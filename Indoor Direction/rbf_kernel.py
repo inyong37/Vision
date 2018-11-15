@@ -1,7 +1,7 @@
 '''
 Inyong Hwang
 
-
+# References
 # Python
 # array call: https://stackoverflow.com/questions/3582601/how-to-call-an-element-in-a-numpy-array
 # Matlab to Python: https://docs.scipy.org/doc/numpy-1.15.0/user/numpy-for-matlab-users.html
@@ -15,7 +15,7 @@ Inyong Hwang
 '''
 
 import numpy as np
-import scipy as sp
+# import scipy as sp
 import math as m
 import matplotlib.pyplot as plt
 
