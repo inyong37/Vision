@@ -1,9 +1,18 @@
-# OpenCV, Python
+# Vision Processing
+OpenCV & Python
+TensorFLow & Python
+
+## Dehazing to Human Detection
+Deep Learning
+
+## Dehazing to Fire Detection
+Deep Learning
+
+## Vanishing Point to Control Posture
 Image Processing
 
-Vision Processing
 ## Optical Character Recognition to Path Planning
 Deep Learning
+
 ## Depth to Obstacle Avoidance
 Deep Learning
-## Vanishing Point to Control Posture
