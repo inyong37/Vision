@@ -2,6 +2,12 @@
 OpenCV & Python
 TensorFLow & Python
 
+## Install OpenCv on Raspberry Pi
+
+'''
+sudo -s
+'''
+
 ## Dehazing to Human Detection
 Image Processing
 
