@@ -8,11 +8,8 @@ TensorFLow & Python
 ```
 sudo -s
 raspi-config
-```
 5 Interfaceing Option
-
 P1 Camera
-```
 apt-get update
 apt-get upgrade
 reboot
