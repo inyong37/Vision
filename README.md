@@ -1,7 +1,7 @@
 # Vision Processing
 OpenCV & Python
 TensorFLow & Python
-
+----------
 ## Install OpenCV on Raspberry Pi
 
 ### 1. Enable Camera
@@ -68,11 +68,13 @@ ldconfig
 ```
 ### 7. Test OpenCV
 ```
-python
-import cv2
-exit()
+$ python
 ```
-
+```
+>> import cv2
+>> exit()
+```
+----------
 ## Dehazing to Human Detection
 Image Processing
 
