@@ -75,14 +75,10 @@ $ python
 >> exit()
 ```
 ----------
-## Dehazing to Human Detection
+## Dehazing to Object Detection (Human & Fire)
 Image Processing
 
 Deep Learning
-
-## Dehazing to Fire Detection
-Deep Learning
-
 ## Vanishing Point to Control Posture
 Image Processing
 
