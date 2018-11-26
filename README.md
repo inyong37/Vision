@@ -2,7 +2,7 @@
 OpenCV & Python
 TensorFLow & Python
 
-## Install OpenCv on Raspberry Pi
+## Install OpenCV on Raspberry Pi
 
 ### 1. Enable Camera
 ```
