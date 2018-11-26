@@ -1,7 +1,5 @@
 # Vision Processing
-OpenCV & Python
-
-TensorFLow & Python
+OpenCV & Python & TensorFlow & Keras
 
 ## Install OpenCV on Raspberry Pi
 Reference: https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
