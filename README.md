@@ -8,8 +8,12 @@ TensorFLow & Python
 ```
 sudo -s
 raspi-config
+```
+```
 5 Interfaceing Option
 P1 Camera
+```
+```
 apt-get update
 apt-get upgrade
 reboot
@@ -50,8 +54,7 @@ nano /etc/dphys-swapfile
 ```
 # set size to absolute value, leaving empty (default) then uses computed value
 #   you most likely don't want this, unless you have an special disk situation
-# CONF_SWAPSIZE=100
-CONF_SWAPSIZE=1024
+CONF_SWAPSIZE=2048
 ```
 ```
 /etc/init.d/dphys-swapfile stop
