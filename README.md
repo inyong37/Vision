@@ -2,8 +2,12 @@
 OpenCV & Python & TensorFlow & Keras
 
 ## Install OpenCV on Raspberry Pi
+### 간단한 방법
+```
+sudo apt-get install python-opencv
+```
+### 복잡한 방법
 Reference: https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
-
 ### 1. Enable Camera
 ```
 sudo -s
@@ -27,16 +31,7 @@ apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev li
 ```
 cd ~
 ```
-#### 3-1. OpenCV-3.4.4
-```
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
-unzip opencv.zip
-unzip opencv_contrib.zip
-mv opencv-3.4.4 opencv
-mv opencv_contrib-3.4.4 opencv_contrib
-```
-#### 3-2. OpenCV-4.0.0-alpha
+#### 3-1. OpenCV-4.0.0-alpha
 ```
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0-alpha.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0-alpha.zip
@@ -44,6 +39,15 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 mv opencv-4.0.0-alpha opencv
 mv opencv_contrib-4.0.0-alpha opencv_contrib
+```
+#### 3-2. OpenCV-3.4.4 (X)
+```
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+mv opencv-3.4.4 opencv
+mv opencv_contrib-3.4.4 opencv_contrib
 ```
 ### 4. CMake and compile
 ```
