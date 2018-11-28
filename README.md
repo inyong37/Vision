@@ -36,7 +36,7 @@ unzip opencv_contrib.zip
 mv opencv-3.4.4 opencv
 mv opencv_contrib-3.4.4 opencv_contrib
 ```
-#### 3-2. OpenCV-4.0.0-alpa
+#### 3-2. OpenCV-4.0.0-alpha
 ```
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0-alpha.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0-alpha.zip
