@@ -27,27 +27,23 @@ apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev li
 ```
 cd ~
 ```
+#### 3-1. OpenCV-3.4.4
 ```
 wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
-```
-4.0.0 대신 3.4.4 (2018-11-28-Wed)
-```
-# wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0-alpha.zip
-# wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0-alpha.zip
-```
-```
 unzip opencv.zip
 unzip opencv_contrib.zip
-```
-```
 mv opencv-3.4.4 opencv
 mv opencv_contrib-3.4.4 opencv_contrib
 ```
-4.0.0 대신 3.4.4 (2018-11-28-Wed)
+#### 3-2. OpenCV-4.0.0-alpa
 ```
-# mv opencv-4.0.0-alpha opencv
-# mv opencv_contrib-4.0.0-alpha opencv_contrib
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0-alpha.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0-alpha.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+mv opencv-4.0.0-alpha opencv
+mv opencv_contrib-4.0.0-alpha opencv_contrib
 ```
 ### 4. CMake and compile
 ```
