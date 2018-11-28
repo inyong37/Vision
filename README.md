@@ -74,6 +74,10 @@ CONF_SWAPSIZE=2048
 ```
 ### 6. Compile OpenCV
 ```
+cd ~
+cd opencv/build
+```
+```
 make -j4
 make install
 ldconfig
