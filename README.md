@@ -113,7 +113,9 @@ dpkg -r opencv
 ----------
 ## Dehazing to Object Detection (Human & Fire)
 Image Processing
-
+reference: https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py
+reference: http://hamait.tistory.com/509
+reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
 Deep Learning
 ## Vanishing Point to Control Posture
 Image Processing
