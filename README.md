@@ -2,7 +2,7 @@
 OpenCV & Python & TensorFlow & Keras
 
 ## Install OpenCV on Raspberry Pi
-### 간단한 방법
+### A. 간단한 방법
 ```
 sudo apt-get install python-opencv
 ```
