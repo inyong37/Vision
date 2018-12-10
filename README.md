@@ -6,7 +6,7 @@ OpenCV & Python & TensorFlow & Keras
 ```
 sudo apt-get install python-opencv
 ```
-### 복잡한 방법
+### B. 복잡한 방법
 Reference: https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
 ### 1. Enable Camera
 ```
