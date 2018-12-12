@@ -1,4 +1,4 @@
-## Uninstall OpenCV
+## Uninstall OpenCV on Raspberry Pi
 
 reference: http://www.srccodes.com/p/article/56/uninstall-remove-opencv-raspberry-pi-jessie-debain-make-uninstall-open-source-computer-vision-opencvlib
 
