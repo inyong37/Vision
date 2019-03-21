@@ -13,6 +13,14 @@ https://github.com/inyong37/Vision/blob/master/Install/OpenCV-RaspberryPi.md
 
 https://github.com/inyong37/Vision/blob/master/Uninstall/OpenCV-RaspberryPi.md
 
+## Install TensorFlow CPU on Computer
+
+https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-CPU.md
+
+## Install TensorFlow GPU on Computer
+
+https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-GPU.md
+
 ----------
 ## Dehazing to Object Detection (Human & Fire)
 Image Processing
