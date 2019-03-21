@@ -1,5 +1,7 @@
 ## Install Keras-Reinforcement Learning
 
+Reference: https://github.com/keras-rl/keras-rl
+
 ### 1. Activate Targer Virtual Environment
 ```
 > activate tensorflow
