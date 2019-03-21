@@ -7,12 +7,12 @@ Reference: https://keras.io/
 > activate tensorflow
 ```
 
-### 2-A. Install with pip
+### 2-A. Install with Pypi (pip)
 ```
 > pip install keras
 ```
 
-### 2-B. Install for the source
+### 2-B. Install from Github source
 ```
 > git clone https://github.com/keras-team/keras.git
 > cd keras
