@@ -5,7 +5,7 @@
 > activate tensorflow
 ```
 
-### 2-A. Install with Pypi
+### 2-A. Install with Pypi (pip)
 ```
 > pip install keras-rl
 ```
