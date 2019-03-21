@@ -27,6 +27,10 @@ https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-RaspberryPi.md
 
 https://github.com/inyong37/Vision/blob/master/Install/Keras.md
 
+### Install Keras-Reinforcement Learning
+
+https://github.com/inyong37/Vision/blob/master/Install/Keras-rl.md
+
 ## Uninstall
 
 ### Unstall OpenCV on Raspberry Pi
