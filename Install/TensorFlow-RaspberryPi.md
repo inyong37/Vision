@@ -19,7 +19,7 @@ $ tensorflow/tools/ci_build/ci_build.sh PI \
     tensorflow/tools/ci_build/pi/build_raspberry_pi.sh
 ```
 
-### 3.Build
+### 3. Build
 ```
 $ tensorflow/tools/ci_build/ci_build.sh PI \
     tensorflow/tools/ci_build/pi/build_raspberry_pi.sh PI_ONE
