@@ -18,7 +18,7 @@
 
 ### Specific Directory/Path
 ```
-> conda create --prefix C:\Python\Anaconda\conda\conda\envs\tensorflow python=3.6 anaconda
+> conda create --prefix C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36 python=3.6 anaconda
 ```
 
 # 2. Activate Virtual Environment
@@ -42,6 +42,6 @@
 'envs' is the name of virtual environment
 
 ### Specific Directory/Path
-'''
+```
 > conda env remove -n  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
 ```
