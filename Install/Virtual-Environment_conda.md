@@ -20,3 +20,15 @@
 ```
 > conda create --prefix C:\Python\Anaconda\conda\conda\envs\tensorflow python=3.6 anaconda
 ```
+
+# Activate
+
+### Basic
+```
+> activate envs
+```
+
+### Specific Directory or Path
+```
+> activate  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
+```
