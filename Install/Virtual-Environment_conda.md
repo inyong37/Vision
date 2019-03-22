@@ -16,7 +16,7 @@
 > conda create -n envs python=2.7 anaconda
 ```
 
-### Specific Directory or Path
+### Specific Directory/Path
 ```
 > conda create --prefix C:\Python\Anaconda\conda\conda\envs\tensorflow python=3.6 anaconda
 ```
@@ -28,7 +28,7 @@
 > activate envs
 ```
 
-### Specific Directory or Path
+### Specific Directory/Path
 ```
 > activate  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
 ```
