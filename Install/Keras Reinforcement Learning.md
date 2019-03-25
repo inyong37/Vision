@@ -1,4 +1,4 @@
-## Install Keras-Reinforcement Learning
+## Install Keras Reinforcement Learning
 
 Reference: https://github.com/keras-rl/keras-rl
 
