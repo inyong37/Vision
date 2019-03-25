@@ -54,6 +54,7 @@ pip install scikit-image
 python -m pip install -U matplotlib
 ```
 reference: http://scikit-image.org/docs/dev/install.html
+
 reference: https://matplotlib.org/users/installing.html
 #### Change Code for Windows/OS X
 ```
