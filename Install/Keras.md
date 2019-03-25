@@ -1,39 +1,39 @@
-## Install Keras
+## I. Install Keras
 
 Reference: https://keras.io/
 
-### 1. Activate Target Virtual Environment
+### i. Activate Target Virtual Environment
 ```
 > activate tensorflow
 ```
 
-### 2-A. Install with Pypi (pip)
+### ii-A. Install with Pypi (pip)
 ```
 > pip install keras
 ```
 
-### 2-B. Install from Github source
+### ii-B. Install from Github source
 ```
 > git clone https://github.com/keras-team/keras.git
 > cd keras
 > sudo python setup.py install
 ```
 
-## Install Keras Reinforcement Learning
+## II. Install Keras Reinforcement Learning
 
 Reference: https://github.com/keras-rl/keras-rl
 
-### 1. Activate Targer Virtual Environment
+### i. Activate Targer Virtual Environment
 ```
 > activate tensorflow
 ```
 
-### 2-A. Install with Pypi (pip)
+### ii-A. Install with Pypi (pip)
 ```
 > pip install keras-rl
 ```
 
-### 2-B. Install from Github source
+### ii-B. Install from Github source
 ```
 > git clone https://github.com/keras-rl/keras-rl.git
 > cd keras-rl
