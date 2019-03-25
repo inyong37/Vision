@@ -1,4 +1,6 @@
-# I. Create Virtual Environment with conda
+# Virtual Environment with conda
+
+## I. Create Virtual Environment with conda
 
 ### i. Basic
 ```
@@ -21,7 +23,7 @@
 > conda create --prefix C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36 python=3.6 anaconda
 ```
 
-# II. Activate Virtual Environment
+## II. Activate Virtual Environment
 
 ### i. Basic
 ```
@@ -33,7 +35,7 @@
 > activate  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
 ```
 
-# III. Remove Virtual Environment with conda
+## III. Remove Virtual Environment with conda
 
 ### i. Basic
 ```
@@ -44,4 +46,11 @@
 ### ii. Specific Directory/Path
 ```
 > conda env remove -n  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
+```
+
+## IV. Conda Commands
+
+#### Show installed packages
+```
+conda list
 ```
