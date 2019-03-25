@@ -68,3 +68,5 @@ from skimage import io
 io.use_plugin('matplotlib')
 ```
 reference: https://github.com/scikit-image/scikit-image/issues/2595
+#### RGBD Dataset
+reference: http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#
