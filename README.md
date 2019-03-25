@@ -39,15 +39,14 @@ https://github.com/inyong37/Vision/blob/master/Uninstall/OpenCV-RaspberryPi.md
 
 ----------
 ## I. Dehazing to Object Detection (Human & Fire)
-Image Processing
-
+### Image Processing with OpenCV
+#### Human detection with RPi
 reference: https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py
-
+#### HOG detectMultiScale (1)
 reference: http://hamait.tistory.com/509
-
+#### HOG detectMultiScale (2)
 reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
-
-Deep Learning
+### Deep Learning
 
 ## II. Vanishing Point to Control Posture
 
@@ -60,8 +59,8 @@ Deep Learning
 ## IV. Depth to Obstacle Avoidance
 
 #### NYU Dataset V1
-https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
+reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
 #### NYU Dataset V2
-https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 #### How to read NYU mat file with python
-https://ddokkddokk.tistory.com/21
+reference: https://ddokkddokk.tistory.com/21
