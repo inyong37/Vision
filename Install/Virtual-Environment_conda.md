@@ -1,47 +1,47 @@
-# 1. Create Virtual Environment with conda
+# I. Create Virtual Environment with conda
 
-### Basic
+### i. Basic
 ```
 > conda create -n envs
 ```
 'envs' is virtual environment name
 
-### Python Version
+### ii. Python Version
 ```
 > conda create -n envs python=2.7
 ```
 
-### Specific Package 
+### iii. Specific Package 
 ```
 > conda create -n envs python=2.7 anaconda
 ```
 
-### Specific Directory/Path
+### iv. Specific Directory/Path
 ```
 > conda create --prefix C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36 python=3.6 anaconda
 ```
 
-# 2. Activate Virtual Environment
+# II. Activate Virtual Environment
 
-### Basic
+### i. Basic
 ```
 > activate envs
 ```
 
-### Specific Directory/Path
+### ii. Specific Directory/Path
 ```
 > activate  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
 ```
 
-# 3. Remove Virtual Environment with conda
+# III. Remove Virtual Environment with conda
 
-### Basic
+### i. Basic
 ```
 > conda env remove -n envs
 ```
 'envs' is the name of virtual environment
 
-### Specific Directory/Path
+### ii. Specific Directory/Path
 ```
 > conda env remove -n  C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36
 ```
