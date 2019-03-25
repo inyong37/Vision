@@ -2,8 +2,7 @@
 OpenCV & Python & TensorFlow & Keras
 
 ## I. Install
-### i. Install OpenCV on Computer
-https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md
+### i. Install OpenCV on Computer(https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
 ### ii. Install OpenCV on Raspberry Pi
 https://github.com/inyong37/Vision/blob/master/Install/OpenCV-RaspberryPi.md
 ### iii. Install TensorFlow CPU on Computer
