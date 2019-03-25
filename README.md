@@ -48,4 +48,22 @@ reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
 reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 #### How to read NYU mat file with python
 reference: https://ddokkddokk.tistory.com/21
-####
+#### Install Packages for Depth Processing
+```
+pip install scikit-image
+python -m pip install -U matplotlib
+```
+reference: http://scikit-image.org/docs/dev/install.html
+reference: https://matplotlib.org/users/installing.html
+#### Change Code for Windows/OS X
+```
+import skimage.io as io
+```
+to 
+```
+import matplotlib
+matplotlib.use('TkAgg')
+from skimage import io
+io.use_plugin('matplotlib')
+```
+reference: https://github.com/scikit-image/scikit-image/issues/2595
