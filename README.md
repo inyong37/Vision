@@ -30,8 +30,12 @@ Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-paramet
 Reference: https://github.com/anhenghuang/dehaze
 ### ii. Deep Learning
 #### A. Dataset
-#### RESIDE (REalistic Single Image DEhazing) [Paper](https://arxiv.org/pdf/1712.04143.pdf)
+Reference: https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images
+#### RESIDE: V0 (REalistic Single Image DEhazing) [Paper](https://arxiv.org/pdf/1712.04143.pdf) [IEEE PaPer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8451944)
 Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
+### iii. Challenge
+#### NTIRE2018
+Reference: http://www.vision.ee.ethz.ch/ntire18/
 
 ## II. Vanishing Point to Control Posture
 Image Processing
@@ -51,10 +55,11 @@ Reference: https://ddokkddokk.tistory.com/21
 #### Packages
 ```
 pip install scikit-image
-python -m pip install -U matplotlib
 ```
 Reference: http://scikit-image.org/docs/dev/install.html
-
+```
+python -m pip install -U matplotlib
+```
 Reference: https://matplotlib.org/users/installing.html
 #### Change Code for Windows/OS X
 ```
