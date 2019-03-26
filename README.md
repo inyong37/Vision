@@ -35,8 +35,9 @@ Reference: https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_s
 Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
 #### b. D-Hazy [Paper (IEEE)](https://ieeexplore.ieee.org/document/7532754)
 Reference: http://www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/)
-#### c. I-Haze [Paper (arXiV)](https://arxiv.org/abs/1804.05091)
+#### c. I-Haze [Paper (arXiv)](https://arxiv.org/abs/1804.05091)
 Reference: http://www.vision.ee.ethz.ch/ntire18/i-haze/
+#### d. O-Haze [Paper (arXiv)](https://arxiv.org/abs/1804.05101)
 ### iii. Challenge
 #### NTIRE2018
 Reference: http://www.vision.ee.ethz.ch/ntire18/
