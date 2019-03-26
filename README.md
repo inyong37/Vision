@@ -26,7 +26,7 @@ Reference: https://github.com/OmalPerera/Human-detection-system-with-raspberry-P
 Reference: http://hamait.tistory.com/509
 #### HOG detectMultiScale (2)
 Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
-#### Dark Channel Prior
+#### Dark Channel Prior [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 Referende: https://github.com/anhenghuang/dehaze
 ### ii. Deep Learning (TODO)
 #### A. Dataset
