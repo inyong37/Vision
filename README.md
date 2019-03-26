@@ -31,7 +31,7 @@ Reference: https://github.com/anhenghuang/dehaze
 ### ii. Deep Learning
 #### A. Dataset
 Reference: https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images
-#### RESIDE: V0 (REalistic Single Image DEhazing) [Paper](https://arxiv.org/pdf/1712.04143.pdf) [IEEE PaPer](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8451944)
+#### RESIDE: V0 (REalistic Single Image DEhazing) [Paper 1](https://arxiv.org/pdf/1712.04143.pdf) [Paper 2 (IEEE)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8451944)
 Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
 ### iii. Challenge
 #### NTIRE2018
