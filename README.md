@@ -42,9 +42,9 @@ Deep Learning
 ## IV. Depth to Obstacle Avoidance (TODO)
 ### i. Deep Learning
 #### A. Dataset
-#### NYU Dataset V1 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
+#### a. NYU Dataset V1 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
-#### NYU Dataset V2 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
+#### b. NYU Dataset V2 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 #### How to read NYU mat file with python
 Reference: https://ddokkddokk.tistory.com/21
@@ -68,7 +68,7 @@ from skimage import io
 io.use_plugin('matplotlib')
 ```
 Reference: https://github.com/scikit-image/scikit-image/issues/2595
-#### RGBD Dataset
+#### c. RGBD Dataset
 Reference: http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#
 
 #### B. Model
