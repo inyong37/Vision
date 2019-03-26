@@ -18,7 +18,7 @@ OpenCV & Python & TensorFlow & Keras
 
 ----------
 
-## I. Dehazing to Object Detection (Human & Fire)
+## I. Dehazing to Object Detection (Human & Fire) (TODO)
 ### i. Image Processing with OpenCV
 #### Human detection with RPi
 Reference: https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py
@@ -28,7 +28,7 @@ Reference: http://hamait.tistory.com/509
 Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
 #### Dark Channel Prior [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 Reference: https://github.com/anhenghuang/dehaze
-### ii. Deep Learning (TODO)
+### ii. Deep Learning
 #### A. Dataset
 #### RESIDE (REalistic Single Image DEhazing)
 Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
@@ -36,10 +36,10 @@ Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
 ## II. Vanishing Point to Control Posture
 Image Processing
 
-## III. Optical Character Recognition to Path Planning
+## III. Optical Character Recognition to Path Planning (TODO)
 Deep Learning
 
-## IV. Depth to Obstacle Avoidance
+## IV. Depth to Obstacle Avoidance (TODO)
 ### i. Deep Learning
 #### A. Dataset
 #### NYU Dataset V1
@@ -48,7 +48,7 @@ Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 #### How to read NYU mat file with python
 Reference: https://ddokkddokk.tistory.com/21
-#### Install Packages for Depth Processing
+#### Packages
 ```
 pip install scikit-image
 python -m pip install -U matplotlib
