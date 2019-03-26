@@ -26,7 +26,12 @@ Reference: https://github.com/OmalPerera/Human-detection-system-with-raspberry-P
 Reference: http://hamait.tistory.com/509
 #### HOG detectMultiScale (2)
 Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/
-### ii. Deep Learning
+#### Dark Channel Prior
+Referende: https://github.com/anhenghuang/dehaze
+### ii. Deep Learning (TODO)
+#### A. Dataset
+#### RESIDE (REalistic Single Image DEhazing)
+Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
 
 ## II. Vanishing Point to Control Posture
 Image Processing
@@ -35,10 +40,8 @@ Image Processing
 Deep Learning
 
 ## IV. Depth to Obstacle Avoidance
-### i. FCRN [Paper](https://arxiv.org/abs/1606.00373)
-Reference:https://github.com/iro-cp/FCRN-DepthPrediction
-
-### ii. Deep Learning
+### i. Deep Learning
+#### A. Dataset
 #### NYU Dataset V1
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
 #### NYU Dataset V2
@@ -67,3 +70,7 @@ io.use_plugin('matplotlib')
 Reference: https://github.com/scikit-image/scikit-image/issues/2595
 #### RGBD Dataset
 Reference: http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#
+
+#### B. Model
+#### FCRN [Paper](https://arxiv.org/abs/1606.00373)
+Reference: https://github.com/iro-cp/FCRN-DepthPrediction
