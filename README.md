@@ -72,5 +72,5 @@ Reference: https://github.com/scikit-image/scikit-image/issues/2595
 Reference: http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#
 
 #### B. Model
-#### FCRN [Paper](https://arxiv.org/abs/1606.00373)
+#### a. FCRN [Paper](https://arxiv.org/abs/1606.00373)
 Reference: https://github.com/iro-cp/FCRN-DepthPrediction
