@@ -30,7 +30,7 @@ Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-paramet
 Reference: https://github.com/anhenghuang/dehaze
 ### ii. Deep Learning
 #### A. Dataset
-#### RESIDE (REalistic Single Image DEhazing)
+#### RESIDE (REalistic Single Image DEhazing) [Paper](https://arxiv.org/pdf/1712.04143.pdf)
 Reference: https://sites.google.com/view/reside-dehaze-datasets/reside-v0
 
 ## II. Vanishing Point to Control Posture
@@ -42,9 +42,9 @@ Deep Learning
 ## IV. Depth to Obstacle Avoidance (TODO)
 ### i. Deep Learning
 #### A. Dataset
-#### NYU Dataset V1
+#### NYU Dataset V1 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html
-#### NYU Dataset V2
+#### NYU Dataset V2 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
 Reference: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 #### How to read NYU mat file with python
 Reference: https://ddokkddokk.tistory.com/21
