@@ -50,7 +50,14 @@
 
 ## IV. Conda Commands
 
-#### Show installed packages
+##### Show installed packages
 ```
 conda list
 ```
+#### Check Python
+```> python --version```
+##### Search Python
+```> conda serach python```
+
+##### Change Python
+```> conda install python=3.5```
