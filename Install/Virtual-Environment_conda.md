@@ -55,9 +55,14 @@
 conda list
 ```
 #### Check Python
-```> python --version```
+```
+> python --version
+```
 ##### Search Python
-```> conda serach python```
-
+```
+> conda serach python
+```
 ##### Change Python
-```> conda install python=3.5```
+```
+> conda install python=3.5
+```
