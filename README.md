@@ -21,8 +21,7 @@ OpenCV & Python & TensorFlow & Keras
 ## I. Dehazing to Object Detection (Human & Fire) (TODO)
 ### i. Image Processing with OpenCV
 #### Human detection with RPi [Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
-#### HOG detectMultiScale (1) [Korean Blog](http://hamait.tistory.com/509)
-#### HOG detectMultiScale (2) [Reference](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
+#### HOG detectMultiScale [Korean](http://hamait.tistory.com/509), [English](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 #### Dark Channel Prior [Github](https://github.com/anhenghuang/dehaze), [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 ### ii. Deep Learning
 #### A. Dataset [Reference](https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images)
