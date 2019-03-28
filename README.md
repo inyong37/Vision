@@ -29,7 +29,7 @@ Reference: https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-paramet
 #### Dark Channel Prior [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 Reference: https://github.com/anhenghuang/dehaze
 ### ii. Deep Learning
-#### A. Dataset [researchgate](https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images)
+#### A. Dataset [Reference](https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images)
 #### a. [RESIDE: V0 (REalistic Single Image DEhazing)](https://sites.google.com/view/reside-dehaze-datasets/reside-v0), [Paper (arXiv)](https://arxiv.org/pdf/1712.04143.pdf), [Paper (IEEE)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8451944)
 #### b. [I-Haze](http://www.vision.ee.ethz.ch/ntire18/i-haze/), [Paper (arXiv)](https://arxiv.org/abs/1804.05091)
 #### c. [D-Hazy](http://www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/)), [Paper (IEEE)](https://ieeexplore.ieee.org/document/7532754)
