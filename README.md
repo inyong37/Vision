@@ -45,10 +45,7 @@ Reference: http://www.vision.ee.ethz.ch/ntire18/
 ## II. Vanishing Point to Control Posture
 Image Processing
 
-## III. Optical Character Recognition to Path Planning (TODO)
-Deep Learning
-
-## IV. Depth to Obstacle Avoidance (TODO)
+## III. Depth to Obstacle Avoidance (TODO)
 ### i. Deep Learning
 #### A. Dataset
 #### a. NYU Dataset V1 [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
@@ -84,3 +81,6 @@ Reference: http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#
 #### B. Model
 #### a. FCRN [Paper (arXiv)](https://arxiv.org/abs/1606.00373)
 Reference: https://github.com/iro-cp/FCRN-DepthPrediction
+
+## IV. Optical Character Recognition to Path Planning (TODO)
+Deep Learning
