@@ -67,10 +67,10 @@ io.use_plugin('matplotlib')
 ## IV. Optical Character Recognition to Path Planning (TODO)
 ### i. Deep Learning
 #### a. Tesseract [Github](https://github.com/tesseract-ocr/tesseract), [Demo](http://tesseract.projectnaptha.com/)
-##### Python Version - pytesseract [Github](https://github.com/madmaze/pytesseract), [pip](https://pypi.org/project/pytesseract/)
+#### Python Version - pytesseract [Github](https://github.com/madmaze/pytesseract), [pip](https://pypi.org/project/pytesseract/)
 ```
 > pip install pytesseract
 ```
-##### Install Windows Version [Github](https://github.com/tesseract-ocr/tesseract/wiki#windows), [Download](https://github.com/UB-Mannheim/tesseract/wiki) 
-##### Training [Github](https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract-4.00)
-##### Korean [Blog](https://webnautes.tistory.com/947)
+#### Install Windows Version [Github](https://github.com/tesseract-ocr/tesseract/wiki#windows), [Download](https://github.com/UB-Mannheim/tesseract/wiki) 
+#### Training [Github](https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract-4.00)
+#### Korean [Blog](https://webnautes.tistory.com/947)
