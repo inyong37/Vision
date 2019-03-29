@@ -65,4 +65,6 @@ io.use_plugin('matplotlib')
 #### a. FCRN [Paper (arXiv)](https://arxiv.org/abs/1606.00373), [Github](https://github.com/iro-cp/FCRN-DepthPrediction)
 
 ## IV. Optical Character Recognition to Path Planning (TODO)
-Deep Learning
+### i. Deep Learning
+#### a. Tesseract [Github](https://github.com/tesseract-ocr/tesseract) [Demo](http://tesseract.projectnaptha.com/)
+
