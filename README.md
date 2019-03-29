@@ -71,3 +71,4 @@ io.use_plugin('matplotlib')
 ```
 > pip install pytesseract
 ```
+##### Windows [Github](https://github.com/UB-Mannheim/tesseract/wiki)
