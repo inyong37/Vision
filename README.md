@@ -71,4 +71,6 @@ io.use_plugin('matplotlib')
 ```
 > pip install pytesseract
 ```
-##### Windows [Github](https://github.com/UB-Mannheim/tesseract/wiki)
+##### Install Windows Version [Github](https://github.com/tesseract-ocr/tesseract/wiki#windows), [Download](https://github.com/UB-Mannheim/tesseract/wiki) 
+##### Training [Github](https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract-4.00)
+##### Korean [Blog](https://webnautes.tistory.com/947)
