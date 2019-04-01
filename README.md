@@ -78,3 +78,13 @@ io.use_plugin('matplotlib')
 #### 공백 제거 [Korean Blog](https://hashcode.co.kr/questions/692/%EC%8A%A4%ED%8A%B8%EB%A7%81%EC%97%90-%EB%AA%A8%EB%93%A0-%EA%B3%B5%EB%B0%B1-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80%EB%8D%B0-%EC%95%9E-%EB%92%A4-%EA%B3%B5%EB%B0%B1%EB%A7%8C-%EC%A0%9C%EA%B1%B0%EB%90%A9%EB%8B%88%EB%8B%A4)
 ##### 한번 경로 변경 등을 하면 Pycharm을 끄고 재시작 해야 됨
 #### 특수 문자 제거 [Korean Blog](https://niceman.tistory.com/156)
+##### 검은 글씨만 인식 -> 색상 반전
+#### b. OpenCV
+##### Color Reversal [Korean Blog](https://076923.github.io/posts/Python-opencv-11/)
+```
+dst = cv2.bitwise_not(src)
+```
+##### Resize [Korean Blog](https://076923.github.io/posts/Python-opencv-8/)
+```
+dst2 = cv2.resize(src, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
+```
