@@ -82,9 +82,9 @@ io.use_plugin('matplotlib')
 #### b. OpenCV
 ##### Color Reversal [Korean Blog](https://076923.github.io/posts/Python-opencv-11/)
 ```
-dst = cv2.bitwise_not(src)
+image = cv2.bitwise_not(input_image)
 ```
 ##### Resize [Korean Blog](https://076923.github.io/posts/Python-opencv-8/)
 ```
-dst2 = cv2.resize(src, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
+image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
