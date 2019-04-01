@@ -78,6 +78,10 @@ io.use_plugin('matplotlib')
 #### Remove special characters [Korean Blog](https://niceman.tistory.com/156)
 #### Tesseract Optimal conditions [Korean Blog](https://creaby.tistory.com/17)
 #### Color Reversal [Korean Blog](https://076923.github.io/posts/Python-opencv-11/)
+```
 image = cv2.bitwise_not(input_image)
+```
 #### Resize [Korean Blog](https://076923.github.io/posts/Python-opencv-8/)
+```
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
+```
