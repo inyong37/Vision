@@ -1,24 +1,9 @@
 # Vision Processing
 OpenCV & Python & TensorFlow & Keras
 
-## I. Install
-### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
-### ii.   [Install OpenCV on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-RaspberryPi.md)
-### iii.  [Install TensorFlow CPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-CPU.md)
-### iv.   [Install TensorFlow GPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-GPU.md)
-### v.    [Install TensorFlow on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-RaspberryPi.md)
-### vi.   [Install Keras](https://github.com/inyong37/Vision/blob/master/Install/Keras.md)
-### vii.  [Install Keras Reinforcement Learning](https://github.com/inyong37/Vision/blob/master/Install/Keras-ReinforcementLearning.md)
-### viii. [Install Pytorch](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md)
-### ix. [Install Theano](https://github.com/inyong37/Vision/blob/master/Install/Theano.md)
-### x. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment_conda.md)
-
-## II. Uninstall
-### i.    [Unstall OpenCV on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Uninstall/OpenCV-RaspberryPi.md)
-
 ## I. Dehazing to Object Detection (Human & Fire) (TODO)
 ### i. Image Processing with OpenCV
-#### Human detection with RPi [Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
+#### Human detection with RPi[Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
 #### HOG detectMultiScale [Korean](http://hamait.tistory.com/509), [English](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 #### Dark Channel Prior [Github](https://github.com/anhenghuang/dehaze), [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 ### ii. Deep Learning
@@ -44,7 +29,6 @@ Image Processing
 > pip install scikit-image
 > python -m pip install -U matplotlib
 ```
-
 #### Change Code for Windows/OS X [Github issue](https://github.com/scikit-image/scikit-image/issues/2595)
 ```
 import skimage.io as io
@@ -56,9 +40,7 @@ matplotlib.use('TkAgg')
 from skimage import io
 io.use_plugin('matplotlib')
 ```
-
 #### c. RGBD Dataset [Reference](http://www.open3d.org/docs/tutorial/Basic/rgbd_images/index.html#)
-
 #### B. Model
 #### a. FCRN [Paper (arXiv)](https://arxiv.org/abs/1606.00373), [Github](https://github.com/iro-cp/FCRN-DepthPrediction)
 
@@ -83,3 +65,15 @@ image = cv2.bitwise_not(input_image)
 ```
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
+
+## Install
+### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
+### ii.   [Install OpenCV on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-RaspberryPi.md)
+### iii.  [Install TensorFlow CPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-CPU.md)
+### iv.   [Install TensorFlow GPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-GPU.md)
+### v.    [Install & Uninstall TensorFlow on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-RaspberryPi.md)
+### vi.   [Install Keras](https://github.com/inyong37/Vision/blob/master/Install/Keras.md)
+### vii.  [Install Keras Reinforcement Learning](https://github.com/inyong37/Vision/blob/master/Install/Keras-ReinforcementLearning.md)
+### viii. [Install Pytorch](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md)
+### ix. [Install Theano](https://github.com/inyong37/Vision/blob/master/Install/Theano.md)
+### x. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment_conda.md)
