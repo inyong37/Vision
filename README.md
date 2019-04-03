@@ -16,8 +16,6 @@ OpenCV & Python & TensorFlow & Keras
 ## II. Uninstall
 ### i.    [Unstall OpenCV on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Uninstall/OpenCV-RaspberryPi.md)
 
-----------
-
 ## I. Dehazing to Object Detection (Human & Fire) (TODO)
 ### i. Image Processing with OpenCV
 #### Human detection with RPi [Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
