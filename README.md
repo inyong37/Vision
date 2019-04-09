@@ -5,7 +5,7 @@ OpenCV & Python & TensorFlow & Keras
 
 ### i. Image Processing with OpenCV
 
-#### Human detection with RPi[Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
+#### Human detection with RPi [Github](https://github.com/OmalPerera/Human-detection-system-with-raspberry-Pi/blob/master/pi_surveillance.py)
 #### HOG detectMultiScale [Korean](http://hamait.tistory.com/509), [English](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 #### Dark Channel Prior [Github](https://github.com/anhenghuang/dehaze), [Paper](http://www.robots.ox.ac.uk/~vgg/rg/papers/hazeremoval.pdf)
 
