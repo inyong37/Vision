@@ -23,3 +23,15 @@ pip3 install torchvision
 
 ### iii. Tutorial
 [Tutorial](https://pytorch.org/tutorials/)
+
+### iv. Version Check
+
+### iv-A. CUDA
+```
+nvcc --version
+```
+
+### iv-B. Python
+```
+python --version
+```
