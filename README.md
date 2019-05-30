@@ -83,13 +83,19 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 ```
 
 ### Korean Scene Text Recognition by Character-level
-#### dataset 2 [download](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
+#### dataset version 2 [download](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
 |<center>Language</center> | Fonts | # of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|70|111,72|782,040|
 |<center>Number</center>|70|10|700|
 |<center>English</center>|70|52 (upper 26, lower 26)|3,640|
 
+#### dataset version 3 [download](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing)
+|<center>Language</center> | Fonts | # of characters|total # of images|
+|----------|----------:|----------:|----------:|
+|<center>Korean</center>|69|972|58,320|
+|<center>Number</center>|69|10|7690|
+|<center>English</center>|69|52 (upper 26, lower 26)|3,588|
 ----------------------------------------------------------------------------------------------------
 ## Install
 ### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
