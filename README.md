@@ -94,7 +94,7 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 |<center>Language</center> | Fonts | # of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|58,320|
-|<center>Number</center>|69|10|7690|
+|<center>Number</center>|69|10|690|
 |<center>English</center>|69|52 (upper 26, lower 26)|3,588|
 ----------------------------------------------------------------------------------------------------
 ## Install
