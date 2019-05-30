@@ -83,7 +83,7 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 ```
 
 ### Korean Scene Text Recognition by Character-level
-#### dataset
+#### dataset 2 [download](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
 |<center>Language</center> | Fonts | # of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|70|111,72|782,040|
