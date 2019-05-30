@@ -81,6 +81,15 @@ image = cv2.bitwise_not(input_image)
 ```
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
+
+### Korean Scene Text Recognition by Character-level
+#### dataset: Korean (70 fonts, 11172 characters) + Number (
+Language | Fonts | # of characters|total # of images
+---------|-------|----------------|-----------------
+Korean|70|11172|782,040
+Number|70|10|700
+English|70|52(upper 26, lower 26)|3,640
+
 ----------------------------------------------------------------------------------------------------
 ## Install
 ### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
