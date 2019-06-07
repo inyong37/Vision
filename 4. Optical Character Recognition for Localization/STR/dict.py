@@ -19,13 +19,6 @@ def character_encoding():
     for i in tqdm(range(0, len(data))):
         data[i] = re.sub('[^가-힣]+', '', data[i])
 
-    '''
-    C:/Users/terry/Desktop/Project/Vision/4. Optical Character Recognition for Localization/STR/1_DATA_CODE_v3/1_Korean_Dictionary_Korean.py:3: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      # 1. Making Korean Dictionary based on Distribution by Korean
-    '''
-
     unigram = []
     for i in range(0, len(data)):
         ngrams = zip(*[iter(data[i])])
