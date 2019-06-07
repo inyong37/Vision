@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # Author : Inyong Hwang
-# Image to pkl
+# 3. Image to pkl
 
 import os
 import pandas as pd
