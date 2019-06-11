@@ -103,7 +103,7 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 |<center>Number</center>|69|10|690|
 |<center>English</center>|69|52 (upper 26, lower 26)|3,588|
 
-#### dataset version 4 (.png) [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing), [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing)
+#### dataset version 4 (.png) [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing), [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing), [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|116,640|
@@ -112,7 +112,6 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 - Korean and numbers use two font sizes.
 - Incorporate uppercase letters into lowercase letters.
 
-#### etc pneumonia dataset (.pkl) [download](https://drive.google.com/drive/folders/102q8Y446NfhLaY_P_vAZFKNOHr8hMZ5w?usp=sharing)
 ----------------------------------------------------------------------------------------------------
 ## Install
 ### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
