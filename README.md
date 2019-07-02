@@ -113,6 +113,7 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 - Incorporate uppercase letters into lowercase letters.
 - Font sizes of Korean and number are 44, and 54, font size of English is 44.
 - Image size is 64.
+- Hangul characters refer to [this](https://drive.google.com/file/d/156bFGx1A4XjAvv5zSGpw5MkCckUx7LaB/view?usp=sharing) and calculated the frequency.
 
 ----------------------------------------------------------------------------------------------------
 ## Install
