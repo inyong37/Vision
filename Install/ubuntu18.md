@@ -1,4 +1,4 @@
-# I. Install NVIDIA drivers
+# I. Install NVIDIA drivers.
 [reference](https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/)
 ## i. Remove nvidia drivers.
 ```
@@ -16,9 +16,13 @@ screen
 sudo apt-get install nvidia-430
 sudo reboot
 ```
-### iv. Verify installation
+## iv. Verify installation
 ```
 nvidia-smi
 ```
 
-## II. 
+# II. Setup Korean.
+[reference](https://gabii.tistory.com/entry/Ubuntu-1804-LTS-%ED%95%9C%EA%B8%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95)
+```
+ibus-setup
+```
