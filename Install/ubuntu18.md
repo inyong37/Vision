@@ -13,7 +13,7 @@ screen
 ```
 ## iii. Check your nvidia graphic card's driver version. for example '430'.
 ```
-sudo apt-get install nvidia 430
+sudo apt-get install nvidia-430
 sudo reboot
 ```
 ### iv. Verify installation
