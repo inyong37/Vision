@@ -131,28 +131,42 @@ image = cv2.bitwise_not(input_image)
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
 
-### iii. Korean Scene Text Recognition by Character-level
-#### A. dataset version 1 (.png) [MNIST.zip](https://drive.google.com/file/d/1c7dlim-q_G_6XMPkZOhMPA474EHmkdx7/view?usp=sharing), [PHD08.zip](https://drive.google.com/file/d/1jrAc5lqw-Nd0zfxS5tiY1E-mL3skty_N/view?usp=sharing)
+### iii. Robust Reading Competition ICDAR
+[Homepage](https://rrc.cvc.uab.es/)
+
+#### A. Overview - ICDAR 2019 Robust Reading Challenge on Multi-lingual scene text detection and recognition
+[Homepage](https://rrc.cvc.uab.es/?ch=15)
+
+### iv. Korean STR
+```
+Korean Scene Text Recognition by Character-level
+```
+
+#### A. dataset version 1 (.png)
+[MNIST.zip](https://drive.google.com/file/d/1c7dlim-q_G_6XMPkZOhMPA474EHmkdx7/view?usp=sharing), [PHD08.zip](https://drive.google.com/file/d/1jrAc5lqw-Nd0zfxS5tiY1E-mL3skty_N/view?usp=sharing)
 |<center>Dataset</center>|<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------|----------:|----------:|----------:|
 |<center>PHD08</center>|<center>Korean</center>|9|2,350|5,139,450|
 |<center>EMNIST (ByClass)</center>|<center>Number & English</center>|Hand Writing|62|814,255|
 
-#### B. dataset version 2 (.png) [7z](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
+#### B. dataset version 2 (.png)
+[7z](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|70|11,172|782,040|
 |<center>Number</center>|70|10|700|
 |<center>English</center>|70|52 (upper 26, lower 26)|3,640|
 
-#### C. dataset version 3 (.png) [7z](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing), [zip](https://drive.google.com/file/d/1XVv-L0oR-xAQjs22f0lL2wZDwyY0RnDv/view?usp=sharing)
+#### C. dataset version 3 (.png)
+[7z](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing), [zip](https://drive.google.com/file/d/1XVv-L0oR-xAQjs22f0lL2wZDwyY0RnDv/view?usp=sharing)
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|58,320|
 |<center>Number</center>|69|10|690|
 |<center>English</center>|69|52 (upper 26, lower 26)|3,588|
 
-#### D. dataset version 4 (.png) [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing), [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing), [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
+#### D. dataset version 4 (.png)
+[7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing), [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing), [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|116,640|
@@ -164,13 +178,7 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 - Image size is 64.
 - Hangul characters refer to [this](https://drive.google.com/file/d/156bFGx1A4XjAvv5zSGpw5MkCckUx7LaB/view?usp=sharing) and calculated the frequency.
 
-### iv. Robust Reading Competition ICDAR
-[Homepage](https://rrc.cvc.uab.es/)
-
-#### A. Overview - ICDAR 2019 Robust Reading Challenge on Multi-lingual scene text detection and recognition
-[Homepage](https://rrc.cvc.uab.es/?ch=15)
-
-----------------------------------------------------------------------------------------------------
+----------
 ## Install
 ### i.    [Install OpenCV on Computer](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-Computer.md)
 ### ii.   [Install OpenCV on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/OpenCV-RaspberryPi.md)
