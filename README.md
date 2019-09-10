@@ -144,6 +144,7 @@ Korean Scene Text Recognition by Character-level
 
 #### A. dataset version 1 (.png)
 [MNIST.zip](https://drive.google.com/file/d/1c7dlim-q_G_6XMPkZOhMPA474EHmkdx7/view?usp=sharing), [PHD08.zip](https://drive.google.com/file/d/1jrAc5lqw-Nd0zfxS5tiY1E-mL3skty_N/view?usp=sharing)
+
 |<center>Dataset</center>|<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------|----------:|----------:|----------:|
 |<center>PHD08</center>|<center>Korean</center>|9|2,350|5,139,450|
@@ -151,6 +152,7 @@ Korean Scene Text Recognition by Character-level
 
 #### B. dataset version 2 (.png)
 [7z](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
+
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|70|11,172|782,040|
@@ -159,6 +161,7 @@ Korean Scene Text Recognition by Character-level
 
 #### C. dataset version 3 (.png)
 [7z](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing), [zip](https://drive.google.com/file/d/1XVv-L0oR-xAQjs22f0lL2wZDwyY0RnDv/view?usp=sharing)
+
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|58,320|
@@ -167,6 +170,7 @@ Korean Scene Text Recognition by Character-level
 
 #### D. dataset version 4 (.png)
 [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing), [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing), [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
+
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
 |<center>Korean</center>|69|972|116,640|
