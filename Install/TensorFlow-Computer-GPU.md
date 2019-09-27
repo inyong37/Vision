@@ -2,7 +2,7 @@
 
 ### A. CUDA and cuDNN
 
-### 1. Install CUDA 9.0
+### 1-1. Install CUDA 9.0
 https://developer.nvidia.com/cuda-90-download-archive 에서 자신의 환경에 맞는 CUDA download
 
 예시 환경
@@ -14,6 +14,19 @@ Installer Type   : exe (local)
 ```
 위 예시 환경일 경우의 다운로드 링크
 https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_win10-exe
+
+### 1-2. Install CUDA 10.0 (2019-09-27-Fri 기준 pip install tensorflow-gpu는 cuda10.dll 필요 https://www.tensorflow.org/install/gpu)
+https://developer.nvidia.com/cuda-10.0-download-archive 에서 자신의 환경에 맞는 CUDA download
+
+예시 환경
+```
+Opertaing System : Windows
+Architecture     : x86_64
+Version          : 10
+Installer Type   : exe (local)
+```
+위 예시 환경일 경우의 다운로드 링크
+https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_411.31_win10
 
 ### 2. exe 파일 실행으로 설치
 
