@@ -2,6 +2,15 @@
 
 ### A. CUDA and cuDNN
 
+### 1. Install CUDA
+호환되는 tensorflow-gpu, Python, CUDA, cuDNN 확인하기
+
+Windows: https://www.tensorflow.org/install/source_windows?hl=ko
+
+Linux/Mac OS: https://www.tensorflow.org/install/source?hl=ko
+
+Raspberry Pi: https://www.tensorflow.org/install/source_rpi?hl=ko
+
 ### 1-1. Install CUDA 9.0
 https://developer.nvidia.com/cuda-90-download-archive 에서 자신의 환경에 맞는 CUDA download
 
