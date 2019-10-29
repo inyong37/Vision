@@ -194,3 +194,11 @@ Korean Scene Text Recognition by Character-level
 ### viii. [Install Pytorch](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md)
 ### ix. [Install Theano](https://github.com/inyong37/Vision/blob/master/Install/Theano.md)
 ### x. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment_conda.md)
+----------
+Image Processing vs. Computer Vision [Reference](https://iskim3068.tistory.com/1)
+Dehazing - Image Processing/Object Recognition - Computer Vision
+Vanishing Point - Computer Vision
+Depth Prediction - Computer Vision
+Opitcal Character Recognition - Computer Vision
+
+
