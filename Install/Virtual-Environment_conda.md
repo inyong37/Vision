@@ -54,7 +54,7 @@
 ```
 conda list
 ```
-#### Check Python
+##### Check Python
 ```
 > python --version
 ```
@@ -65,4 +65,8 @@ conda list
 ##### Change Python
 ```
 > conda install python=3.5
+```
+##### Show virtual environments
+```
+> conda info --env
 ```
