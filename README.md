@@ -189,10 +189,10 @@ Korean Scene Text Recognition by Character-level
 ### iii.  [Install TensorFlow CPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-CPU.md)
 ### iv.   [Install TensorFlow GPU on Computer](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-Computer-GPU.md)
 ### v.    [Install & Uninstall TensorFlow on Raspberry Pi](https://github.com/inyong37/Vision/blob/master/Install/TensorFlow-RaspberryPi.md)
-### vi.   [Install Keras](https://github.com/inyong37/Vision/blob/master/Install/Keras.md)
-### viii. [Install Pytorch](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md)
-### ix. [Install Theano](https://github.com/inyong37/Vision/blob/master/Install/Theano.md)
-### x. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment-conda.md)
+### vi.   [Install Keras & Keras Reinforcement Learning](https://github.com/inyong37/Vision/blob/master/Install/Keras.md)
+### vii. [Install Pytorch](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md)
+### Viii. [Install Theano](https://github.com/inyong37/Vision/blob/master/Install/Theano.md)
+### iX. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment-conda.md)
 ----------
 ## Image Processing vs. Computer Vision [Reference](https://iskim3068.tistory.com/1)
 ### Dehazing - Image Processing/Object Recognition - Computer Vision
