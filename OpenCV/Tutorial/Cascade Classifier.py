@@ -1,5 +1,6 @@
 # Haar-cascade Detection in OpenCV
 # Reference: https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html
+# Reference: https://www.kaggle.com/lalitharajesh/haarcascades/
 
 from __future__ import print_function
 import cv2 as cv
