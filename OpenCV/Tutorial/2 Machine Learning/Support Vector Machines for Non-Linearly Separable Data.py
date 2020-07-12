@@ -1,3 +1,9 @@
+# Description       : Support Vector Machine in OpenCV
+# (Modified) Author : Inyong Hwang (inyong1020@gmail.com)
+# Data              : 2020-07-11-Sat
+# Reference         : https://docs.opencv.org/master/d0/dcc/tutorial_non_linear_svms.html
+
+
 from __future__ import print_function
 import cv2 as cv
 import numpy as np
