@@ -1,4 +1,4 @@
-# Description       : Haar-cascade Detection in OpenCV
+# Description       : Support Vector Machine in OpenCV
 # (Modified) Author : Inyong Hwang (inyong1020@gmail.com)
 # Data              : 2020-07-10-Fri
 # Reference         : https://docs.opencv.org/master/d1/d73/tutorial_introduction_to_svm.html
