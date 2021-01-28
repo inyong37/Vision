@@ -60,18 +60,18 @@ Image Processing with OpenCV
 [Korean Expalnation](https://ddokkddokk.tistory.com/21)
 
 Packages [scikit-image](http://scikit-image.org/docs/dev/install.html) [matplotlib](https://matplotlib.org/users/installing.html)
-```
+```cmd
 > pip install scikit-image
 > python -m pip install -U matplotlib
 ```
 
 ##### 1-2. Change Code for Windows or OS X
 [Github issue](https://github.com/scikit-image/scikit-image/issues/2595)
-```
+```python
 import skimage.io as io
 ```
 to 
-```
+```python
 import matplotlib
 matplotlib.use('TkAgg')
 from skimage import io
@@ -91,7 +91,7 @@ io.use_plugin('matplotlib')
 
 ### ii. PyTesseract
 [Github](https://github.com/madmaze/pytesseract), [pip](https://pypi.org/project/pytesseract/)
-```
+```cmd
 > pip install pytesseract
 ```
 
@@ -122,12 +122,12 @@ io.use_plugin('matplotlib')
 
 #### E-e. Color Reversal
 [Korean Explanation](https://076923.github.io/posts/Python-opencv-11/)
-```
+```python
 image = cv2.bitwise_not(input_image)
 ```
 #### E-f. Resize
 [Korean Explanation](https://076923.github.io/posts/Python-opencv-8/)
-```
+```python
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
 
@@ -200,5 +200,3 @@ Korean Scene Text Recognition by Character-level
 ### Vanishing Point - Computer Vision
 ### Depth Prediction - Computer Vision
 ### Opitcal Character Recognition - Computer Vision
-
-
