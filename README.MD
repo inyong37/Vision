@@ -3,7 +3,7 @@ Computuer Vision and Image Processing with Python, OpenCV, and Keras.
 
 ----------
 
-## 1. Dehazing to Object Recognition :construction:
+## :foggy: 1. Dehazing to Object Recognition :construction:
 Human, and fire detection and recognition in indoor foggy environment.
 
 ### i. Image Processing with OpenCV
