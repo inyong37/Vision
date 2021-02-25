@@ -21,7 +21,7 @@ Human, and fire detection and recognition in indoor foggy environment.
 ##### c. D-HAZY | [Homepage](http://www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/) | [Paper (IEEE)](https://ieeexplore.ieee.org/document/7532754)
 ##### d. O-HAZE | [Paper (arXiv)](https://arxiv.org/abs/1804.05101)
 
-### iii. Challenge
+### :checkered_flag: iii. Challenge
 #### A. NTIRE2018 | [Homepage](http://www.vision.ee.ethz.ch/ntire18/)
 
 ----------
@@ -91,9 +91,10 @@ image = cv2.bitwise_not(input_image)
 image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.INTER_LINEAR)
 ```
 
-### iii. Robust Reading Competition ICDAR | [Homepage](https://rrc.cvc.uab.es/)
+### :checkered_flag: iii. Challenge
 
-#### A. Overview - ICDAR 2019 Robust Reading Challenge on Multi-lingual scene text detection and recognition | [Homepage](https://rrc.cvc.uab.es/?ch=15)
+#### A. Robust Reading Competition ICDAR | [Homepage](https://rrc.cvc.uab.es/)
+Overview - ICDAR 2019 Robust Reading Challenge on Multi-lingual scene text detection and recognition | [Homepage](https://rrc.cvc.uab.es/?ch=15)
 
 ### iv. Korean STR
 Korean Scene Text Recognition by Character-level
