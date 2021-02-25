@@ -1,7 +1,7 @@
 # Vision
 Computuer Vision and Image Processing with Python, OpenCV, and Keras.
 
-## I. Dehazing to Object Recognition :construction:
+## 1. Dehazing to Object Recognition :construction:
 Human, and fire detection and recognition in indoor foggy environment.
 
 ### i. Image Processing with OpenCV
@@ -22,33 +22,30 @@ Human, and fire detection and recognition in indoor foggy environment.
 ### iii. Challenge
 #### A. NTIRE2018 | [Homepage](http://www.vision.ee.ethz.ch/ntire18/)
 
-## II. Vanishing Point to Control Posture :heavy_check_mark:
+## 2. Vanishing Point to Control Posture :heavy_check_mark:
 Using Image Processing with OpenCV
 
-## III. Depth to Obstacle Avoidance :construction:
+## 3. Depth to Obstacle Avoidance :construction:
 ### i. Image Processing with Deep Learning
 #### A. Dataset
 
 ##### a. NYU Dataset V1 | [Homepage](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html) | [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
 ##### b. NYU Dataset V2 | [Homepage](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) | [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
 
-##### 1. Sample Code for NYU
-##### 1-1. How to read NYU mat file with python
-[Korean Expalnation](https://ddokkddokk.tistory.com/21)
-
-Packages [scikit-image](http://scikit-image.org/docs/dev/install.html) [matplotlib](https://matplotlib.org/users/installing.html)
+##### c. Sample Code for NYU
+- How to read NYU mat file with python | [Blog (KR)](https://ddokkddokk.tistory.com/21)
+  - Packages [scikit-image](http://scikit-image.org/docs/dev/install.html) [matplotlib](https://matplotlib.org/users/installing.html)
 ```cmd
 > pip install scikit-image
 > python -m pip install -U matplotlib
 ```
 
-##### 1-2. Change Code for Windows or OS X
-[Github issue](https://github.com/scikit-image/scikit-image/issues/2595)
-```python
+- Change Code for Windows or OS X | [GitHub issue](https://github.com/scikit-image/scikit-image/issues/2595)
+```Python
 import skimage.io as io
 ```
 to 
-```python
+```Python
 import matplotlib
 matplotlib.use('TkAgg')
 from skimage import io
@@ -60,7 +57,7 @@ io.use_plugin('matplotlib')
 #### B. Model
 ##### a. FCRN | [Paper (arXiv)](https://arxiv.org/abs/1606.00373) | [GitHub](https://github.com/iro-cp/FCRN-DepthPrediction)
 
-## IV. Optical Character Recognition to Path Planning :construction:
+## 4. Optical Character Recognition to Path Planning :construction:
 ### i. Tesseract | [GitHub](https://github.com/tesseract-ocr/tesseract) | [Demo](http://tesseract.projectnaptha.com/)
 
 ### ii. PyTesseract | [GitHub](https://github.com/madmaze/pytesseract) | [Install with pip](https://pypi.org/project/pytesseract/)
