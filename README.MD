@@ -1,6 +1,8 @@
 # Vision
 Computuer Vision and Image Processing with Python, OpenCV, and Keras.
 
+----------
+
 ## 1. Dehazing to Object Recognition :construction:
 Human, and fire detection and recognition in indoor foggy environment.
 
@@ -13,7 +15,7 @@ Human, and fire detection and recognition in indoor foggy environment.
 ##### b. HOG detectMultiScale | [Blog (KR)](http://hamait.tistory.com/509) | [Blog (US)](https://www.pyimagesearch.com/2015/11/16/hog-detectmultiscale-parameters-explained/)
 
 ### ii. Image Processing with Deep Learning
-#### A. Dataset | [Reference](https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images)
+#### :books: A. Dataset | [Reference](https://www.researchgate.net/post/Is_there_exists_any_haze_fog_dust_smog_removal_images_data-set_with_ground_truth_images)
 ##### a. RESIDE: V0 (REalistic Single Image DEhazing) | [Homepage](https://sites.google.com/view/reside-dehaze-datasets/reside-v0) | [Paper (IEEE)](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8451944) | [Paper (arXiv)](https://arxiv.org/pdf/1712.04143.pdf)
 ##### b. I-HAZE | [Homepage](http://www.vision.ee.ethz.ch/ntire18/i-haze/) | [Paper (arXiv)](https://arxiv.org/abs/1804.05091)
 ##### c. D-HAZY | [Homepage](http://www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/) | [Paper (IEEE)](https://ieeexplore.ieee.org/document/7532754)
@@ -22,12 +24,16 @@ Human, and fire detection and recognition in indoor foggy environment.
 ### iii. Challenge
 #### A. NTIRE2018 | [Homepage](http://www.vision.ee.ethz.ch/ntire18/)
 
+----------
+
 ## 2. Vanishing Point to Control Posture :heavy_check_mark:
 Using Image Processing with OpenCV
 
+----------
+
 ## 3. Depth to Obstacle Avoidance :construction:
 ### i. Image Processing with Deep Learning
-#### A. Dataset
+#### :books: A. Dataset
 
 ##### a. NYU Dataset V1 | [Homepage](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v1.html) | [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_struct_light.pdf)
 ##### b. NYU Dataset V2 | [Homepage](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) | [Paper](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
@@ -56,6 +62,8 @@ io.use_plugin('matplotlib')
 
 #### B. Model
 ##### a. FCRN | [Paper (arXiv)](https://arxiv.org/abs/1606.00373) | [GitHub](https://github.com/iro-cp/FCRN-DepthPrediction)
+
+----------
 
 ## 4. Optical Character Recognition to Path Planning :construction:
 ### i. Tesseract | [GitHub](https://github.com/tesseract-ocr/tesseract) | [Demo](http://tesseract.projectnaptha.com/)
@@ -90,14 +98,15 @@ image = cv2.resize(input_image, dsize=(0, 0), fx=0.3, fy=0.7, interpolation=cv2.
 ### iv. Korean STR
 Korean Scene Text Recognition by Character-level
 
-#### A. dataset version 1 (.png) | [MNIST.zip](https://drive.google.com/file/d/1c7dlim-q_G_6XMPkZOhMPA474EHmkdx7/view?usp=sharing) | [PHD08.zip](https://drive.google.com/file/d/1jrAc5lqw-Nd0zfxS5tiY1E-mL3skty_N/view?usp=sharing)
+#### :books: A. Dataset
+##### a. Dataset Version 1 (.png) | [MNIST.zip](https://drive.google.com/file/d/1c7dlim-q_G_6XMPkZOhMPA474EHmkdx7/view?usp=sharing) | [PHD08.zip](https://drive.google.com/file/d/1jrAc5lqw-Nd0zfxS5tiY1E-mL3skty_N/view?usp=sharing)
 
 |<center>Dataset</center>|<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------|----------:|----------:|----------:|
 |<center>PHD08</center>|<center>Korean</center>|9|2,350|5,139,450|
 |<center>EMNIST (ByClass)</center>|<center>Number & English</center>|Hand Writing|62|814,255|
 
-#### B. dataset version 2 (.png) | [7z](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
+##### b. Dataset Version 2 (.png) | [7z](https://drive.google.com/file/d/1zmSysfB6BLwBfTDCh84coSxEhEqq2Ung/view?usp=sharing)
 
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
@@ -105,7 +114,7 @@ Korean Scene Text Recognition by Character-level
 |<center>Number</center>|70|10|700|
 |<center>English</center>|70|52 (upper 26, lower 26)|3,640|
 
-#### C. dataset version 3 (.png) | [7z](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing) | [zip](https://drive.google.com/file/d/1XVv-L0oR-xAQjs22f0lL2wZDwyY0RnDv/view?usp=sharing)
+##### c. Dataset Version 3 (.png) | [7z](https://drive.google.com/file/d/1mAXFEmYup06cBFohwEprvt1gLIRkCA7R/view?usp=sharing) | [zip](https://drive.google.com/file/d/1XVv-L0oR-xAQjs22f0lL2wZDwyY0RnDv/view?usp=sharing)
 
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
@@ -113,7 +122,7 @@ Korean Scene Text Recognition by Character-level
 |<center>Number</center>|69|10|690|
 |<center>English</center>|69|52 (upper 26, lower 26)|3,588|
 
-#### D. dataset version 4 (.png) | [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing) | [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing) | [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
+##### d. Dataset Version 4 (.png) | [7z](https://drive.google.com/file/d/1vQPIzj3Yuw4acuhzhdOV7c3z_ZQ5U0_q/view?usp=sharing) | [zip](https://drive.google.com/file/d/1wkYzcCbIYVmw2b4qdzDpQr0FBwVpMt78/view?usp=sharing) | [pkl](https://drive.google.com/file/d/1tHITLOsm3o27qUrz2CPUon1WTwhdFNGN/view?usp=sharing)
 
 |<center>Language</center>|# of fonts|# of characters|total # of images|
 |----------|----------:|----------:|----------:|
