@@ -26,7 +26,7 @@ Human, and fire detection and recognition in indoor foggy environment.
 
 ----------
 
-## 2. Vanishing Point to Control Posture :heavy_check_mark:
+## :dart: 2. Vanishing Point to Control Posture :heavy_check_mark:
 Using Image Processing with OpenCV
 
 ----------
