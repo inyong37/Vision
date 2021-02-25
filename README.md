@@ -195,8 +195,8 @@ Korean Scene Text Recognition by Character-level
 ### iX. [Virtual Environment with Conda](https://github.com/inyong37/Vision/blob/master/Install/Virtual-Environment-conda.md)
 ### X. [Setup Ubuntu](https://github.com/inyong37/Vision/blob/master/Install/Ubuntu.md)
 ----------
-## Image Processing vs. Computer Vision [Reference](https://iskim3068.tistory.com/1)
-### Dehazing - Image Processing/Object Recognition - Computer Vision
-### Vanishing Point - Computer Vision
-### Depth Prediction - Computer Vision
-### Opitcal Character Recognition - Computer Vision
+- Image Processing vs. Computer Vision [Reference](https://iskim3068.tistory.com/1)
+- Dehazing - Image Processing/Object Recognition - Computer Vision
+- Vanishing Point - Computer Vision
+- Depth Prediction - Computer Vision
+- Opitcal Character Recognition - Computer Vision
