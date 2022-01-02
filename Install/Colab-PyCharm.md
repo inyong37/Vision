@@ -1,12 +1,12 @@
 # Use Colab in PyCharm
 
-# I. Setup ngrok
-## i. Sgin-Up/In
+## I. Setup ngrok
+### i. Sgin-Up/In
 
-## ii. Get authtoken
+### ii. Get authtoken
 
-# II. Setup Colab
-## i. Define default setup
+## II. Setup Colab
+### i. Define default setup
 ```Python
 from google.colab import drive
 drive.mount('/content/drive)
@@ -14,19 +14,19 @@ NGROK_TOKEN = '{YOUR_TOKEN}'
 PASSWORD = '{YOUR_PASSWORD}'
 ```
 
-## ii. Install colab-ssh
+### ii. Install colab-ssh
 ```Python
 !pip install colab-ssh
 ```
 
-## iii. Get `HostName`, `Port`, and `User` | [Related issue](https://github.com/WassimBenzarti/colab-ssh/issues/45)
+### iii. Get `HostName`, `Port`, and `User` | [Related issue](https://github.com/WassimBenzarti/colab-ssh/issues/45)
 ```Python
 from colab_ssh import launch_ssh
 launch_ssh(NGROK_TOKEN, PASSWORD)
 ```
 
-# III. Setup PyCharm | **only in Professional Version**
-## i. Add Python Interpreter | [Configure an interpreter using SSH](https://www.jetbrains.com/help/pycharm/configuring-remote-interpreters-via-ssh.html)
+## III. Setup PyCharm | **only in Professional Version**
+### i. Add Python Interpreter | [Configure an interpreter using SSH](https://www.jetbrains.com/help/pycharm/configuring-remote-interpreters-via-ssh.html)
 - Host: `{HostName}`
 - Port: `{Port}`
 - Username: `{User}`
