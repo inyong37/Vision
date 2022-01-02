@@ -9,7 +9,7 @@
 ### i. Define default setup
 ```Python
 from google.colab import drive
-drive.mount('/content/drive)
+drive.mount('/content/drive')
 NGROK_TOKEN = '{YOUR_TOKEN}'
 PASSWORD = '{YOUR_PASSWORD}'
 ```
