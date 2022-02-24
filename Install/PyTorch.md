@@ -5,12 +5,12 @@
 > conda install pytorch-cpu torchvision-cpu -c pytorch
 ```
 
-### B. Windows & Conda & CUDA 9.0 :point_right: [check CUDA version](https://github.com/inyong37/Vision/edit/master/Install/Pytorch.md#a-cuda)
+### B. Windows & Conda & CUDA 9.0 :point_right: [check CUDA version](https://github.com/inyong37/Vision/blob/master/Install/PyTorch.md#a-cuda)
 ```cmd
 > conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
 ```
 
-### C. Windows & pip & Python 3.6 & CUDA 9.0 :point_right: [check Python version](https://github.com/inyong37/Vision/edit/master/Install/Pytorch.md#b-python)
+### C. Windows & pip & Python 3.6 & CUDA 9.0 :point_right: [check Python version](https://github.com/inyong37/Vision/blob/master/Install/Pytorch.md#b-python)
 ```cmd
 > pip3 install https://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl
 > pip3 install torchvision
