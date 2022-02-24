@@ -30,7 +30,7 @@ $ sudo python setup.py install
 > activate {env_name}
 ```
 
-### II-A. Install Keras-RL with Pypi (pip)
+### II-A. Install Keras RL with Pypi (pip)
 ```cmd
 > pip install keras-rl
 ```
