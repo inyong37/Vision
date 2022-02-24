@@ -87,6 +87,12 @@ nvcc --version
 python --version
 ```
 
+# Uninstalling PyTorch
+Recommend to using the Pip
+```
+pip uninstall pytorch torchaudio torchvision
+```
+
 ----------
 
 #### Reference
