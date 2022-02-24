@@ -141,3 +141,48 @@ $ roslaunch cvg_sim_gazebo ardrone_testworld.launch
 $ cd ~/test_ws
 $ rosrun test_pkg test.py
 ```
+
+## Setup xrdp
+### I. Install xrdp
+```bash
+$ sudo apt update && sudo apt install xrdp -y
+```
+
+### II. Check xrdp status and add current user into sll cert key list
+```bash
+$ sudo systemctl status xrdp
+$ sudo adduser xrdp ssl-cert
+```
+
+*change xrdp port*
+```bash
+$ sudo vim /etc/xrdp/xrdp.ini # default port is 3389
+```
+
+### III. Setup xrdp always enable
+```bash
+$ sudo systemctl enable xrdp.service
+```
+
+### IV. Install firewalld to opne port for xrdp
+```bash
+$ sudo apt update && sudo apt install firewalld -y
+```
+
+### V. Setup Firewall
+```bash
+$ sudo firewall-cmd --permanent --zone=public --add-port={port_number}/tcp
+$ sudo systemctl restart firewalld.service
+$ sudo reboot
+```
+
+### VI. Connect from other devices using Remote Desktop Application
+*Windows*
+Remote Desktop
+
+----------
+
+#### Reference
+- install xrdp on Ubuntu 20, https://ko.linux-console.net/?p=393, 2022-02-24-Thu.
+- setup xrdp on Ubuntu, https://corona-world.tistory.com/21, 2022-02-24-Thu.
+- install firewalld on Ubuntu, https://lindarex.github.io/ubuntu/ubuntu-firewalld-installation/, 2022-02-24-Thu.
