@@ -35,7 +35,7 @@ $ sudo python setup.py install
 > pip install keras-rl
 ```
 
-### II-B. Install Keras-RL from GitHub source
+### II-B. Install Keras RL from GitHub source
 ```cmd
 > git clone https://github.com/keras-rl/keras-rl.git
 > cd keras-rl
