@@ -6,7 +6,7 @@ activate {env_name}
 ```
 
 ### Install PyTorch
-#### A. Install CPU version of PyTorch
+#### A. Install CPU version of PyTorch *recommend to install lts version*
 *On Windows & Linux w. Conda*
 ```
 conda install pytorch torchvision torchaudio cpuonly -c pytorch
