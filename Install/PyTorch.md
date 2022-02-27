@@ -6,21 +6,25 @@ activate {env_name}
 ```
 
 ### Install PyTorch
-#### A. Install CPU version of PyTorch *recommend to install lts version*
+#### A. Install CPU version of PyTorch *recommend to install LTS version*
 *On Windows & Linux w. Conda*
 ```
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
+conda install pytorch torchvision torchaudio cpuonly -c pytorch-lts
 ```
+
+*macOS is not currently supported for lts*
 
 *On Windows w. Pip*
 ```cmd
-> pip3 install torch torchvision torchaudio
+> pip3 install torch==1.8.2+cpu torchvision==0.9.2+cpu torchaudio===0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
 ```
 
 *On Linux w. Pip*
 ```bash
-$ pip3 install torch==1.10.2+cpu torchvision==0.11.3+cpu torchaudio==0.10.2+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+$ pip3 install torch==1.8.2+cpu torchvision==0.9.2+cpu torchaudio==0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
 ```
+
+*macOS is not currently supported for lts*
 
 *~~On Windows & Linux w. conda~~* (deprecated)
 ```
