@@ -43,6 +43,12 @@ $ conda activate envs # macOS
 
 ## III. Remove Virtual Environment with conda
 
+### Prerequirement: Deactivate
+```bash
+> deactivate # in Windows.
+$ conda deactivate # in macOS.
+```
+
 ### i. Basic
 ```
 > conda env remove -n envs
