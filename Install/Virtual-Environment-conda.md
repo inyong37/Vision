@@ -23,11 +23,17 @@
 > conda create --prefix C:\Users\Inyong\Python\Anaconda\conda\conda\envs\py36 python=3.6 anaconda
 ```
 
+### Summary
+```
+$ conda create -n enve python=3.9 anaconda
+```
+
 ## II. Activate Virtual Environment
 
 ### i. Basic
-```
-> activate envs
+```bash
+> activate envs # Windows
+$ conda activate envs # macOS
 ```
 
 ### ii. Specific Directory/Path
