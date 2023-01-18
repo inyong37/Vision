@@ -2,6 +2,8 @@
 
 ## A. Ubuntu 20.04.4 LTS
 
+:key: All commands are executed on sudo.
+
 ### 1. Forwarding IPv4 and letting iptables see bridged traffic
 
 ```Bash
@@ -12,8 +14,8 @@ EOF
 ```
 
 ```Bash
-$ sudo modprobe overlay
-$ sudo modprobe br_netfilter
+$ modprobe overlay
+$ modprobe br_netfilter
 ```
 
 sysctl params required by setup, params persist across reboots: 
@@ -29,7 +31,7 @@ EOF
 Apply sysctl params without reboot:
 
 ```Bash
-$ sudo sysctl --system
+$ sysctl --system
 
 ```
 
@@ -110,7 +112,38 @@ $ systemctl restart docker
 ```
 
 ```Bash
-$ sudo systemctl enable docker
+$ systemctl enable docker
+```
+
+### 5. Install kubeadm/kubelet/kubectl
+
+:key: In releases older than Debian 12 and Ubuntu 22.04, /etc/apt/keyrings does not exist by default. You can create this directory if you need to, making it world-readable but writeable only by admins.
+
+Update the apt package index and install packages needed to use the Kubernetes apt repository:
+
+```Bash
+$ apt-get update
+$ apt-get install -y apt-transport-https ca-certificates curl
+```
+
+Download the Google Cloud public signing key:
+
+```Bash
+$ curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+```
+
+Add the Kubernetes apt repository:
+
+```Bash
+$ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+```
+
+Update apt package index, install kubelet, kubeadm and kubectl, and pin their version:
+
+```Bash
+$ apt-get update
+$ apt-get install -y kubelet kubeadm kubectl
+$ apt-mark hold kubelet kubeadm kubectl
 ```
 
 ---
@@ -121,3 +154,5 @@ $ sudo systemctl enable docker
 - Container Runtimes, https://kubernetes.io/docs/setup/production-environment/container-runtimes/, 2023-01-17-Tue.
 - Install Docker Engine on Ubuntu, https://docs.docker.com/engine/install/ubuntu/, 2023-01-17-Tue.
 - Runtime Container, https://kubernetes.io/id/docs/setup/production-environment/container-runtimes/, 2023-01-17-Tue.
+- Installing kubeadm, https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/, 2023-01-18-Wed.
+- 
