@@ -154,6 +154,48 @@ $ apt-get install -y kubelet kubeadm kubectl
 $ apt-mark hold kubelet kubeadm kubectl
 ```
 
+### 6-1. Control Pane - master node
+
+```bash
+$ kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=192.168.56.2
+```
+
+To start using your cluster, you need to run the following as a regular user:
+
+```bash
+$ mkdir -p $HOME/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+:key: Alternatively, if you are the root user, you can run:
+
+```bash
+$ export KUBECONFIG=/etc/kubernetes/admin.conf
+```
+
+[Install Weave Net](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)
+
+```Bash
+$ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+```
+
+### 6-2. Worker node
+
+You can join any number of worker nodes by running the following on each as root:
+
+```Bash
+$ kubeadm join 192.168.56.2:6443 --token h9smbd.hdx5qpw8ngj5unfv \
+        --discovery-token-ca-cert-hash sha256:15424be7be8aa35c51916619fb3e185424fb5f4edb68e73d6682ed579d7b55c4
+```
+
+### 6-3. Check it on master node
+
+```Bash
+$ kubectl get nodes
+```
+<img width="383" alt="Screenshot 2023-01-18 at 1 54 19 PM" src="https://user-images.githubusercontent.com/20737479/213087369-fff2a1f1-0130-44ba-b7e6-a95fd3d454fb.png">
+
 ## :construction: B. macOS with Apple Silicon
 
 ### 1. Install Vagrant
@@ -201,3 +243,5 @@ $ vagrant plugin install vagrant-vmware-desktop
 - Installing kubeadm, https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/, 2023-01-18-Wed.
 - Setting up Vagrant 2.3.0 for Virtual Machine Management in Mac ( Apple M1 Pro), https://medium.com/geekculture/setting-up-vagrant-2-3-0-for-virtual-machine-management-in-mac-apple-m1-pro-9dc4ec9036db, 2023-01-16-Mon.
 - VMware Fusion Public Tech Preview 22H2, https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2, 2023-01-16-Mon.
+- Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-01-18-Wed.
+- 
