@@ -215,7 +215,7 @@ $ ln -s /Applications/VMWare\ Fusion\ Tech\ Preview.app /Applications/VMWare\ Fu
 sudo /opt/vagrant-vmware-desktop/bin/vagrant-vmware-utility api -debug
 ```
 
-Verify runngin:
+Verify running:
 
 ```zsh
 $ sudo lsof -i -P | grep LISTEN | grep 'vagrant-v'
