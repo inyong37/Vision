@@ -56,13 +56,15 @@ $ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https:
 $ sudo apt update && sudo apt install vagrant
 ```
 
-```Bash
-$ vagrant up
-```
-
 ### 3. Install Virtualbox-6.1
 
 https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
+
+Start vagrant with virtualbox:
+
+```Bash
+$ vagrant up --provider virtualbox
+```
 
 ### 4. Install Container Runtime - Docker
 
@@ -145,6 +147,16 @@ $ apt-get update
 $ apt-get install -y kubelet kubeadm kubectl
 $ apt-mark hold kubelet kubeadm kubectl
 ```
+
+## B. macOS with Apple Silicon
+
+### 1. Install Vagrant
+
+```zsh
+$ brew install hashicorp/tap/hashicorp-vagrant
+```
+
+### 2. 
 
 ---
 
