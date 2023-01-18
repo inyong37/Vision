@@ -4,7 +4,31 @@
 
 :key: All commands are executed on sudo.
 
-### 1. Forwarding IPv4 and letting iptables see bridged traffic
+### 1. Install Vagrant
+
+```bash
+$ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+$ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+$ sudo apt update && sudo apt install vagrant
+```
+
+### 2. Install Virtualbox-6.1
+
+https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
+
+Start vagrant with virtualbox:
+
+```Bash
+$ vagrant up --provider virtualbox
+```
+
+ssh:
+
+```Bash
+$ vagrant ssh {vm_name}
+```
+
+### 3. Forwarding IPv4 and letting iptables see bridged traffic
 
 ```Bash
 $ cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -46,24 +70,6 @@ Verify that the net.bridge.bridge-nf-call-iptables, net.bridge.bridge-nf-call-ip
 
 ```Bash
 $ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
-```
-
-### 2. Install Vagrant
-
-```bash
-$ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
-$ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-$ sudo apt update && sudo apt install vagrant
-```
-
-### 3. Install Virtualbox-6.1
-
-https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
-
-Start vagrant with virtualbox:
-
-```Bash
-$ vagrant up --provider virtualbox
 ```
 
 ### 4. Install Container Runtime - Docker
