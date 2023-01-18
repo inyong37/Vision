@@ -157,7 +157,7 @@ $ apt-mark hold kubelet kubeadm kubectl
 ### 6-1. Control Pane - master node
 
 ```bash
-$ kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=192.168.56.2
+$ kubeadm init --pod-network-cidr <ip_address>/16 --apiserver-advertise-address=<master_node_ip_address>
 ```
 
 To start using your cluster, you need to run the following as a regular user:
@@ -185,8 +185,7 @@ $ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/
 You can join any number of worker nodes by running the following on each as root:
 
 ```Bash
-$ kubeadm join 192.168.56.2:6443 --token h9smbd.hdx5qpw8ngj5unfv \
-        --discovery-token-ca-cert-hash sha256:15424be7be8aa35c51916619fb3e185424fb5f4edb68e73d6682ed579d7b55c4
+$ kubeadm join --token <token> <control-plane-host>:<control-plane-port> --discovery-token-ca-cert-hash sha256:<hash>
 ```
 
 ### 6-3. Check it on master node
@@ -235,6 +234,7 @@ $ vagrant plugin install vagrant-vmware-desktop
 ---
 
 ### Reference
+- Certified Kubernetes Administrator (CKA) with Practice Test, https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/, 2023-01-18-Wed.
 - Install Vagrant, https://developer.hashicorp.com/vagrant/downloads, 2023-01-18-Wed.
 - Download VirtualBox (Old Builds): VirtualBox 6.1, https://www.virtualbox.org/wiki/Download_Old_Builds_6_1, 2023-01-18-Wed.
 - Container Runtimes, https://kubernetes.io/docs/setup/production-environment/container-runtimes/, 2023-01-17-Tue.
@@ -244,4 +244,3 @@ $ vagrant plugin install vagrant-vmware-desktop
 - Setting up Vagrant 2.3.0 for Virtual Machine Management in Mac ( Apple M1 Pro), https://medium.com/geekculture/setting-up-vagrant-2-3-0-for-virtual-machine-management-in-mac-apple-m1-pro-9dc4ec9036db, 2023-01-16-Mon.
 - VMware Fusion Public Tech Preview 22H2, https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2, 2023-01-16-Mon.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-01-18-Wed.
-- 
