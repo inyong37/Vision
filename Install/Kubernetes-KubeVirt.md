@@ -85,3 +85,4 @@ $ kubectl get pods -n kubevirt
 ### Reference
 - Installation, https://kubevirt.io/user-guide/operations/installation/, 2023-01-19-Thu.
 - Find Out What Container Runtime is Used on a Node, https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/find-out-runtime-you-use/, 2023-01-19-Thu.
+- KubeVirt: installing Microsoft Windows from an ISO, https://kubevirt.io/2020/KubeVirt-installing_Microsoft_Windows_from_an_iso.html, 2023-01-19-Thu.
