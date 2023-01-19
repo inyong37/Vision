@@ -15,7 +15,7 @@ $ kubectl get nodes -o wide
 
 <img width="1011" alt="Screenshot 2023-01-19 at 11 06 45 AM" src="https://user-images.githubusercontent.com/20737479/213338659-e99b4576-1b1e-4256-a6a1-f91fd76bcca9.png">
 
-### Validate Hardware Virtualization Support¶
+### Validate Hardware Virtualization Support
 
 Hardware with virtualization support is recommended. You can use virt-host-validate to ensure that your hosts are capable of running virtualization workloads:
 
