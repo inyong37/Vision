@@ -79,4 +79,3 @@ $ kubectl get pods -n kubevirt
 ### Reference
 - Installation, https://kubevirt.io/user-guide/operations/installation/, 2023-01-19-Thu.
 - Find Out What Container Runtime is Used on a Node, https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/find-out-runtime-you-use/, 2023-01-19-Thu.
-- 
