@@ -52,6 +52,10 @@ Wait until all KubeVirt components are up:
 $ kubectl -n kubevirt wait kv kubevirt --for condition=Available
 ```
 
+<img width="576" alt="Screenshot 2023-01-19 at 11 22 20 AM" src="https://user-images.githubusercontent.com/20737479/213340468-d59e131d-99aa-419d-896b-cb61eecdc829.png">
+
+A timeout error occurred, but when I checked the pods, it was already running.
+
 :key: If hardware virtualization is not available, then a software emulation fallback can be enabled using by setting in the KubeVirt CR spec.configuration.developerConfiguration.useEmulation to true as follows:
 
 ```bash
@@ -73,6 +77,8 @@ All new components will be deployed under the kubevirt namespace:
 ```bash
 $ kubectl get pods -n kubevirt
 ```
+
+<img width="486" alt="Screenshot 2023-01-19 at 11 21 52 AM" src="https://user-images.githubusercontent.com/20737479/213340429-e8b458ca-599e-47ae-b296-0f27f30e1e5f.png">
 
 ---
 
