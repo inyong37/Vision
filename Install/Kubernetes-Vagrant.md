@@ -14,7 +14,18 @@ $ sudo apt update && sudo apt install vagrant
 
 ### 2. Install Virtualbox-6.1
 
+a. Download VirtualBox with GUI:
+
 https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
+
+b. Download VirtualBox with CUI:
+
+```Bash
+$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+$ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+$ sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian focal contrib"
+$ apt update && apt install virtualbox-6.1
+```
 
 Start vagrant with virtualbox:
 
@@ -73,6 +84,8 @@ $ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables 
 ```
 
 ### 4. Install Container Runtime - Docker
+
+:key: If you want to use KubeVirt, then you have to install containerd or CRI for Container Runtime.
 
 ```Bash
 $ apt-get update && apt-get install -y \
@@ -244,3 +257,4 @@ $ vagrant plugin install vagrant-vmware-desktop
 - Setting up Vagrant 2.3.0 for Virtual Machine Management in Mac ( Apple M1 Pro), https://medium.com/geekculture/setting-up-vagrant-2-3-0-for-virtual-machine-management-in-mac-apple-m1-pro-9dc4ec9036db, 2023-01-16-Mon.
 - VMware Fusion Public Tech Preview 22H2, https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2, 2023-01-16-Mon.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-01-18-Wed.
+- How to Install VirtualBox 6.1 on Ubuntu 20.04, https://tecadmin.net/install-virtualbox-on-ubuntu-20-04/, 2023-01-19-Thu.
