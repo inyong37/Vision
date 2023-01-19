@@ -1,6 +1,6 @@
 # Install KubeVirt on Kubernetes (1.26.0) and Ubuntu (18.04.6 LTS)
 
-## Requirements
+## 0. Requirements
 
 ### Container Runtime Support
 
@@ -26,7 +26,7 @@ $ virt-host-validate qemu
 
 <img width="1133" alt="Screenshot 2023-01-19 at 11 12 11 AM" src="https://user-images.githubusercontent.com/20737479/213339345-7cba774f-329c-44d0-b953-7a28f1d4179c.png">
 
-## Installing KubeVirt on Kubernetes
+## 1. Installing KubeVirt on Kubernetes
 
 Point at latest release:
 
@@ -80,7 +80,7 @@ $ kubectl get pods -n kubevirt
 
 <img width="486" alt="Screenshot 2023-01-19 at 11 21 52 AM" src="https://user-images.githubusercontent.com/20737479/213340429-e8b458ca-599e-47ae-b296-0f27f30e1e5f.png">
 
-## [Install Containerized Data Importer (CDI)](https://kubevirt.io/user-guide/operations/containerized_data_importer/)
+## 2. [Install Containerized Data Importer (CDI)](https://kubevirt.io/user-guide/operations/containerized_data_importer/)
 
 ### What is a Containerized Data Importer (CDI)?
 
@@ -108,7 +108,7 @@ The `cdi-uploadproxy` service must be accessible from outside the cluster. Here 
 - Route
 - kubectl port-forward (not recommended for production clusters)
 
-## [Install virtctl](https://kubevirt.io/user-guide/operations/virtctl_client_tool/)
+## 3. [Install virtctl](https://kubevirt.io/user-guide/operations/virtctl_client_tool/)
 
 Basic VirtualMachineInstance operations can be performed with the stock kubectl utility. However, the virtctl binary utility is required to use advanced features such as:
 - Serial and graphical console access
