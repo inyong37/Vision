@@ -1,4 +1,4 @@
-# [Deploy Windows 11 Virtual Machine on Kubernetes with KubeVirt](https://kubevirt.io/2022/KubeVirt-installing_Microsoft_Windows_11_from_an_iso.html)
+# [Deploy Windows 11 on Kubernetes with KubeVirt](https://kubevirt.io/2022/KubeVirt-installing_Microsoft_Windows_11_from_an_iso.html)
 
 ## Requirements
 
