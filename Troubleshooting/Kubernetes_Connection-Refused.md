@@ -1,4 +1,10 @@
-# :construction: Connection Refused on Kubernetes (1.27.0) and Ubuntu (18.04.6 LTS)
+# :construction: Connection Refused
+
+## Environment
+
+Kubernetes (1.27.0)
+
+Ubuntu (18.04.6 LTS)
 
 ## Date
 
