@@ -8,7 +8,7 @@ Ubuntu (18.04.6 LTS)
 
 ## Date
 
-2023-01-20-Fri.
+2023-01-20-Friday
 
 ## Problem
 
