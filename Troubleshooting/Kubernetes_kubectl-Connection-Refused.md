@@ -1,4 +1,4 @@
-# :construction: Connection Refused
+# :construction: `kubectl` Connection Refused
 
 ## Environment
 
