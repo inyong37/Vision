@@ -61,7 +61,7 @@ $ kubectl -n rook-ceph delete cephcluster rook-ceph
 Delete the Operator and related Resources:
 
 ```Bash
-$  kubectl delete -f operator.yaml
+$ kubectl delete -f operator.yaml
 $ kubectl delete -f common.yaml
 $ kubectl delete -f psp.yaml
 $ kubectl delete -f crds.yaml
