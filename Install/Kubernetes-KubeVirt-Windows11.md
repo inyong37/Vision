@@ -17,3 +17,5 @@ $ make cluster-up && make cluster-sync
 
 ### Reference
 - KubeVirt: installing Microsoft Windows 11 from an ISO ,https://kubevirt.io/2022/KubeVirt-installing_Microsoft_Windows_11_from_an_iso.html, 2023-01-20-Fri.
+- Installing a Windows VM from an ISO in Kubernetes with KubeVirt, https://youtu.be/MBvm48v43g0, 2023-01-25-Wed.
+- [DIAMANTI] Use Case: How to run windows POD Using Kubevirt on Diamanti, https://knk1034.medium.com/diamanti-use-case-how-to-run-windows-pod-using-kubevirt-on-diamanti-f966f69c46bb, 2023-01-25-Wed.
