@@ -67,7 +67,9 @@ $ kubectl get vmis
 
 > <img width="393" alt="Screenshot 2023-01-25 at 3 29 24 PM" src="https://user-images.githubusercontent.com/20737479/214495716-dc8cd50d-c189-4afd-8760-4ad053e1a07c.png">
 
-## Accessing VMs (serial console)
+## [Accessing Virtual Machines](https://kubevirt.io/user-guide/virtual_machines/accessing_virtual_machines/)
+
+### A. CLI (console)
 
 ```Bash
 $ kubectl virt console testvm
@@ -75,6 +77,13 @@ $ virtctl console testvm
 ```
 
 > <img width="474" alt="Screenshot 2023-01-25 at 3 30 06 PM" src="https://user-images.githubusercontent.com/20737479/214495804-3a4e5fb2-b83b-4c2c-94f9-7a7b17cb3f25.png">
+
+### B. GUI (VNC)
+
+```Bash
+$ kubectl virt vnc testvm
+$ virtctl vnc testvm
+```
 
 ## Delete the virtual machine
 
@@ -87,3 +96,4 @@ $ kubectl delete vm testvm
 ### Reference
 
 - Use KubeVirt, https://kubevirt.io/labs/kubernetes/lab1.html, 2023-01-25-Wed.
+- Accessing Virtual Machines, https://kubevirt.io/user-guide/virtual_machines/accessing_virtual_machines/, 2023-01-25-Wed.
