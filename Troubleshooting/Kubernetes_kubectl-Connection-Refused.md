@@ -42,9 +42,16 @@ $ export KUBECONFIG=$HOME/admin.conf
 
 ## Fixed
 
+#1
+
 <img width="1011" alt="Screenshot 2023-01-20 at 10 59 53 AM" src="https://user-images.githubusercontent.com/20737479/213601883-3ea6f166-f912-4804-bacf-51cbc9e41c73.png">
+
+#2
+
+<img width="291" alt="Screenshot 2023-01-25 at 2 05 04 PM" src="https://user-images.githubusercontent.com/20737479/214484259-3b29df62-43eb-4d97-be7b-f07a4ca1461e.png">
 
 ---
 
 ### Reference
+
 - The connection to the server localhost:8080 was refused – did you specify the right host or port?, https://k21academy.com/docker-kubernetes/the-connection-to-the-server-localhost8080-was-refused/, 2023-01-20-Fri.
