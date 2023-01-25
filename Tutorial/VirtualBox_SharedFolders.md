@@ -26,6 +26,8 @@ $ sudo mkdir /mnt/share # folder to use for sharing
 $ sudo mount -t vboxsf share /mnt/share # name set by Host OS and folder path
 ```
 
+> <img width="214" alt="Screenshot 2023-01-25 at 3 50 06 PM" src="https://user-images.githubusercontent.com/20737479/214498725-e7e26bc9-fa40-4584-a63e-4631fe0a0d42.png">
+
 ---
 
 ### Reference
