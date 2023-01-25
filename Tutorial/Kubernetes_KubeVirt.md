@@ -56,8 +56,16 @@ $ kubectl patch virtualmachine testvm --type merge -p \
 ## Check virtual machines
 
 ```Bash
+$ kubectl get vm
+```
+
+> <img width="240" alt="Screenshot 2023-01-25 at 3 29 06 PM" src="https://user-images.githubusercontent.com/20737479/214495683-25686f1f-1df9-4d2f-8ead-b145b82d0295.png">
+
+```Bash
 $ kubectl get vmis
 ```
+
+> <img width="393" alt="Screenshot 2023-01-25 at 3 29 24 PM" src="https://user-images.githubusercontent.com/20737479/214495716-dc8cd50d-c189-4afd-8760-4ad053e1a07c.png">
 
 ## Accessing VMs (serial console)
 
@@ -65,6 +73,8 @@ $ kubectl get vmis
 $ kubectl virt console testvm
 $ virtctl console testvm
 ```
+
+> <img width="474" alt="Screenshot 2023-01-25 at 3 30 06 PM" src="https://user-images.githubusercontent.com/20737479/214495804-3a4e5fb2-b83b-4c2c-94f9-7a7b17cb3f25.png">
 
 ## Delete the virtual machine
 
