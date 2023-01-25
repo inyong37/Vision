@@ -36,7 +36,7 @@ $ vagrant up --provider virtualbox
 ssh:
 
 ```Bash
-$ vagrant ssh {vm_name}
+$ vagrant ssh {vm_name} # kubemaster, kubenode01, kubenode01
 ```
 
 ### 3. Forwarding IPv4 and letting iptables see bridged traffic
