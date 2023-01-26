@@ -53,10 +53,19 @@ $ git --version
 
 ### [docker](https://docs.docker.com/engine/install/centos/)
 
-Install:
+Set up the repository:
 
 ```Bash
-$ sudo yum upate && yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+$ sudo yum install -y yum-utils
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+To install the latest version, run:
+
+```Bash
+$ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 Start:
