@@ -145,7 +145,7 @@ Korean Scene Text Recognition by Character-level
 ### v.    [Install TensorFlow on Raspberry Pi](Install/TensorFlow-RaspberryPi.md)
 ### vi.   [Install Keras & Reinforcement Learning](Install/Keras.md)
 ### vii.  [Install Pytorch](Install/Pytorch.md)
-### Viii. [Install Theano](Install/Theano.md)
+### viii. [Install Theano](Install/Theano.md)
 ### ix.   [Python Virtual Environment with Conda](Install/Virtual-Environment-conda.md)
 ### x.    [Setup Ubuntu](Install/Ubuntu.md)
 ### xi.   [Setup CentOS](Install/CentOS.md)
