@@ -258,4 +258,3 @@ $ vagrant plugin install vagrant-vmware-desktop
 - VMware Fusion Public Tech Preview 22H2, https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2, 2023-01-16-Mon.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-01-18-Wed.
 - How to Install VirtualBox 6.1 on Ubuntu 20.04, https://tecadmin.net/install-virtualbox-on-ubuntu-20-04/, 2023-01-19-Thu.
-- 가상머신 생성은 Vagrant로!, https://blog.juho.kim/posts/2021-10-01_Vagrant/, 2023-01-27-Fri.
