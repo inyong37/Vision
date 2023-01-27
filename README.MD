@@ -150,7 +150,7 @@ Korean Scene Text Recognition by Character-level
 ### x.    [Setup Ubuntu](Install/Ubuntu.md)
 ### xi.   [Setup CentOS](Install/CentOS.md)
 ### xii.  [Install Vagrant](Install/Vagrant.md)
-### xiii. [Install Kubernetes](Install/Kubernetes-Vagrant.md)
+### xiii. [Install Kubernetes](Install/Kubernetes.md)
 ### xiv.  [Install KubeVirt](Install/Kubernetes-KubeVirt.md)
 ### xv.   [Install Rook Ceph](Install/Kubernetes-Rook-Ceph.md)
 ----------
