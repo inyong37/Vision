@@ -28,7 +28,7 @@ $ apt-get install -y lvm2
 
 If you will be creating volumes from a Ceph shared file system (CephFS), the recommended minimum kernel version is 4.17. If you have a kernel version less than 4.17, the requested PVC sizes will not be enforced. Storage quotas will only be enforced on newer kernels.
 
-## [Rook Ceph 1.9 Quickstart](https://rook.io/docs/rook/v1.9/quickstart.html)
+## A. [Rook Ceph 1.9 Quickstart](https://rook.io/docs/rook/v1.9/quickstart.html)
 
 :key: Kubernetes v1.17 or higher is supported by Rook.
 
@@ -67,7 +67,7 @@ $ kubectl delete -f psp.yaml
 $ kubectl delete -f crds.yaml
 ```
 
-## [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
+## B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
 
 ```Bash
 $ kubectl krew install rook-ceph
