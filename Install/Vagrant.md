@@ -32,6 +32,12 @@ $ vagrant global-status
 
 > <img width="1384" alt="Screenshot 2023-01-30 at 10 42 00 AM" src="https://user-images.githubusercontent.com/20737479/215370412-8ec7959d-1e89-4196-9f0c-59ff8581ddfa.png">
 
+### Connect
+
+```Bash
+$ vagrant ssh {name} # kubemaster
+```
+
 ---
 
 ### Reference
