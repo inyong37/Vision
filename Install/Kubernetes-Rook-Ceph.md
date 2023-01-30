@@ -39,6 +39,10 @@ $ kubectl create -f crds.yaml -f common.yaml -f operator.yaml
 $ kubectl create -f cluster.yaml
 ```
 
+### [Issue](https://github.com/helm/helm/issues/11287)
+
+> <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
+
 ## [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
 
 Delete the Block and File artifacts:
