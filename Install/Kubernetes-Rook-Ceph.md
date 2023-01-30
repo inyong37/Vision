@@ -67,6 +67,12 @@ $ kubectl delete -f psp.yaml
 $ kubectl delete -f crds.yaml
 ```
 
+## [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
+
+```Bash
+$ kubectl krew install rook-ceph
+```
+
 ---
 
 ### Reference
@@ -76,3 +82,4 @@ $ kubectl delete -f crds.yaml
 - 쿠버네티스 가상스토리지(Ceph) 설치, https://danawalab.github.io/kubernetes/2020/01/28/kubernetes-rook-ceph.html, 2023-01-20-Fri.
 - Ceph Quickstart, https://rook.io/docs/rook/v1.9/quickstart.html, 2023-01-25-Wed.
 - Cleanup, https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/, 2023-01-25-Wed.
+- kubectl-rook-ceph, https://github.com/rook/kubectl-rook-ceph, 2023-01-30-Mon.
