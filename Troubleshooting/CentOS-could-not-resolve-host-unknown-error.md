@@ -1,5 +1,9 @@
 # CentOS yum install: Could not resolve host Unknown error
 
+## Environment
+
+CentOS Linux release 7.9.2009 (Core)
+
 ## Date
 
 2023-01-31-Tuesday.
