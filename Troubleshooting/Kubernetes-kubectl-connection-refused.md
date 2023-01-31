@@ -2,9 +2,9 @@
 
 ## Environment
 
-Kubernetes (1.27.0)
+Ubuntu 18.04.6 LTS
 
-Ubuntu (18.04.6 LTS)
+Kubernetes 1.26.0
 
 ## Date
 
