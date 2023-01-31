@@ -2,9 +2,11 @@
 
 ## Environment
 
-Host OS: Ubuntu (20.04.4 LTS), VirtualBox 6.1
+Host OS: Ubuntu 20.04.4 LTS
 
-Guest OS: Ubuntu (18.04.6 LTS)
+VirtualBox 6.1
+
+Guest OS: Ubuntu 18.04.6 LTS)
 
 ## Host OS
 
