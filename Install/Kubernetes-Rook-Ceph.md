@@ -43,6 +43,10 @@ $ kubectl create -f cluster.yaml
 
 > <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
 
+With Kubernetes 1.24.0:
+
+> <img width="622" alt="Screenshot 2023-01-31 at 11 07 12 AM" src="https://user-images.githubusercontent.com/20737479/215641540-5980ac86-1197-46b0-9fb9-59911b4ff131.png">
+
 ## [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
 
 Delete the Block and File artifacts:
