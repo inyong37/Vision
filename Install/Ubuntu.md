@@ -193,8 +193,8 @@ $ vim /etc/netplan/{ethernet_name}.yaml
 ...
       dhcp4: no
       addresses:
-      - 192.168.123.123/24
-      gateway4: 192.168.123.1
+      - 192.168.123.123/24 # fake address
+      gateway4: 192.168.123.1 # fake addresse
       nameservers:
         addresses:
         - 8.8.8.8
