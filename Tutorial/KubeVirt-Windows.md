@@ -1,5 +1,11 @@
 # [Deploy Windows 11 on Kubernetes with KubeVirt](https://kubevirt.io/2022/KubeVirt-installing_Microsoft_Windows_11_from_an_iso.html)
 
+## Environment
+
+Ubuntu 18.04.6 LTS
+
+Kubernetes 1.26.0
+
 ## Requirements
 
 - You’ll need a Kubernetes cluster with worker node(s) that have at least 6GB of available memory
