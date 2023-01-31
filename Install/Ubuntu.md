@@ -180,7 +180,44 @@ $ sudo reboot
 *Windows*
 Remote Desktop
 
-----------
+## Setup Static IP after Ubuntu 22 on CLI/Terminal/Shell
+
+### 1. Edit yaml file
+
+```Bash
+$ sudo su # Edit file with root authority
+$ vim /etc/netplan/{ethernet_name}.yaml
+```
+
+```yaml
+...
+      dhcp4: no
+      addresses:
+      - 192.168.123.123/24
+      gateway4: 192.168.123.1
+      nameservers:
+        addresses:
+        - 8.8.8.8
+        - 168.126.63.1
+        search: []
+...
+```
+
+### 2. Apply edited yaml
+
+```Bash
+$ netplan apply
+```
+
+### 3. Verity
+
+```Bash
+$ ping 8.8.8.8
+```
+
+> <img width="376" alt="Screenshot 2023-01-31 at 5 41 57 PM" src="https://user-images.githubusercontent.com/20737479/215710851-88d6885a-a1ab-4c8b-9d9d-376e07f0c3de.png">
+
+---
 
 #### Reference
 - install xrdp on Ubuntu 20, https://ko.linux-console.net/?p=393, 2022-02-24-Thu.
