@@ -20,9 +20,15 @@ $ minikube start
 $ $ minikube start --kubernetes-version v1.24.0
 ```
 
+<img width="666" alt="Screenshot 2023-01-31 at 10 57 10 AM" src="https://user-images.githubusercontent.com/20737479/215640086-42e6f732-249b-4201-aa2a-dabdad3bbb6a.png">
+
 ### Downgrade
 
 <img width="830" alt="Screenshot 2023-01-31 at 10 43 17 AM" src="https://user-images.githubusercontent.com/20737479/215638025-06b59d66-6a05-48db-8601-af1af6c9b6cd.png">
+
+### Compatible
+
+<img width="594" alt="Screenshot 2023-01-31 at 10 58 16 AM" src="https://user-images.githubusercontent.com/20737479/215640286-49517ef7-3de4-4461-bbf7-fc2b32f643f5.png">
 
 ---
 
