@@ -1,5 +1,11 @@
 # Kubernetes apply/create fail during installing rook-ceph
 
+## Environment
+
+Ubuntu 18.04.6 LTS
+
+Kubernetes 1.26.0
+
 ## Date
 
 2023-01-25-Wednesday
