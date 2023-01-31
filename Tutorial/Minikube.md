@@ -4,6 +4,10 @@
 
 Ubuntu 22.04.1 LTS Jammy
 
+minikube 1.28.0
+
+Kubernetes 1.24.0
+
 ## Content
 
 ### Start
