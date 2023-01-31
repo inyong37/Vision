@@ -20,6 +20,10 @@ $ minikube start
 $ $ minikube start --kubernetes-version v1.24.0
 ```
 
+### Downgrade
+
+<img width="830" alt="Screenshot 2023-01-31 at 10 43 17 AM" src="https://user-images.githubusercontent.com/20737479/215638025-06b59d66-6a05-48db-8601-af1af6c9b6cd.png">
+
 ---
 
 ### Reference
