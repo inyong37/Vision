@@ -1,5 +1,11 @@
 # [Use KubeVirt](https://kubevirt.io/labs/kubernetes/lab1.html)
 
+## Environment
+
+Ubuntu 18.04.6 LTS
+
+Kubernetes 1.26.0
+
 ## Requirement
 
 - Kubernetes
