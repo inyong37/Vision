@@ -2,7 +2,9 @@
 
 ## Environment
 
-Ubuntu (20.04.4 LTS)
+Ubuntu 20.04.4 LTS
+
+Kubernetes 1.26.0
 
 ## Date
 
