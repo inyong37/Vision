@@ -14,6 +14,8 @@ $ minikube start
 
 > <img width="736" alt="Screenshot 2023-01-31 at 10 35 50 AM" src="https://user-images.githubusercontent.com/20737479/215636893-e42997d5-c5ec-4e2d-97c7-6ed7057c907f.png">
 
+### Start with specified Kubernetes version
+
 ```Bash
 $ $ minikube start --kubernetes-version v1.24.0
 ```
