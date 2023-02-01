@@ -1,4 +1,4 @@
-# :construction: `kubectl` Connection Refused
+# kubectl Connection Refused
 
 ## Environment
 
