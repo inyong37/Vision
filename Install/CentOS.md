@@ -51,32 +51,8 @@ Verify:
 $ git --version
 ```
 
-### [docker](https://docs.docker.com/engine/install/centos/)
-
-Set up the repository:
-
-```Bash
-$ sudo yum install -y yum-utils
-$ sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-```
-
-To install the latest version, run:
-
-```Bash
-$ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-```
-
-Start:
-
-```Bash
-$ sudo systemctl start docker
-```
-
 ---
 
 ### Reference
 - How to Enable SSH in CentOS 7, https://www.wikihow.com/Enable-Ssh-in-Centos-7, 2023-01-26-Thu.
 - How To Install Git on CentOS 7, https://www.digitalocean.com/community/tutorials/how-to-install-git-on-centos-7, 2023-01-26-Thu.
-- docker, https://docs.docker.com/engine/install/centos/, 2023-01-26-Thu.
