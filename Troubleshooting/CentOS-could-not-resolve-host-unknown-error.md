@@ -10,6 +10,8 @@ CentOS Linux release 7.9.2009 (Core)
 
 ## Problem
 
+I was trying to install tmux (window manager in terminal interface), but yum-install failed as below:
+
 ```Bash
 $ sudo yum install -y tmux
 ```
@@ -17,6 +19,10 @@ $ sudo yum install -y tmux
 > <img width="1317" alt="Screenshot 2023-01-31 at 10 05 33 AM" src="https://user-images.githubusercontent.com/20737479/215632614-3f3122d5-805f-4aea-9bb6-292c490d0640.png">
 
 ## Solution
+
+I looked up some similar problems and I found that the nameserver setup was cleared when I checked `cat /etc/resolv.conf`.
+
+Therefore, I added nameservers such as Google's.
 
 Add DNS server:
 
