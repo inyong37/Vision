@@ -52,11 +52,23 @@ Check available version:
 $ sudo apt-cache madison docker-ce | awk '{ print $3 }'
 ```
 
-Specify `$DOCKER_VERSION_STRING`
+A. Specify `$DOCKER_VERSION_STRING`
 
 ```Bash
 $ DOCKER_VERSION=5:20.10.13~3-0~ubuntu-jammy
 $ sudo apt-get install docker-ce=$DOCKER_VERSION docker-ce-cli=$VDOCKER_VERSION containerd.io docker-compose-plugin
+```
+
+B. Install Latest
+
+```Bash
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+### 3. Verify
+
+```Bash
+$ sudo docker run hello-world
 ```
 
 ---
