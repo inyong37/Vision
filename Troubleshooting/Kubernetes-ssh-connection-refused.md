@@ -1,4 +1,4 @@
-# :construction: ssh Connection Refused during installing `kubectl`
+# ssh Connection Refused during installing `kubectl`
 
 ## Environment
 
