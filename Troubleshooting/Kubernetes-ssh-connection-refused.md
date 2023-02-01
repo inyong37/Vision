@@ -16,12 +16,16 @@ After installing `kubectl` and restart it, ssh reconnect is refused.
 
 ## [Solution](https://blog.hkwon.me/ubuntu-18-04-netplan/)
 
+When I checked the device's IPv4 setup, the dhcp4 has set 'true'. However, the server has to be set up static IP.
+
+Therefore, I edited the netplan file as below.
+
 ### Setup static IP address with using `netplan`
 
 Edit the static IP address:
 
 ```bash
-$ vi /etc/netplan/*.yaml
+$ vim /etc/netplan/*.yaml
 ```
 
 Result:
