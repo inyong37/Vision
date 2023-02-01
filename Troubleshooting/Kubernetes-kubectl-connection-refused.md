@@ -1,4 +1,4 @@
-# kubectl Connection Refused
+# Kubectl Connection Refused
 
 ## Environment
 
@@ -53,5 +53,4 @@ $ export KUBECONFIG=$HOME/admin.conf
 ---
 
 ### Reference
-
 - The connection to the server localhost:8080 was refused – did you specify the right host or port?, https://k21academy.com/docker-kubernetes/the-connection-to-the-server-localhost8080-was-refused/, 2023-01-20-Fri.
