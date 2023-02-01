@@ -18,7 +18,7 @@ Kubernetes 1.26.0
 
 The problem was rook-ceph is using deprecated (removed) API of Kubernetes.
 
-Therefore I have to check the new API for rook-ceph or downgrade the Kubernetes.
+Therefore I have to check the new API for rook-ceph or downgrade the Kubernetes under 1.24.0 version.
 
 ---
 
