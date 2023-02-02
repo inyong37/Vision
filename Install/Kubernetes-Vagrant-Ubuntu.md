@@ -1,4 +1,4 @@
-# Kubernetes Cluster with Vagrant
+# Install Kubernetes Cluster using Vagrant on Ubuntu
 
 ## Date
 
@@ -218,42 +218,6 @@ $ kubectl get nodes
 ```
 <img width="383" alt="Screenshot 2023-01-18 at 1 54 19 PM" src="https://user-images.githubusercontent.com/20737479/213087369-fff2a1f1-0130-44ba-b7e6-a95fd3d454fb.png">
 
-## :construction: B. macOS with Apple Silicon
-
-### 1. Install Vagrant
-
-```zsh
-$ brew install hashicorp/tap/hashicorp-vagrant
-```
-
-### 2. Install VMware Fusion
-
-https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2
-
-```zsh
-$ ln -s /Applications/VMWare\ Fusion\ Tech\ Preview.app /Applications/VMWare\ Fusion.app
-```
-
-```zsh
-sudo /opt/vagrant-vmware-desktop/bin/vagrant-vmware-utility api -debug
-```
-
-Verify running:
-
-```zsh
-$ sudo lsof -i -P | grep LISTEN | grep 'vagrant-v'
-```
-
-Or start to run:
-
-```zsh
-$ sudo launchctl load -w /Library/LaunchDaemons/com.vagrant.vagrant-vmware-utility.plist
-```
-
-```zsh
-$ vagrant plugin install vagrant-vmware-desktop
-```
-
 ---
 
 ### Reference
@@ -264,7 +228,5 @@ $ vagrant plugin install vagrant-vmware-desktop
 - Install Docker Engine on Ubuntu, https://docs.docker.com/engine/install/ubuntu/, 2023-01-17-Tue.
 - Runtime Container, https://kubernetes.io/id/docs/setup/production-environment/container-runtimes/, 2023-01-17-Tue.
 - Installing kubeadm, https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/, 2023-01-18-Wed.
-- Setting up Vagrant 2.3.0 for Virtual Machine Management in Mac ( Apple M1 Pro), https://medium.com/geekculture/setting-up-vagrant-2-3-0-for-virtual-machine-management-in-mac-apple-m1-pro-9dc4ec9036db, 2023-01-16-Mon.
-- VMware Fusion Public Tech Preview 22H2, https://customerconnect.vmware.com/downloads/get-download?downloadGroup=FUS-PUBTP-22H2, 2023-01-16-Mon.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-01-18-Wed.
 - How to Install VirtualBox 6.1 on Ubuntu 20.04, https://tecadmin.net/install-virtualbox-on-ubuntu-20-04/, 2023-01-19-Thu.
