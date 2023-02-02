@@ -1,4 +1,4 @@
-# Drain A Node on Kubernetes
+# Drain a Node on Kubernetes
 
 ## Environment
 
