@@ -38,10 +38,36 @@ Install specific version:
 apt install -y kubeadm=1.24.0-00 kubectl=1.24.0-00 kubelet=1.24.0-00
 ```
 
-```Bash
-```
+Fix the versions:
 
 ```Bash
+apt-mark hold kubelet kubeadm kubectl
+```
+
+Initialize:
+
+```Bash
+kubeadm init --pod-network-cidr <ip_address>/16 --apiserver-advertise-address=<master_node_ip_address>
+```
+
+Set admin.conf path:
+
+```Bash
+export KUBECONFIG=/etc/kubernetes/admin.conf
+```
+
+Deploy pod network:
+
+```Bash
+kubectl edit cm coredns -n kube-system
+```
+
+Edit as below:
+
+```Bash
+...
+# loop
+...
 ```
 
 ---
