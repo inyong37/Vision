@@ -30,7 +30,7 @@ $ kubectl get nodes -o wide
 Hardware with virtualization support is recommended. You can use virt-host-validate to ensure that your hosts are capable of running virtualization workloads:
 
 ```bash
-$ apt install libvirt-client
+$ apt install libvirt-clients
 $ virt-host-validate qemu
 ```
 
