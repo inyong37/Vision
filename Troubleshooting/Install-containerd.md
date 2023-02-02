@@ -6,7 +6,7 @@
 
 ## Environment
 
-Ubuntu 22.04 LTS
+Ubuntu 20.04 LTS
 
 ## Problem
 
@@ -22,7 +22,7 @@ However, I got an error when I commanded `kubeadm init -- ...`
 
 <img width="2236" alt="Screenshot 2023-02-02 at 11 04 22 AM" src="https://user-images.githubusercontent.com/20737479/216213128-c0d711f3-864f-4f07-83c8-b7f15561e8f4.png">
 
-## [Solution](https://www.nocentino.com/posts/2021-12-27-installing-and-configuring-containerd-as-a-kubernetes-container-runtime/)
+## [Try #1 - Not Solved](https://www.nocentino.com/posts/2021-12-27-installing-and-configuring-containerd-as-a-kubernetes-container-runtime/)
 
 :key: All commands are executed with root authority.
 
@@ -52,7 +52,39 @@ Finally, restart containerd:
 systemctl restart containerd
 ```
 
+## [Solution](https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented)
+
+However, the same error code appeard :cry: The real problem was old containerd version of built-in Ubuntu 20. Therefore, I removed containerd and installed it again.
+
+Removed:
+
+```Bash
+apt remove containerd
+```
+
+Install:
+
+```Bash
+apt install containerd.io
+```
+
+Remove old config file:
+
+```Bash
+rm /etc/containerd/config.toml
+```
+
+Restart containerd:
+```Bash
+systemctl restart containerd
+```
+
+Finally, kubeadm init works :tada:
+
+<img width="608" alt="Screenshot 2023-02-02 at 11 41 03 AM" src="https://user-images.githubusercontent.com/20737479/216217954-b9d67f9d-a783-4e03-9425-792613f63a3c.png">
+
 ---
 
 ### Reference
 - Installing and Configuring containerd as a Kubernetes Container Runtime, https://www.nocentino.com/posts/2021-12-27-installing-and-configuring-containerd-as-a-kubernetes-container-runtime/, 2023-02-02-Thu.
+- https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented, 2023-02-02-Thu.
