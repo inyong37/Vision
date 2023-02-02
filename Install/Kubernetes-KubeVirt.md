@@ -1,5 +1,15 @@
 # Install KubeVirt on Kubernetes (1.26.0) and Ubuntu (18.04.6 LTS)
 
+## Date
+
+2023-01-19-Thursday.
+
+## Environment
+
+Ubuntu 18.04.6 LTS
+
+Kubernetes 1.26.0
+
 ## 0. Requirements
 
 ### Container Runtime Support
