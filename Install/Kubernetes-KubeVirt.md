@@ -4,11 +4,13 @@
 
 2023-01-19-Thursday.
 
+2023-02-02-Thursday.
+
 ## Environment
 
-Ubuntu 18.04.6 LTS
+Ubuntu 18.04.6 LTS -> Ubuntu 20.04.5 LTS
 
-Kubernetes 1.26.0
+Kubernetes 1.26.0 -> Kubernetes 1.24.0
 
 ## 0. Requirements
 
@@ -132,7 +134,17 @@ There are two ways to get it:
 - the most recent version of the tool can be retrieved from the official release page
 - it can be installed as a kubectl plugin using krew
 
-### [Install `krew`](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
+### A. Install virtctl
+
+```Bash
+export VERSION=v0.58.0
+```
+
+```Bash
+wget https://github.com/kubevirt/kubevirt/releases/download/${VERSION}/virtctl-${VERSION}-linux-amd64
+```
+
+### B-1. [Install `krew`](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
 
 1. Install `git`:
 
@@ -169,12 +181,11 @@ and restart your shell or source ~/.bashrc:
 $ source ~/.bashrc
 ```
 
-### [Install `virtctl` with `krew`](https://kubevirt.io/user-guide/operations/virtctl_client_tool/)
+### B-2. [Install `virtctl` with `krew`](https://kubevirt.io/user-guide/operations/virtctl_client_tool/)
 
 ```Bash
 $ kubectl krew install virt
 ```
-
 
 ---
 
