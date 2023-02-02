@@ -87,7 +87,7 @@ $ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables 
 
 :key: [If you want to use KubeVirt, then you have to install containerd or CRI for Container Runtime.](Kubernetes-KubeVirt.md)
 
-:key: Installing Docker Engine contains containerd, if you want to install just containerd, look this [page](../Troublshooting/Install-Containerd.md).
+:key: Installing Docker Engine contains containerd, if you want to install just containerd, look this [page](../Troublshooting/Install-containerd.md).
 
 ```Bash
 $ apt-get update && apt-get install -y \
