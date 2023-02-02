@@ -2,6 +2,8 @@
 
 ## Date
 
+2023-01-17-Tuesday.
+
 ## Environment
 
 macOS Ventura 13.0.1
