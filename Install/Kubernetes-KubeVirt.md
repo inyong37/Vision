@@ -144,6 +144,12 @@ export VERSION=v0.58.0
 wget https://github.com/kubevirt/kubevirt/releases/download/${VERSION}/virtctl-${VERSION}-linux-amd64
 ```
 
+```Bash
+mv virtctl-${VERSION}-linux-amd64 virtctl
+chmod +x virtctl
+install virtctl /bin/
+```
+
 ### B-1. [Install `krew`](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
 
 1. Install `git`:
