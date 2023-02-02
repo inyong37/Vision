@@ -26,29 +26,27 @@ However, I got an error when I commanded `kubeadm init -- ...`
 
 :key: All commands are executed with root authority.
 
-Installing containerd with `apt install` is not enough.
+Installing containerd with `apt install` is not enough. Therefore, few more steps are required as below.
 
-Therefore, few more steps are required as below.
-
-Make directory for containerd configuration:
+1. Make directory for containerd configuration:
 
 ```Bash
 mkdir -p /etc/containerd
 ```
 
-Make config file for containerd:
+2. Make config file for containerd:
 
 ```Bash
 containerd config default | sudo tee /etc/containerd/config.toml
 ```
 
-Change `SystemdCgroup` fales to ture:
+3. Change `SystemdCgroup` fales to ture:
 
 ```Bash
 sed -i 's/ SystemdCgroup = false/ SystemdCgroup = true/' /etc/containerd/config.toml
 ```
 
-Restart containerd:
+Finally, Restart containerd:
 
 ```Bash
 systemctl restart containerd
