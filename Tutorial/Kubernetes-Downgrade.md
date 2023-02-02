@@ -70,6 +70,16 @@ Edit as below:
 ...
 ```
 
+```Bash
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+Finally, join from worker nodes:
+
+```Bash
+kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256}
+```
+
 ---
 
 ### Reference
