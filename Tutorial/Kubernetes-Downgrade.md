@@ -24,7 +24,7 @@ kubeadm reset
 apt remove -y kubeadm kubectl kubelet
 ```
 
-### 3. [Install kubeadm, kubectl, and kubelet with specific version](How to install specific version of Kubernetes?)
+### 3. [Install kubeadm, kubectl, and kubelet with specific version](https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes)
 
 Check available versions:
 
