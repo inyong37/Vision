@@ -2,9 +2,9 @@
 
 ## Environment
 
-Ubuntu 18.04.6 LTS
+Ubuntu 18.04.6 LTS -> Ubuntu 20.04.5 LTS
 
-Kubernetes 1.26.0
+Kubernetes 1.26.0 -> Kubernetes 1.24.0
 
 ## Requirements
 
