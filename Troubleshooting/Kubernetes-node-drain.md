@@ -12,7 +12,7 @@ Kubernetes 1.26.1
 
 ## Problem
 
-I was trying to delete worker node due to downgrade Kubernetes 1.26.1 to 1.24.0. However, `kubectl drain` get an error as below:
+I was trying to delete worker node due to downgrade Kubernetes 1.26.1 to 1.24.0. However, `kubectl drain` got an error as below:
 
 > <img width="1514" alt="Screenshot 2023-02-02 at 2 14 49 PM" src="https://user-images.githubusercontent.com/20737479/216237639-f840ff19-cb70-4e77-86af-5d0484676751.png">
 
