@@ -1,6 +1,14 @@
-# Vagrant
+# Install Vagrant on macOS with Apple Silicon
 
-## Mac computers with Apple silicon
+## Date
+
+## Environment
+
+macOS Ventura 13.0.1
+
+Apple M1
+
+## Contents
 
 ### 1. Install Vagrant
 
