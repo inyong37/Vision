@@ -1,4 +1,18 @@
-# Install [Rook](https://rook.io/) Ceph on Kubernetes (1.26.0) and Ubuntu (18.04.6 LTS)
+# Install [Rook](https://rook.io/) Ceph on Kubernetes
+
+## Environment
+
+### Try #1
+
+Kubernetes 1.26.0 -> Policy is deprecated from 1.25.0, therefore, using 1.24.0 is recommended.
+
+Ubuntu 18.04.6 LTS
+
+### Try #2
+
+Kubernetes 1.24.0
+
+Ubuntu 20.04.5 LTS
 
 ## [Requirement](https://rook.io/docs/rook/v1.10/Getting-Started/Prerequisites/prerequisites/)
 
@@ -46,6 +60,8 @@ $ kubectl create -f cluster.yaml
 With Kubernetes 1.24.0:
 
 > <img width="622" alt="Screenshot 2023-01-31 at 11 07 12 AM" src="https://user-images.githubusercontent.com/20737479/215641540-5980ac86-1197-46b0-9fb9-59911b4ff131.png">
+
+Installing rook-ceph with Krew works, but the pods are not properly deployed.
 
 ## [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
 
