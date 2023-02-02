@@ -30,16 +30,10 @@ kubectl drain {node_name}
 kubectl drain {node_name} --ignore-daemonsets --delete-local-data
 ```
 
-### 3. Delete the node
+### Finally, delete the node
 
 ```Bash
 kubectl delete node {node_name}
-```
-
-### Finally, reset the cluster's state
-
-```Bash
-kubectl reset
 ```
 
 ---
