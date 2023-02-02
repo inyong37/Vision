@@ -1,8 +1,16 @@
 # Kubernetes Cluster with Vagrant
 
-## A. Ubuntu 20.04.4 LTS
+## Date
 
-:key: All commands are executed on sudo.
+2023-01-18-Wednesday.
+
+## Enviroment
+
+Ubuntu 20.04.4 LTS
+
+## Contents
+
+:key: All commands are executed on root authority.
 
 ### 1. Install Vagrant
 
