@@ -18,7 +18,7 @@ I was trying to delete worker node due to downgrade Kubernetes 1.26.1 to 1.24.0.
 
 ## [Solution](https://stackoverflow.com/questions/35757620/how-to-gracefully-remove-a-node-from-kubernetes)
 
-Add options as below:
+Add an option as below:
 
 ```Bash
 kubectl drain kubenode01 --ignore-daemonsets
