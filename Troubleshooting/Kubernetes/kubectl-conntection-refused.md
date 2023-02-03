@@ -2,6 +2,8 @@
 
 ## Date
 
+2023-02-03-Friday.
+
 ## Environment
 
 Ubuntu 22.04.1 LTS
