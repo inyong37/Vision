@@ -4,9 +4,13 @@
 
 2023-01-18-Wednesday.
 
+2023-02-03-Friday.
+
 ## Enviroment
 
 Ubuntu 20.04.4 LTS
+
+Ubuntu 22.04.1 LTS
 
 ## Contents
 
@@ -50,21 +54,23 @@ $ vagrant ssh {vm_name} # kubemaster, kubenode01, kubenode01
 ### 3. Forwarding IPv4 and letting iptables see bridged traffic
 
 ```Bash
-$ cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+mkdir -p /etc/modules-load.d
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
 br_netfilter
 EOF
 ```
 
 ```Bash
-$ modprobe overlay
-$ modprobe br_netfilter
+modprobe overlay
+modprobe br_netfilter
 ```
 
 sysctl params required by setup, params persist across reboots: 
 
 ```Bash
-$ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+mkdir -p /etc/sysctl.d
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-iptables  = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 net.ipv4.ip_forward                 = 1
@@ -74,21 +80,20 @@ EOF
 Apply sysctl params without reboot:
 
 ```Bash
-$ sysctl --system
-
+sysctl --system
 ```
 
 Verify that the br_netfilter, overlay modules are loaded by running below instructions:
 
 ```Bash
-$ lsmod | grep br_netfilter
-$ lsmod | grep overlay
+lsmod | grep br_netfilter
+lsmod | grep overlay
 ```
 
 Verify that the net.bridge.bridge-nf-call-iptables, net.bridge.bridge-nf-call-ip6tables, net.ipv4.ip_forward system variables are set to 1 in your sysctl config by running below instruction:
 
 ```Bash
-$ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
+sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 ```
 
 ### 4. Install Container Runtime - Docker
