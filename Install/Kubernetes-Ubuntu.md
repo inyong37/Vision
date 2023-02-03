@@ -64,7 +64,6 @@ sysctl --system
 apt update && apt install -y apt-transport-https ca-certificates curl software-properties-common gnupg2
 ```
 
-
 ```Bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 ```
@@ -73,16 +72,22 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-Remove old containerd (Ubuntu 20+):
+:key: Remove old containerd on Ubuntu 20:
 
 ```Bash
-apt remove -y containerd
+apt remove containerd -y
+```
+
+:key: Remove old containerd on Ubuntu 22:
+
+```Bash
+apt remove containerd.io -y
 ```
 
 Install containerd:
 
 ```Bash
-apt install -y containerd.io
+apt install containerd.io -y
 ```
 
 ```Bash
