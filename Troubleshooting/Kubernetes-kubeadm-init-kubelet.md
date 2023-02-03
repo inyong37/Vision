@@ -38,7 +38,7 @@ Reset kubeadm:
 kubeadm reset
 ```
 
-Re-initialize kubeadm
+[Re-initialize kubeadm](https://github.com/inyong37/Vision/blob/master/Install/Kubernetes-Ubuntu.md#3-kubeadm-kubectl-kubelet-in-specific-version):
 
 ```Bash
 kubeadm init ...
