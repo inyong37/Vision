@@ -121,6 +121,7 @@ $ apt-get update && apt-get install -y \
 ```
 
 ```Bash
+$ mkdir -p /etc/docker
 $ cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
