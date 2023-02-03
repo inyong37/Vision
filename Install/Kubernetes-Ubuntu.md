@@ -8,6 +8,8 @@
 
 Ubuntu 20.04.5 LTS
 
+Ubuntu 22.04.1 LTS
+
 ## Content
 
 :key: All commands are executed on root authority.
