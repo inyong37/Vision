@@ -6,9 +6,11 @@
 
 2023-02-02-Thursday.
 
+2023-02-03-Friday.
+
 ## Environment
 
-Ubuntu 18.04.6 LTS -> Ubuntu 20.04.5 LTS
+Ubuntu 18.04.6 LTS -> Ubuntu 20.04.5 LTS -> Ubuntu 22.04.1 LTS
 
 Kubernetes 1.26.0 -> Kubernetes 1.24.0
 
@@ -37,6 +39,8 @@ $ virt-host-validate qemu
 ```
 
 <img width="1133" alt="Screenshot 2023-01-19 at 11 12 11 AM" src="https://user-images.githubusercontent.com/20737479/213339345-7cba774f-329c-44d0-b953-7a28f1d4179c.png">
+
+<img width="1209" alt="Screenshot 2023-02-03 at 2 48 14 PM" src="https://user-images.githubusercontent.com/20737479/216522655-dae18dea-5384-48f3-8dbb-d3b2b9b5727b.png">
 
 ## 1. Installing KubeVirt on Kubernetes
 
