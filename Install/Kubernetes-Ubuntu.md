@@ -71,7 +71,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-Remove old containerd (Ubuntu 20):
+Remove old containerd (Ubuntu 20+):
 
 ```Bash
 apt remove -y containerd
@@ -111,6 +111,13 @@ Install specific version:
 
 ```Bash
 apt install -y kubeadm=1.24.0-00 kubectl=1.24.0-00 kubelet=1.24.0-00
+```
+
+:key: [If you want to use old version, then you have to disable swap](https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy):
+
+```Bash
+swapoff -a
+sed -i '/ swap / s/^/#/' /etc/fstab
 ```
 
 Fix the versions:
@@ -162,3 +169,4 @@ kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256
 - Using containerd for CRI in Kubernetes, https://github.com/inyong37/Vision/blob/master/Troubleshooting/Install-containerd.md, 2023-02-02-Thu.
 - Downgrade Kubernetes, https://github.com/inyong37/Vision/blob/master/Tutorial/Kubernetes-Downgrade.md, 2023-02-02-Thu.
 - Kubernetes Nodes' status are NotReady, https://github.com/inyong37/Vision/blob/master/Troubleshooting/Kubernetes-not-ready.md, 2023-02-02-Thu.
+- kubeadm init shows kubelet isn't running or healthy, https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy, 2023-02-03-Fri.
