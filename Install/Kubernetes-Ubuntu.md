@@ -94,6 +94,11 @@ apt install containerd.io -y
 systemctl restart containerd
 ```
 
+:construction: There is an issue about cgroup. Therefore, I tried to solve this with installing Docker engine instead of bare-containerd. However, it did not work. Still same issue occured.
+
+<img width="486" alt="Screenshot 2023-02-03 at 3 41 26 PM" src="https://user-images.githubusercontent.com/20737479/216530206-10c8dce0-505e-43c8-a5b5-79ed7f0d66cc.png">
+
+
 ### 3. [kubeadm, kubectl, kubelet](https://github.com/inyong37/Vision/blob/master/Install/Kubernetes-Vagrant-Ubuntu.md) in [specific version](https://github.com/inyong37/Vision/blob/master/Tutorial/Kubernetes-Downgrade.md)
 
 ```Bash
@@ -143,9 +148,10 @@ Set admin.conf path:
 
 ```Bash
 export KUBECONFIG=/etc/kubernetes/admin.conf
+# export KUBECONFIG=/etc/kubernetes/kubelet.conf # sometimes, kubelet exists.
 ```
 
-Deploy pod network:
+Option A - Deploy CoreDNS pod network:
 
 ```Bash
 kubectl edit cm coredns -n kube-system
@@ -161,6 +167,12 @@ Edit as below:
 
 ```Bash
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+Option B - Deploy Weave pod network (only a command):
+
+```Bash
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 ```
 
 Finally, join from worker nodes:
