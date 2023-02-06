@@ -5,3 +5,6 @@
 .idea/Vision.iml
 .idea/workspace.xml
 .idea/inspectionProfiles/profiles_settings.xml
+
+# macOS
+.DS_Store
