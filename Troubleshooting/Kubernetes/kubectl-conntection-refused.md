@@ -14,7 +14,7 @@ Kubernetes 1.24.10
 
 <img width="719" alt="Screenshot 2023-02-03 at 4 30 04 PM" src="https://user-images.githubusercontent.com/20737479/216538804-2ce575b5-a577-483b-ba46-070a63acb7c4.png">
 
-## [Solution](https://discuss.kubernetes.io/t/the-connection-to-the-server-host-6443-was-refused-did-you-specify-the-right-host-or-port/552/5)
+## [Solution #1](https://discuss.kubernetes.io/t/the-connection-to-the-server-host-6443-was-refused-did-you-specify-the-right-host-or-port/552/5)
 
 <img width="746" alt="Screenshot 2023-02-03 at 4 30 19 PM" src="https://user-images.githubusercontent.com/20737479/216538838-67433791-feaa-407d-8cb2-1cf7d3c27495.png">
 
@@ -31,6 +31,16 @@ Node01:
 Node02:
 
 > <img width="1256" alt="Screenshot 2023-02-03 at 4 36 32 PM" src="https://user-images.githubusercontent.com/20737479/216539955-fe024a51-ffcf-4cae-9f08-be2b74772ce6.png">
+
+## [Solution #2](https://discuss.kubernetes.io/t/the-connection-to-the-server-host-6443-was-refused-did-you-specify-the-right-host-or-port/552/24)
+
+Disable firewall
+
+```Bash
+ufw status verbose
+ufw disable
+systemctl restart kubelet
+```
 
 ---
 
