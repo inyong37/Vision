@@ -100,4 +100,4 @@ version: 2
 ---
 
 ### Reference
-- Ubuntu 18.04 Netplan을 사용한 Static IP 설정: [https://blog.hkwon.me/ubuntu-18-04-netplan/](https://blog.hkwon.me/ubuntu-18-04-netplan/)
+- Ubuntu 18.04 Netplan을 사용한 Static IP 설정, https://blog.hkwon.me/ubuntu-18-04-netplan/, 2023-01-20-Fri.
