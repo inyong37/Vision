@@ -88,3 +88,8 @@ kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256
 ### Reference
 - How to install specific version of Kubernetes?, https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes, 2023-02-02-Thu.
 - How to completely uninstall kubernetes, https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes, 2023-02-02-Thu.
+- Ubuntu 22.04에 쿠버네티스 설치하기 (Install Kubernetes), https://andrewpage.tistory.com/234, 2023-02-07-Tue.
+- How to Install Kubernetes on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html, 2023-02-07-Tue.
+- cri-dockerd GitHub, https://github.com/Mirantis/cri-dockerd, 2023-02-07-Tue.
+- How to Install Containerd on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-containerd-on-ubuntu-22-04.html, 2023-02-07-Tue.
+- How to Install CRI-O on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-cri-o-on-ubuntu-22-04.html, 2023-02-07-Tue.
