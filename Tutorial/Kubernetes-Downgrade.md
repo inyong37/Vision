@@ -21,7 +21,8 @@ kubeadm reset
 ### 2. [Uninstall kubeadm, kubectl, and kubelet](https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes)
 
 ```Bash
-apt remove -y kubeadm kubectl kubelet
+apt remove kubeadm kubectl kubelet
+apt autoremove
 ```
 
 ### 3. [Install kubeadm, kubectl, and kubelet with specific version](https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes)
