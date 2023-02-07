@@ -23,6 +23,7 @@ rm -rf /etc/cni/net.d
 
 ```Bash
 apt remove kubeadm kubectl kubelet
+rm -rf /opt/cni/bin
 apt autoremove
 ```
 
