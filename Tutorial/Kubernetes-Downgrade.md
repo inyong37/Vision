@@ -1,14 +1,16 @@
-# Downgrade Kubernetes
+# Downgrade/remove Kubernetes
 
 ## Date
 
 2023-02-02-Thursday.
 
+2023-02-07-Tuesday.
+
 ## Environment
 
-Ubuntu 20.04.5 LTS
+Ubuntu 20.04.5 LTS -> Ubuntu 22.04.1 LTS
 
-Kubernetes 1.26.1 -> 1.24.00
+Kubernetes 1.26.1 -> 1.24.00 -> 1.24.10
 
 ## Contents
 
@@ -59,7 +61,16 @@ Set admin.conf path:
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 
-Deploy pod network:
+
+### 4. Deploy pod network
+
+A. Calico:
+
+```Bash
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+```
+
+B. Flannel:
 
 ```Bash
 kubectl edit cm coredns -n kube-system
