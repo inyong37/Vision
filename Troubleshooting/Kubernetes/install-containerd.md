@@ -87,4 +87,4 @@ Finally, kubeadm init works :tada:
 
 ### Reference
 - Installing and Configuring containerd as a Kubernetes Container Runtime, https://www.nocentino.com/posts/2021-12-27-installing-and-configuring-containerd-as-a-kubernetes-container-runtime/, 2023-02-02-Thu.
-- https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented, 2023-02-02-Thu.
+- kubeadm init error: CRI v1 runtime API is not implemented, https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented, 2023-02-02-Thu.
