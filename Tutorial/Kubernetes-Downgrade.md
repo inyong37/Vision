@@ -18,14 +18,18 @@ Kubernetes 1.26.1 -> 1.24.00 -> 1.24.10
 
 ```Bash
 kubeadm reset
-rm -rf /etc/cni/net.d
+rm -rf $HOME/.kube /etc/cni/net.d /opt/cni /etc/kubernetes
+``` 
+
+```Bash
+apt install ipvsadm
+ipvsadm --clear
 ```
 
 ### 2. [Uninstall kubeadm, kubectl, and kubelet](https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes)
 
 ```Bash
 apt remove kubeadm kubectl kubelet
-rm -rf /opt/cni/bin
 apt autoremove
 ```
 
