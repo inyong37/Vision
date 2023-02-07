@@ -32,6 +32,10 @@ Kubernetes 1.26.0 -> Kubernetes 1.24.10
 
 <img width="719" alt="Screenshot 2023-02-03 at 4 30 04 PM" src="https://user-images.githubusercontent.com/20737479/216538804-2ce575b5-a577-483b-ba46-070a63acb7c4.png">
 
+#4 
+
+<img width="1160" alt="Screenshot 2023-02-07 at 10 50 34 AM" src="https://user-images.githubusercontent.com/20737479/217127446-3a368526-c813-4e95-8115-b6c6e77f7cb7.png">
+
 ## [Solution #1](https://k21academy.com/docker-kubernetes/the-connection-to-the-server-localhost8080-was-refused/)
 
 ### A. Set the `$KUBECONFIG` to `admin.conf`
