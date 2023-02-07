@@ -16,6 +16,7 @@ Kubernetes 1.26.1 -> 1.24.00
 
 ```Bash
 kubeadm reset
+rm -rf /etc/cni/net.d
 ```
 
 ### 2. [Uninstall kubeadm, kubectl, and kubelet](https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes)
@@ -36,7 +37,7 @@ curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binar
 Install specific version:
 
 ```Bash
-apt install -y kubeadm=1.24.0-00 kubectl=1.24.0-00 kubelet=1.24.0-00
+apt install kubeadm=1.24.10-00 kubectl=1.24.10-00 kubelet=1.24.10-00
 ```
 
 Fix the versions:
