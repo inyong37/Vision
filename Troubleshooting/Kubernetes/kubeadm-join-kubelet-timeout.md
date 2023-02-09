@@ -18,3 +18,6 @@ One node works, but another one doesn't work as below:
 
 > <img width="773" alt="Screenshot 2023-02-03 at 4 22 09 PM" src="https://user-images.githubusercontent.com/20737479/216537365-27781c15-3b07-440d-b5a0-5964c7e0abb3.png">
 
+## Solution
+
+I guess container runtime is not installed rightly. Therefore, I reinstalled container runtime interface.
