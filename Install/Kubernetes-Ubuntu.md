@@ -1,4 +1,4 @@
-# Install Kubernetes on Ubuntu (Experimental)
+# Install Kubernetes on Ubuntu
 
 ## Date
 
@@ -8,9 +8,13 @@
 
 ## Environment
 
-Ubuntu 20.04.5 LTS
+Ubuntu 20.04.5 LTS -> Ubuntu 22.04.1 LTS
 
-Ubuntu 22.04.1 LTS
+Kubernetes 1.24.10
+
+CRI-O 1.24
+
+WeaveNet 2.8.1
 
 ## Content
 
@@ -25,7 +29,7 @@ sed -i '/ swap / s/^/#/' /etc/fstab
 
 Make sure the last line of `/etc/fstab` is commented out.
 
-### 0. Disable Firewall
+### 0. [Disable Firewall](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html)
 
 0-0-A.
 
@@ -82,7 +86,7 @@ Apply:
 sysctl --system
 ```
 
-### 1. Install Container Runtime Interface - CRI-O
+### 1. [Install Container Runtime Interface - CRI-O](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-cri-o-on-ubuntu-22-04.html)
 
 :key: Set OS version and CRIO version to use. I will use Kubernetes 1.24.10, therefore, I will set `CRIO_VERSION` as 1.24:
 
@@ -183,5 +187,7 @@ kubectl get pods -A -o wide
 ---
 
 ### Reference
+- How to Install CRI-O on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-cri-o-on-ubuntu-22-04.html, 2023-02-07-Tue.
+- How to Install Kubernetes on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html, 2023-02-09-Thu.
 - kubeadm init shows kubelet isn't running or healthy, https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy, 2023-02-03-Fri.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-02-09-Thu.
