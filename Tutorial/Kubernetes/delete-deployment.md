@@ -1,4 +1,4 @@
-# Kubernetes delet deployments
+# Kubernetes delet deployment
 
 ## Date
 
@@ -32,10 +32,20 @@ kube-system   calico-kube-controllers   0/1     1            0           2d    c
 kube-system   coredns                   2/2     2            2           2d    coredns                   registry.k8s.io/coredns/coredns:v1.8.6      k8s-app=kube-dns
 ```
 
-### 2. delete the deployment
+### 2. delete a deployment
+
+A. Using `deployments`:
 
 ```Bash
+root@master01:~# kubectl delete deployments calico-kube-controllers -n kube-system
+deployment.apps "calico-kube-controllers" deleted
+```
 
+B. Using `deploy`:
+
+```Bash
+root@master01:~# kubectl delete deploy calico-kube-controllers -n kube-system
+deployment.apps "calico-kube-controllers" deleted
 ```
 
 ---
