@@ -192,11 +192,35 @@ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/we
 kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256}
 ```
 
-###  8. Verify on Master Node
+### :tada: Finally, Verify on Master Node
+
+Nodes:
 
 ```Bash
-kubectl get nodes
-kubectl get pods -A -o wide
+root@master01:~# kubectl get nodes
+NAME       STATUS                     ROLES           AGE    VERSION
+master01   Ready                      control-plane   2d2h   v1.24.10
+node01     Ready,SchedulingDisabled   <none>          2d1h   v1.24.10
+node02     Ready                      <none>          2d1h   v1.24.10
+```
+
+Pods:
+
+```Bash
+root@master01:~# kubectl get pods -A -o wide
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE    IP                NODE       NOMINATED NODE   READINESS GATES
+kube-system   coredns-57575c5f89-dhr9r           1/1     Running   0          2d2h   10.85.0.3         master01   <none>           <none>
+kube-system   coredns-57575c5f89-vtbnl           1/1     Running   0          2d2h   10.85.0.2         master01   <none>           <none>
+kube-system   etcd-master01                      1/1     Running   0          2d2h   192.168.1.238     master01   <none>           <none>
+kube-system   kube-apiserver-master01            1/1     Running   0          2d2h   192.168.1.238     master01   <none>           <none>
+kube-system   kube-controller-manager-master01   1/1     Running   0          2d2h   192.168.1.238     master01   <none>           <none>
+kube-system   kube-proxy-86bwq                   1/1     Running   0          2d2h   192.168.1.238     master01   <none>           <none>
+kube-system   kube-proxy-8zpzw                   1/1     Running   0          2d1h   192.168.103.107   node02     <none>           <none>
+kube-system   kube-proxy-wm9fv                   1/1     Running   0          2d1h   192.168.1.237     node01     <none>           <none>
+kube-system   kube-scheduler-master01            1/1     Running   0          2d2h   192.168.1.238     master01   <none>           <none>
+kube-system   weave-net-kqzlv                    2/2     Running   0          42m    192.168.1.238     master01   <none>           <none>
+kube-system   weave-net-lddm7                    2/2     Running   0          42m    192.168.103.107   node02     <none>           <none>
+kube-system   weave-net-ttfp4                    2/2     Running   0          42m    192.168.1.237     node01     <none>           <none>
 ```
 
 ---
