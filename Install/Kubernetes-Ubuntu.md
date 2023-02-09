@@ -38,7 +38,7 @@ systemctl stop firewalld
 systemctl disable firewalld
 ```
 
-0-0-B. Allow ports on Master Node
+0-0-B-a. Allow ports on Master Node
 
 ```Bash
 ufw allow 6443/tcp
@@ -51,7 +51,7 @@ ufw reload
 ```
 
 
-0-0-C. Allow ports on Worker Node
+0-0-B-b. Allow ports on Worker Node
 
 ```Bash
 ufw allow 10250/tcp
