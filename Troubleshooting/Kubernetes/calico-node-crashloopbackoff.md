@@ -48,3 +48,18 @@ Defaulted container "calico-node" out of: calico-node, upgrade-ipam (init), inst
 2023-02-09 05:44:36.114 [WARNING][9] startup/utils.go 49: Terminating
 Calico node failed to start
 ```
+
+## Solution #1
+
+Delete and restart autonmatically - didn't work:
+
+```Bash
+root@master01:~# kubectl delete pod calico-node-bq2rt -n kube-system
+pod "calico-node-bq2rt" deleted
+root@master01:~# kubectl get pods -A -o wide
+NAMESPACE     NAME                                       READY   STATUS             RESTARTS      AGE    IP                NODE       NOMINATED NODE   READINESS GATES
+kube-system   calico-kube-controllers-55fc758c88-9kd84   1/1     Running            0             2d     10.85.0.4         master01   <none>           <none>
+kube-system   calico-node-77n6g                          0/1     Running            0             2d     192.168.1.238     master01   <none>           <none>
+kube-system   calico-node-97d52                          0/1     Running            0             47h    192.168.1.237     node01     <none>           <none>
+kube-system   calico-node-hw6vr                          0/1     CrashLoopBackOff   5 (58s ago)   4m1s   192.168.103.107   node02     <none>           <none>
+```
