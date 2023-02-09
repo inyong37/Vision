@@ -31,17 +31,32 @@ Make sure the last line of `/etc/fstab` is commented out.
 
 ### 0. [Disable Firewall](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html)
 
-0-0-A.
-
-```Bash
-
-```
-
-0-0-B.
+0-0-A. Disable all
 
 ```Bash
 systemctl stop firewalld
 systemctl disable firewalld
+```
+
+0-0-B. Allow ports on Master Node
+
+```Bash
+ufw allow 6443/tcp
+ufw allow 2379/tcp
+ufw allow 2380/tcp
+ufw allow 10250/tcp
+ufw allow 10257/tcp
+ufw allow 10259/tcp
+ufw reload
+```
+
+
+0-0-C. Allow ports on Worker Node
+
+```Bash
+ufw allow 10250/tcp
+ufw allow 30000:32767/tcp
+ufw reload
 ```
 
 ### 0. Set Network
