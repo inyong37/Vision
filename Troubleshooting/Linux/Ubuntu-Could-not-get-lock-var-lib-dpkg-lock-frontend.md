@@ -1,4 +1,4 @@
-# 
+# Ubuntu apt update error: Could not get /var/lib/dpkg/lock-frontend
 
 ## Date
 
