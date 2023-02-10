@@ -23,7 +23,7 @@ Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 ```
 
-## [Solution](https://kingsong.tistory.com/127)
+## [Solutions](https://kingsong.tistory.com/127)
 
 ### #1
 
