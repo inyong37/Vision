@@ -27,7 +27,7 @@ swapoff -a
 sed -i '/ swap / s/^/#/' /etc/fstab
 ```
 
-Make sure the last line of `/etc/fstab` is commented out.
+:key: Make sure the last line of `/etc/fstab` is commented out.
 
 ### 0. [Disable Firewall](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html)
 
@@ -41,6 +41,7 @@ systemctl disable firewalld
 0-0-B-a. Allow ports on Master Node
 
 ```Bash
+apt install ufw -y
 ufw allow 6443/tcp
 ufw allow 2379/tcp
 ufw allow 2380/tcp
@@ -49,7 +50,6 @@ ufw allow 10257/tcp
 ufw allow 10259/tcp
 ufw reload
 ```
-
 
 0-0-B-b. Allow ports on Worker Node
 
