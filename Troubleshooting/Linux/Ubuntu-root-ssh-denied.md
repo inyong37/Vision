@@ -19,10 +19,18 @@ After Ubuntu 22, for security, allowing root login via ssh has to be edited by r
 Edit:
 
 ```Bash
-$ sudo vim /etc/ssh/sshd_conf
+$ sudo vim /etc/ssh/sshd_config
 ```
 
 Edit PermitRootLogin with yes argument:
+
+Before:
+
+```vim
+#PermitRootLogin prohibit-password
+```
+
+After:
 
 ```vim
 ...
