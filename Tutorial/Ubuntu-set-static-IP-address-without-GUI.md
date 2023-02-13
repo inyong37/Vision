@@ -36,16 +36,15 @@ network:
     eno1:
       dhcp4: no
       addresses:
-        - 192.168.10.86/24
+        - 192.168.0.2/24 # Your Static IP Address
       routes:
         - to: default
-          via: 192.168.10.1
+          via: 192.168.0.1 # Your AP's IP Address
       nameservers:
-        addresses:
-          - 168.126.63.1
-          - 192.168.2.135
-          - 8.8.8.8
-          - 8.8.4.4
+        addresses
+          - 168.126.63.1 # KT DNS Server
+          - 8.8.8.8 # Google DNS Server
+          - 8.8.4.4 # Google 2nd DNS Server 
   renderer: networkd
   version: 2
 ```
