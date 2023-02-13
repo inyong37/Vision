@@ -153,13 +153,13 @@ curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binar
 3-1-A. Install specific version:
 
 ```Bash
-apt install -y kubeadm=1.24.10-00 kubectl=1.24.10-00 kubelet=1.24.10-00
+apt update && apt install -y kubeadm=1.24.10-00 kubectl=1.24.10-00 kubelet=1.24.10-00
 ```
 
 3-1-B. Install latest version:
 
 ```Bash
-apt intall -y kubeadm kubectl kubelet
+apt update && apt intall -y kubeadm kubectl kubelet
 ```
 
 Fix the versions:
