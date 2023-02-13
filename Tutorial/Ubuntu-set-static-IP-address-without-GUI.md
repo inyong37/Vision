@@ -49,6 +49,12 @@ network:
   version: 2
 ```
 
+Apply:
+
+```Bash
+netplan apply
+```
+
 :key: FYI:
 
 ```Bash
