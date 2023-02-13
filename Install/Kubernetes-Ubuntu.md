@@ -168,25 +168,25 @@ Fix the versions:
 apt-mark hold kubelet kubeadm kubectl
 ```
 
-### 4. Initialize
+### :control_knobs: Initialize on Master Node
 
 ```Bash
 kubeadm init --pod-network-cidr <ip_address>/16 --apiserver-advertise-address=<master_node_ip_address>
 ```
 
-### 5. Set Variable Path
+### :control_knobs: Set Variable Path on Master Node
 
 ```Bash
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 
-### 6. Deploy Network Policy - Weave Net
+### :control_knobs: Deploy Network Policy on Master Node - Weave Net
 
 ```Bash
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 ```
 
-### 7. Join on :robot: Worker/Slave Nodes
+### :robot: Join on Worker Nodes
 
 ```Bash
 kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256}
