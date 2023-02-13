@@ -14,6 +14,8 @@ User ssh login works, but the root ssh login doesn't work.
 
 ## [Solution](https://linuxconfig.org/allow-ssh-root-login-on-ubuntu-22-04-jammy-jellyfish-linux)
 
+### 1. Permit Root Login in Configuration
+
 After Ubuntu 22, for security, allowing root login via ssh has to be edited by root user in configuration file.
 
 Edit:
@@ -26,16 +28,34 @@ Edit PermitRootLogin with yes argument:
 
 Before:
 
-```vim
+```YAML
 #PermitRootLogin prohibit-password
 ```
 
 After:
 
-```vim
+```YAML
 ...
 PermitRootLogin yes
 ...
+```
+
+### 2. Restart SSH
+
+```Bash
+systemctl restart ssh
+```
+
+### 3. Set Root Password
+
+```Bash
+sudo passwd
+```
+
+### 4. Allow SSH in firewall
+
+```
+sudo ufw allow ssh
 ```
 
 ---
