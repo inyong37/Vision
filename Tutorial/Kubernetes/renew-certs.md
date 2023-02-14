@@ -56,7 +56,7 @@ systemctl daemon-reload && systemctl restart kubelet
 
 :tada:
 
-<img width="837" alt="Screenshot 2023-02-14 at 4 21 17 PM" src="https://user-images.githubusercontent.com/20737479/218666734-65e53350-231d-4260-a155-52d6ff754399.png">
+> <img width="817" alt="Screenshot 2023-02-14 at 4 22 15 PM" src="https://user-images.githubusercontent.com/20737479/218666904-2ec6b60a-ae2b-4959-99fa-6dfae2dd391e.png">
 
 ---
 
