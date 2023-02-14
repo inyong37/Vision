@@ -108,17 +108,41 @@ sysctl --system
 ```Bash
 export OS_VERSION=xUbuntu_22.04
 export CRIO_VERSION=1.24
+```
+
+```Bash
 curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS_VERSION/Release.key | sudo gpg --dearmor -o /usr/share/keyrings/libcontainers-archive-keyring.gpg
+```
+
+```Bash
 curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$CRIO_VERSION/$OS_VERSION/Release.key | sudo gpg --dearmor -o /usr/share/keyrings/libcontainers-crio-archive-keyring.gpg
+```
+
+```Bash
 echo "deb [signed-by=/usr/share/keyrings/libcontainers-archive-keyring.gpg] https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS_VERSION/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+```
+
+```Bash
 echo "deb [signed-by=/usr/share/keyrings/libcontainers-crio-archive-keyring.gpg] https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$CRIO_VERSION/$OS_VERSION/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:$CRIO_VERSION.list
+```
+
+```Bash
 apt update && apt install -y cri-o cri-o-runc
+```
+
+```Bash
 systemctl daemon-reload
+```
+
+```Bash
 systemctl enable crio
+```
+
+```Bash
 systemctl start crio
-systemctl status crio
-apt install -y containernetworking-plugins
-systemctl restart crio
+```
+
+```Bash
 systemctl status crio
 ```
 
