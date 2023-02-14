@@ -21,21 +21,18 @@ Kubernetes 1.26.0 -> Kubernetes 1.24.0
 - containerd
 - crio (with runv)
 
-Use `kubectl` to fetch and show node information:
-
-```bash
-$ kubectl get nodes -o wide
-```
-
-<img width="1011" alt="Screenshot 2023-01-19 at 11 06 45 AM" src="https://user-images.githubusercontent.com/20737479/213338659-e99b4576-1b1e-4256-a6a1-f91fd76bcca9.png">
-
 ### Validate Hardware Virtualization Support
 
 Hardware with virtualization support is recommended. You can use virt-host-validate to ensure that your hosts are capable of running virtualization workloads:
 
-```bash
-$ apt install libvirt-clients
-$ virt-host-validate qemu
+```Bash
+apt install -y libvirt-clients
+```
+
+Check:
+
+```Bash
+virt-host-validate qemu
 ```
 
 <img width="1133" alt="Screenshot 2023-01-19 at 11 12 11 AM" src="https://user-images.githubusercontent.com/20737479/213339345-7cba774f-329c-44d0-b953-7a28f1d4179c.png">
@@ -46,26 +43,26 @@ $ virt-host-validate qemu
 
 Point at latest release:
 
-```bash
-$ export RELEASE=$(curl https://storage.googleapis.com/kubevirt-prow/release/kubevirt/kubevirt/stable.txt)
+```Bash
+export RELEASE=$(curl https://storage.googleapis.com/kubevirt-prow/release/kubevirt/kubevirt/stable.txt)
 ```
 
 Deploy the KubeVirt operator:
 
-```bash
-$ kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/${RELEASE}/kubevirt-operator.yaml
+```Bash
+kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/${RELEASE}/kubevirt-operator.yaml
 ```
 
 Create the KubeVirt CR (instance deployment request) which triggers the actual installation:
 
 ```bash
-$ kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/${RELEASE}/kubevirt-cr.yaml
+kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/${RELEASE}/kubevirt-cr.yaml
 ```
 
 Wait until all KubeVirt components are up:
 
-```bash
-$ kubectl -n kubevirt wait kv kubevirt --for condition=Available
+```Bash
+kubectl -n kubevirt wait kv kubevirt --for condition=Available
 ```
 
 <img width="576" alt="Screenshot 2023-01-19 at 11 22 20 AM" src="https://user-images.githubusercontent.com/20737479/213340468-d59e131d-99aa-419d-896b-cb61eecdc829.png">
@@ -74,13 +71,13 @@ A timeout error occurred, but when I checked the pods, it was already running.
 
 :key: If hardware virtualization is not available, then a software emulation fallback can be enabled using by setting in the KubeVirt CR spec.configuration.developerConfiguration.useEmulation to true as follows:
 
-```bash
-$ kubectl edit -n kubevirt kubevirt kubevirt
+```Bash
+kubectl edit -n kubevirt kubevirt kubevirt
 ```
 
 Add the following to the kubevirt.yaml file:
 
-```vim
+```YAML
     spec:
       ...
       configuration:
@@ -90,8 +87,8 @@ Add the following to the kubevirt.yaml file:
 
 All new components will be deployed under the kubevirt namespace:
 
-```bash
-$ kubectl get pods -n kubevirt
+```Bash
+kubectl get pods -n kubevirt
 ```
 
 <img width="486" alt="Screenshot 2023-01-19 at 11 21 52 AM" src="https://user-images.githubusercontent.com/20737479/213340429-e8b458ca-599e-47ae-b296-0f27f30e1e5f.png">
@@ -108,10 +105,19 @@ The Containerized Data Importer (CDI) project provides facilities for enabling P
 ### Install CDI
 
 ```Bash
-$ export TAG=$(curl -s -w %{redirect_url} https://github.com/kubevirt/containerized-data-importer/releases/latest)
-$ export VERSION=$(echo ${TAG##*/})
-$ kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$VERSION/cdi-operator.yaml
-$ kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$VERSION/cdi-cr.yaml
+export TAG=$(curl -s -w %{redirect_url} https://github.com/kubevirt/containerized-data-importer/releases/latest)
+```
+
+```Bash
+export VERSION=$(echo ${TAG##*/})
+```
+
+```Bash
+kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$VERSION/cdi-operator.yaml
+```
+
+```Bash
+kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/$VERSION/cdi-cr.yaml
 ```
 
 ### Expose `cdi-uploadproxy` service
@@ -150,7 +156,13 @@ wget https://github.com/kubevirt/kubevirt/releases/download/${VERSION}/virtctl-$
 
 ```Bash
 mv virtctl-${VERSION}-linux-amd64 virtctl
+```
+
+```Bash
 chmod +x virtctl
+```
+
+```Bash
 install virtctl /bin/
 ```
 
@@ -159,13 +171,13 @@ install virtctl /bin/
 1. Install `git`:
 
 ```Bash
-$ apt install git
+apt install git
 ```
 
 2. Run this command to download and install `krew`:
 
 ```Bash
-$ (
+(
   set -x; cd "$(mktemp -d)" &&
   OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
   ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
@@ -179,7 +191,7 @@ $ (
 3. Add the $HOME/.krew/bin directory to your PATH environment variable. To do this, update your .bashrc or .zshrc file and append the following line:
 
 ```Bash
-$ vi ~/.bashrc
+vi ~/.bashrc
 ...
 export PATH="${PATH}:${HOME}/.krew/bin"
 ...
@@ -188,13 +200,13 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 and restart your shell or source ~/.bashrc:
 
 ```Bash
-$ source ~/.bashrc
+source ~/.bashrc
 ```
 
 ### B-2. [Install `virtctl` with `krew`](https://kubevirt.io/user-guide/operations/virtctl_client_tool/)
 
 ```Bash
-$ kubectl krew install virt
+kubectl krew install virt
 ```
 
 ---
