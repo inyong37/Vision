@@ -103,7 +103,7 @@ sysctl --system
 
 ### 1. [Install Container Runtime Interface - CRI-O](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-cri-o-on-ubuntu-22-04.html)
 
-:key: Kubernetes 1.24, the Docker will no longer be supported as a runtime due to the removal of Dockershim.
+:key: Kubernetes 1.24, the Docker will no longer be supported as a runtime due to the removal of Dockershim. Or Docker Engine (For Kubernetes v1.24 and newer, you need to install cri-docker). CRI-O has built-in CNI (can be used with Kubernetes).
 
 :key: Set OS version and CRIO version to use. I will use Kubernetes 1.24.10, therefore, I will set `CRIO_VERSION` as 1.24:
 
