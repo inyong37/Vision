@@ -36,20 +36,11 @@ Backup configurations:
 cp -fR /etc/kubernetes/ /etc/kubernetes-backup/
 ```
 
-Update configurations:
-
-```Bash
-kubeadm kubeconfig user --client-name=admin
-kubeadm kubeconfig user --org system:masters --client-name kubernetes-admin > /etc/kubernetes/admin.conf
-kubeadm kubeconfig user --client-name system:kube-controller-manager > /etc/kubernetes/controller-manager.conf
-kubeadm kubeconfig user --org system:nodes --client-name system:node:$(hostname) > /etc/kubernetes/kubelet.conf
-kubeadm kubeconfig user --client-name system:kube-scheduler > /etc/kubernetes/scheduler.conf
-```
-
 Restart services:
 
 ```Bash
-systemctl daemon-reload && systemctl restart kubelet
+systemctl daemon-reload
+systemctl restart kubelet
 ```
 
 ---
@@ -57,6 +48,10 @@ systemctl daemon-reload && systemctl restart kubelet
 :tada:
 
 > <img width="817" alt="Screenshot 2023-02-14 at 4 22 15 PM" src="https://user-images.githubusercontent.com/20737479/218666904-2ec6b60a-ae2b-4959-99fa-6dfae2dd391e.png">
+
+> <img width="992" alt="Screenshot 2023-02-14 at 4 46 58 PM" src="https://user-images.githubusercontent.com/20737479/218672046-eb9db367-3d58-4129-ab2e-bfa8ba722ad7.png">
+
+> <img width="1175" alt="Screenshot 2023-02-14 at 4 47 18 PM" src="https://user-images.githubusercontent.com/20737479/218672111-88ee1468-7f77-46c8-8321-cede6b2ca401.png">
 
 ---
 
