@@ -34,13 +34,25 @@ $ apt-get install -y lvm2
 
 If you will be creating volumes from a Ceph shared file system (CephFS), the recommended minimum kernel version is 4.17. If you have a kernel version less than 4.17, the requested PVC sizes will not be enforced. Storage quotas will only be enforced on newer kernels.
 
-## 1-A. [Install Rook-Ceph](https://rook.io/docs/rook/v1.9/quickstart.html)
+## 1. [Install Rook-Ceph](https://rook.io/docs/rook/v1.9/quickstart.html)
 
 ```Bash
 $ git clone --single-branch --branch v1.9.2 https://github.com/rook/rook.git
 $ cd rook/deploy/examples
 $ kubectl apply -f crds.yaml -f common.yaml -f operator.yaml
 $ kubectl apply -f cluster.yaml
+```
+
+## 2. Deploy File System
+
+```Bash
+kubectl apply -f rook/deploy/examples/filesystem.yaml
+```
+
+## 3. Deploy Storage Class
+
+```Bash
+kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 ```
 
 ### [Issue](https://github.com/helm/helm/issues/11287)
@@ -81,22 +93,10 @@ kubectl delete -f psp.yaml
 kubectl delete -f crds.yaml
 ```
 
-## 1-B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
+## Option B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
 
 ```Bash
 $ kubectl krew install rook-ceph
-```
-
-## 2. Deploy File System
-
-```Bash
-kubectl apply -f rook/deploy/examples/filesystem.yaml
-```
-
-## 3. Deploy Storage Class
-
-```Bash
-kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 ```
 
 ---
