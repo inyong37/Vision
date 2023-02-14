@@ -87,32 +87,16 @@ $ kubectl delete -f crds.yaml
 $ kubectl krew install rook-ceph
 ```
 
-## :tada:
+## Deploy File System
 
 ```Bash
-rook-ceph     csi-cephfsplugin-6nqvl                             3/3     Running     0             8m31s
-rook-ceph     csi-cephfsplugin-fqg49                             3/3     Running     0             8m31s
-rook-ceph     csi-cephfsplugin-provisioner-5c6c4c7785-6bmzn      6/6     Running     0             8m31s
-rook-ceph     csi-cephfsplugin-provisioner-5c6c4c7785-mqwh9      6/6     Running     0             8m31s
-rook-ceph     csi-cephfsplugin-xdmnn                             3/3     Running     0             8m31s
-rook-ceph     csi-rbdplugin-6pvtj                                3/3     Running     0             8m31s
-rook-ceph     csi-rbdplugin-provisioner-7c756d9bd7-8v7cf         6/6     Running     0             8m31s
-rook-ceph     csi-rbdplugin-provisioner-7c756d9bd7-m7zwt         6/6     Running     0             8m31s
-rook-ceph     csi-rbdplugin-rjsp8                                3/3     Running     0             8m31s
-rook-ceph     csi-rbdplugin-wpwbk                                3/3     Running     0             8m31s
-rook-ceph     rook-ceph-crashcollector-node86-6f69c98877-785cl   1/1     Running     0             3m41s
-rook-ceph     rook-ceph-crashcollector-node87-865f998898-59zjm   1/1     Running     0             3m49s
-rook-ceph     rook-ceph-crashcollector-node88-65669f77f5-vd48r   1/1     Running     0             3m15s
-rook-ceph     rook-ceph-mgr-a-6b6f9444f-qw2bg                    2/2     Running     0             3m49s
-rook-ceph     rook-ceph-mgr-b-69768df8f7-lvk6r                   2/2     Running     0             3m48s
-rook-ceph     rook-ceph-mon-a-77545f988f-qnphr                   1/1     Running     0             9m45s
-rook-ceph     rook-ceph-mon-b-7c5c48bb4d-kvqpn                   1/1     Running     0             8m48s
-rook-ceph     rook-ceph-mon-c-7699d5c9f5-7ckcb                   1/1     Running     0             6m11s
-rook-ceph     rook-ceph-operator-8485948986-2v6k6                1/1     Running     0             12m
-rook-ceph     rook-ceph-osd-0-7cc7d95975-99d96                   1/1     Running     0             3m15s
-rook-ceph     rook-ceph-osd-prepare-node86-g4crh                 0/1     Completed   0             2m55s
-rook-ceph     rook-ceph-osd-prepare-node87-zgxvx                 0/1     Completed   0             2m52s
-rook-ceph     rook-ceph-osd-prepare-node88-dv8j5                 0/1     Completed   0             2m48s
+kubectl apply -f rook/deploy/examples/filesystem.yaml
+```
+
+## Deploy Storage Class
+
+```Bash
+kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 ```
 
 ---
