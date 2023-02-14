@@ -54,6 +54,12 @@ systemctl daemon-reload && systemctl restart kubelet
 
 ---
 
+:tada:
+
+<img width="837" alt="Screenshot 2023-02-14 at 4 21 17 PM" src="https://user-images.githubusercontent.com/20737479/218666734-65e53350-231d-4260-a155-52d6ff754399.png">
+
+---
+
 ### Reference
 - Kubernetes 인증서 만료시 갱신 방법, https://danawalab.github.io/kubernetes/2022/03/28/Renew-Kubernates.html, 2023-02-14-Tue.
 - Organizing Cluster Access Using kubeconfig Files, https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/, 2023-02-14-Tue.
