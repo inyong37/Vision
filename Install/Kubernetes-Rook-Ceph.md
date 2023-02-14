@@ -34,7 +34,7 @@ $ apt-get install -y lvm2
 
 If you will be creating volumes from a Ceph shared file system (CephFS), the recommended minimum kernel version is 4.17. If you have a kernel version less than 4.17, the requested PVC sizes will not be enforced. Storage quotas will only be enforced on newer kernels.
 
-## A. [Rook Ceph 1.9 Quickstart](https://rook.io/docs/rook/v1.9/quickstart.html)
+## 1-A. [Install Rook-Ceph](https://rook.io/docs/rook/v1.9/quickstart.html)
 
 ```Bash
 $ git clone --single-branch --branch v1.9.2 https://github.com/rook/rook.git
@@ -53,47 +53,47 @@ With Kubernetes 1.24.0:
 
 Installing rook-ceph with Krew works, but the pods are not properly deployed.
 
-## [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
+### [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
 
 Delete the Block and File artifacts:
 
 ```Bash
-$ # kubectl delete -f ../wordpress.yaml
-$ # kubectl delete -f ../mysql.yaml
-$ kubectl delete -n rook-ceph cephblockpool replicapool
-$ kubectl delete storageclass rook-ceph-block
-$ kubectl delete -f csi/cephfs/kube-registry.yaml
-$ kubectl delete storageclass csi-cephfs
+# kubectl delete -f ../wordpress.yaml
+# kubectl delete -f ../mysql.yaml
+kubectl delete -n rook-ceph cephblockpool replicapool
+kubectl delete storageclass rook-ceph-block
+kubectl delete -f csi/cephfs/kube-registry.yaml
+kubectl delete storageclass csi-cephfs
 ```
 
 Delete the `CephCluster` CR:
 
 ```Bash
-$ kubectl -n rook-ceph delete cephcluster rook-ceph
+kubectl -n rook-ceph delete cephcluster rook-ceph
 ```
 
 Delete the Operator and related Resources:
 
 ```Bash
-$ kubectl delete -f operator.yaml
-$ kubectl delete -f common.yaml
-$ kubectl delete -f psp.yaml
-$ kubectl delete -f crds.yaml
+kubectl delete -f operator.yaml
+kubectl delete -f common.yaml
+kubectl delete -f psp.yaml
+kubectl delete -f crds.yaml
 ```
 
-## B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
+## 1-B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
 
 ```Bash
 $ kubectl krew install rook-ceph
 ```
 
-## Deploy File System
+## 2. Deploy File System
 
 ```Bash
 kubectl apply -f rook/deploy/examples/filesystem.yaml
 ```
 
-## Deploy Storage Class
+## 3. Deploy Storage Class
 
 ```Bash
 kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
