@@ -96,7 +96,7 @@ kubectl delete -f crds.yaml
 ## Option B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
 
 ```Bash
-$ kubectl krew install rook-ceph
+kubectl krew install rook-ceph
 ```
 
 ---
