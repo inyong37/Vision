@@ -23,4 +23,4 @@ Reduce the number of nameservers (DNS) no more than three.
 ---
 
 ### Reference
-- https://www.ibm.com/support/pages/how-fix-kube-event-nameserver-limits-were-exceeded-some-nameservers-have-been-omitted, 2023-02-14-Tue.
+- How to fix kube event "Nameserver limits were exceeded, some nameservers have been omitted."?, https://www.ibm.com/support/pages/how-fix-kube-event-nameserver-limits-were-exceeded-some-nameservers-have-been-omitted, 2023-02-14-Tue.
