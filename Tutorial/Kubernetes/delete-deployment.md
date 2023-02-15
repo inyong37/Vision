@@ -1,4 +1,4 @@
-# Kubernetes delet deployment
+# Delet a Deployment
 
 ## Date
 
@@ -10,9 +10,9 @@ Ubuntu 22.04.1 LTS
 
 Kubernetes 1.24.10
 
-## Contents
+## Delete a Deployment
 
-### 1. get deployments
+### 1. Get Deployments
 
 A. Using `deployments`
 
@@ -32,7 +32,7 @@ kube-system   calico-kube-controllers   0/1     1            0           2d    c
 kube-system   coredns                   2/2     2            2           2d    coredns                   registry.k8s.io/coredns/coredns:v1.8.6      k8s-app=kube-dns
 ```
 
-### 2. delete a deployment
+### 2. Delete the deployment
 
 A. Using `deployments`:
 
@@ -49,7 +49,7 @@ deployment.apps "calico-kube-controllers" deleted
 ```
 
 ---
+
 ### Reference
 - How to Delete a Kubernetes Deployment [Quick K8s Tips], https://linuxhandbook.com/kubectl-delete-deployment/, 2023-02-09-Thu.
-- Stop the existing Deployments
-, https://www.ibm.com/docs/en/control-desk/7.6.1.x?topic=containers-stop-existing-deployments, 2023-02-09-Thu.
+- Stop the existing Deployments, https://www.ibm.com/docs/en/control-desk/7.6.1.x?topic=containers-stop-existing-deployments, 2023-02-09-Thu.
