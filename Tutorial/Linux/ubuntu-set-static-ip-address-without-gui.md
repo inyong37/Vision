@@ -1,4 +1,4 @@
-# Set static IP address without GUI on Ubuntu 22.04 LTS Server
+# Set Static IP Address without GUI on Ubuntu 22.04 LTS
 
 ## Date
 
@@ -8,11 +8,11 @@
 
 Ubuntu 22.04.1 LTS
 
-## Problem/situaion
+## Contents
 
-Try to set up static IP address on Ubuntu 22.04 LTS Server without GUI
+Set up static IP address on Ubuntu 22.04 LTS without GUI
 
-## Solution
+### 1. Edit netplan configuration file
 
 Before:
 
@@ -49,13 +49,13 @@ network:
   version: 2
 ```
 
-Apply:
+### 2. Apply netplan
 
 ```Bash
 netplan apply
 ```
 
-:key: FYI:
+### FYI: warning with gateway4
 
 ```Bash
 root@node85:~# netplan apply
