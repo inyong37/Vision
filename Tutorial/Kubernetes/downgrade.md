@@ -1,4 +1,4 @@
-# Downgrade/remove Kubernetes
+# Uninstall Kubernetes
 
 ## Date
 
@@ -12,36 +12,37 @@ Ubuntu 20.04.5 LTS -> Ubuntu 22.04.1 LTS
 
 Kubernetes 1.26.1 -> 1.24.00 -> 1.24.10
 
-## Contents
+## Uninstall Kubernetes
 
-### 1. Reset on each machines
+### 1. Reset kubeadm
 
 ```Bash
 kubeadm reset
-rm -rf $HOME/.kube /etc/cni/net.d /opt/cni /etc/kubernetes
-``` 
+```
 
 ```Bash
-apt install ipvsadm
+rm -rf $HOME/.kube /etc/cni/net.d /opt/cni /etc/kubernetes
+```
+
+```Bash
+apt update && apt install ipvsadm
+```
+
+```Bash
 ipvsadm --clear
 ```
 
 ### 2. [Uninstall kubeadm, kubectl, and kubelet](https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes)
 
 ```Bash
-apt remove kubeadm kubectl kubelet
+apt remove -y kubeadm kubectl kubelet
+```
+
+```Bash
 apt autoremove
 ```
 
-### 3. [Install kubeadm, kubectl, and kubelet with specific version](https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes)
-
-Check available versions:
-
-```Bash
-curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep Version | awk '{print $2}'
-```
-
-Install specific version:
+## :key: FYI: [Reinstall](https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes)
 
 ```Bash
 apt install kubeadm=1.24.10-00 kubectl=1.24.10-00 kubelet=1.24.10-00
@@ -53,7 +54,7 @@ Fix the versions:
 apt-mark hold kubelet kubeadm kubectl
 ```
 
-Initialize:
+### :control_knobs: Initialize on Master Node
 
 ```Bash
 kubeadm init --pod-network-cidr <ip_address>/16 --apiserver-advertise-address=<master_node_ip_address>
@@ -65,8 +66,7 @@ Set admin.conf path:
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 
-
-### 4. Deploy pod network
+Deploy network policy:
 
 A. Calico:
 
@@ -92,7 +92,7 @@ Edit as below:
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
-Finally, join from worker nodes:
+### :robot: Join on Worker Node:
 
 ```Bash
 kubeadm join {master_ip} -- token {token} --discovery-token-ca-cert-hash {sha256}
