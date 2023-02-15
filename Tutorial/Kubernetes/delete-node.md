@@ -1,4 +1,4 @@
-# Delete a Node on Kubernetes
+# Delete a Node
 
 ## Environment
 
@@ -10,27 +10,15 @@ Kubernetes 1.26.1
 
 2023-02-02-Thursday.
 
-## Contents
+## Delete a Node
 
-### 1. Check nodes' name
-
-```Bash
-kubectl get nodes
-```
-
-### 2. Drain the node
+### 1. Drain a node
 
 ```Bash
-kubectl drain {node_name}
+kubectl drain {node_name} # --ignore-daemonsets --delete-local-data
 ```
 
-[Or](https://github.com/inyong37/Vision/blob/master/Troubleshooting/Kubernetes-node-drain.md):
-
-```Bash
-kubectl drain {node_name} --ignore-daemonsets --delete-local-data
-```
-
-### Finally, delete the node
+### Finally, Delete the Node
 
 ```Bash
 kubectl delete node {node_name}
