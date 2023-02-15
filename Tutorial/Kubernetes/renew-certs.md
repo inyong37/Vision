@@ -1,4 +1,4 @@
-# Renew Certification
+# Renew the Certificates
 
 ## Date
 
@@ -57,7 +57,6 @@ systemctl restart kubelet
 
 ### Reference
 - Kubernetes 인증서 만료시 갱신 방법, https://danawalab.github.io/kubernetes/2022/03/28/Renew-Kubernates.html, 2023-02-14-Tue.
-- Organizing Cluster Access Using kubeconfig Files, https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/, 2023-02-14-Tue.
-- Renewing Kubernetes 1.14.x cluster certificates, https://www.ibm.com/docs/en/fci/1.0.3?topic=kubernetes-renewing-114x-cluster-certificates, 2023-02-14-Tue.
-- Certificate Management with kubeadm, https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/, 2023-02-14-Tue.
 - Renewing Kubernetes cluster certificates, https://www.ibm.com/docs/en/fci/1.1.0?topic=kubernetes-renewing-cluster-certificates, 2023-02-14-Tue.
+- Certificate Management with kubeadm, https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/, 2023-02-14-Tue.
+- Organizing Cluster Access Using kubeconfig Files, https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/, 2023-02-14-Tue.
