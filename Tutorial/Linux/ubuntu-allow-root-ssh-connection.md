@@ -1,4 +1,4 @@
-# Allow Root SSH Connection on Ubuntu 22.04 LTS
+# Allow Root SSH Connection on Ubuntu
 
 ## Date
 
@@ -6,13 +6,13 @@
 
 ## Environment
 
-Ubuntu 22.04 LTS
+Ubuntu 22.04.1 LTS
 
-## Problem
+## [Content](https://linuxconfig.org/allow-ssh-root-login-on-ubuntu-22-04-jammy-jellyfish-linux)
+
+### Situation
 
 User ssh login works, but the root ssh login doesn't work.
-
-## [Solution](https://linuxconfig.org/allow-ssh-root-login-on-ubuntu-22-04-jammy-jellyfish-linux)
 
 ### 1. Permit Root Login in Configuration
 
@@ -52,7 +52,7 @@ systemctl restart ssh
 sudo passwd
 ```
 
-### 4. Allow SSH in firewall
+### FYI: Allow SSH in firewall
 
 ```
 sudo ufw allow ssh
