@@ -42,6 +42,8 @@ apt remove -y kubeadm kubectl kubelet
 apt autoremove
 ```
 
+---
+
 ## :key: FYI: [Reinstall](https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes)
 
 ```Bash
