@@ -12,12 +12,15 @@ Kubernetes 1.24.10
 
 Calico 3.25.0
 
-## Contents
-
-### Delete
+## Delete
 
 ```Bash
-root@master01:~# kubectl delete -f calico.yaml
+kubectl delete -f calico.yaml
+```
+
+Results:
+
+```Bash
 poddisruptionbudget.policy "calico-kube-controllers" deleted
 serviceaccount "calico-kube-controllers" deleted
 serviceaccount "calico-node" deleted
@@ -50,5 +53,3 @@ daemonset.apps "calico-node" deleted
 
 ### Reference
 - how to delete/remove calico cni from my kubernetes cluster, https://stackoverflow.com/questions/53610641/how-to-delete-remove-calico-cni-from-my-kubernetes-cluster, 2023-02-09-Thu.
-
-
