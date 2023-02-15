@@ -12,46 +12,30 @@ Kubernetes 1.24.10
 
 ## [Renew](https://danawalab.github.io/kubernetes/2022/03/28/Renew-Kubernates.html)
 
-Backup keys:
+### 1. Backup Configurations
 
 ```Bash
-cp -fR /etc/kubernetes/pki/ /etc/kubernetes/pki-backup/
+cp -fR /etc/kubernetes/ /etc/kubernetes-backup/ # pki at /etc/kubernetes/pki/
 ```
 
-Renew all:
+### 2. Renew the Certificates
 
 ```Bash
 kubeadm certs renew all
 ```
 
-Check keys renewed:
-
-```Bash
-kubeadm certs check-expiration
-```
-
-Backup configurations:
-
-```Bash
-cp -fR /etc/kubernetes/ /etc/kubernetes-backup/
-```
-
-Restart services:
+### 3. Restart the Services
 
 ```Bash
 systemctl daemon-reload
 systemctl restart kubelet
 ```
 
----
+### Finally, Check the Certificates
 
-## :tada: Result
-
-> <img width="817" alt="Screenshot 2023-02-14 at 4 22 15 PM" src="https://user-images.githubusercontent.com/20737479/218666904-2ec6b60a-ae2b-4959-99fa-6dfae2dd391e.png">
-
-> <img width="992" alt="Screenshot 2023-02-14 at 4 46 58 PM" src="https://user-images.githubusercontent.com/20737479/218672046-eb9db367-3d58-4129-ab2e-bfa8ba722ad7.png">
-
-> <img width="1175" alt="Screenshot 2023-02-14 at 4 47 18 PM" src="https://user-images.githubusercontent.com/20737479/218672111-88ee1468-7f77-46c8-8321-cede6b2ca401.png">
+```Bash
+kubeadm certs check-expiration
+```
 
 ---
 
