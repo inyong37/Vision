@@ -1,4 +1,4 @@
-# Kubernetes delete pods
+# Delete a Pod
 
 ## Date
 
@@ -12,7 +12,7 @@ Kubernetes 1.24.10
 
 Calico 3.25.0
 
-## Delete
+## Delete a Pod
 
 ```Bash
 kubectl delete -f calico.yaml
