@@ -1,4 +1,4 @@
-# Set Static IP Address without GUI on Ubuntu 22.04 LTS
+# Set Static IP Address without GUI on Ubuntu
 
 ## Date
 
