@@ -24,12 +24,12 @@ Edit:
 $ sudo vim /etc/ssh/sshd_config
 ```
 
-Edit PermitRootLogin with yes argument:
-
 Before:
 
 ```YAML
+...
 #PermitRootLogin prohibit-password
+...
 ```
 
 After:
