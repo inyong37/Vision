@@ -8,6 +8,8 @@
 
 Debian GNU/Linux 11 (bullseye)
 
+NFC Card Reader ACR122U
+
 ## [Content](https://github.com/Rylern/ACR122U-tutorial)
 
 ### Verify
