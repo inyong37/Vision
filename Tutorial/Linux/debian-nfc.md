@@ -57,4 +57,8 @@ Feb 22 11:24:08 DESKTOP-8AI2B51 systemd[1]: pcscd.service: Succeeded.
 ---
 
 ### Reference
+- ACR122 Driver, https://www.acs.com.hk/en/driver/3/acr122u-usb-nfc-reader/, 2023-02-22-Wed.
 - Install NFC Card Reader GitHub, https://github.com/Rylern/ACR122U-tutorial, 2023-02-22-Wed.
+- LC_CTYPE Error Blog KR, https://timte.tistory.com/46, 2023-02-22-Wed.
+- NFC Driver Conflict, https://ludovicrousseau.blogspot.com/2013/11/linux-nfc-driver-conflicts-with-ccid.html, 2023-02-22-Wed.
+- rmmod Error Stackoverflow, https://stackoverflow.com/questions/42429871/device-driver-cannot-remove-rmmod-error-module-is-in-use, 2023-02-22-Wed.
