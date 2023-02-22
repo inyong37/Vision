@@ -1,4 +1,4 @@
-# CentOS Yum Install Could Not Resolve Host Unknown Error
+# Yum Install Could Not Resolve Host Unknown Error
 
 ## Environment
 
