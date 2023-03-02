@@ -10,6 +10,8 @@ Ubuntu 22.04.1 LTS
 
 Kubernetes 1.24.10
 
+Rook Ceph 1.9
+
 ## Problem
 
 I tried to re-make rook-ceph, an error occured:
