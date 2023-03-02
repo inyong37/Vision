@@ -1,4 +1,4 @@
-# Install [Rook](https://rook.io/) Ceph on Kubernetes
+# Install [Rook](https://rook.io/) [Ceph](https://ceph.com/en/) on Kubernetes
 
 ## Environment
 
@@ -103,6 +103,7 @@ kubectl krew install rook-ceph
 
 ### Reference
 - Rook, https://rook.io/, 2023-01-20-Fri.
+- Ceph, https://ceph.com/en/, 2023-03-02-Thu.
 - Rook GitHub, https://github.com/rook/rook, 2023-01-20-Fri.
 - Rook Prerequisites, https://rook.io/docs/rook/v1.10/Getting-Started/Prerequisites/prerequisites/, 2023-01-20-Fri.
 - 쿠버네티스 가상스토리지(Ceph) 설치, https://danawalab.github.io/kubernetes/2020/01/28/kubernetes-rook-ceph.html, 2023-01-20-Fri.
