@@ -6,6 +6,24 @@ Ubuntu 18.04.6 LTS -> Ubuntu 20.04.5 LTS -> Ubuntu 22.04.1 LTS
 
 Kubernetes 1.26.0 (Policy deprecated in 1.25) -> Kubernetes 1.24.0 -> Kubernetes 1.24.10
 
+## [Install Ceph](https://docs.ceph.com/en/latest/install/)
+
+### Cephadm
+
+Cephadm installs and manages a Ceph cluster that uses containers and systemd and is tightly integrated with the CLI and dashboard GUI.
+
+- cephadm supports only Octopus and newer releases.
+- cephadm is fully integrated with the orchestration API and fully supports the CLI and dashboard features that are used to manage cluster deployment.
+- cephadm requires container support (in the form of Podman or Docker) and Python 3.
+
+### Rook
+
+Rook deploys and manages Ceph clusters running in Kubernetes, while also enabling management of storage resources and provisioning via Kubernetes APIs. We recommend Rook as the way to run Ceph in Kubernetes or to connect an existing Ceph storage cluster to Kubernetes.
+
+- Rook supports only Nautilus and newer releases of Ceph.
+- Rook is the preferred method for running Ceph on Kubernetes, or for connecting a Kubernetes cluster to an existing (external) Ceph cluster.
+- Rook supports the orchestrator API. Management features in the CLI and dashboard are fully supported.
+
 ## [Requirement](https://rook.io/docs/rook/v1.10/Getting-Started/Prerequisites/prerequisites/)
 
 Rook can be installed on any existing Kubernetes cluster as long as it meets the minimum version and Rook is granted the required privileges (see below for more information).
@@ -104,6 +122,7 @@ kubectl krew install rook-ceph
 ### Reference
 - Rook, https://rook.io/, 2023-01-20-Fri.
 - Ceph, https://ceph.com/en/, 2023-03-02-Thu.
+- Install Ceph, https://docs.ceph.com/en/latest/install/, 2023-03-02-Thu.
 - Rook GitHub, https://github.com/rook/rook, 2023-01-20-Fri.
 - Rook Prerequisites, https://rook.io/docs/rook/v1.10/Getting-Started/Prerequisites/prerequisites/, 2023-01-20-Fri.
 - 쿠버네티스 가상스토리지(Ceph) 설치, https://danawalab.github.io/kubernetes/2020/01/28/kubernetes-rook-ceph.html, 2023-01-20-Fri.
