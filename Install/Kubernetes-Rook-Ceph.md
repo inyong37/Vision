@@ -61,6 +61,12 @@ $ kubectl apply -f crds.yaml -f common.yaml -f operator.yaml
 $ kubectl apply -f cluster.yaml
 ```
 
+## 1.B. [Install Rook-Ceph using Krew](https://github.com/rook/kubectl-rook-ceph)
+
+```Bash
+kubectl krew install rook-ceph
+```
+
 ## 2. Deploy File System
 
 ```Bash
@@ -73,15 +79,7 @@ kubectl apply -f rook/deploy/examples/filesystem.yaml
 kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 ```
 
-### [Issue](https://github.com/helm/helm/issues/11287)
-
-> <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
-
-With Kubernetes 1.24.0:
-
-> <img width="622" alt="Screenshot 2023-01-31 at 11 07 12 AM" src="https://user-images.githubusercontent.com/20737479/215641540-5980ac86-1197-46b0-9fb9-59911b4ff131.png">
-
-Installing rook-ceph with Krew works, but the pods are not properly deployed.
+---
 
 ### [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
 
@@ -111,11 +109,17 @@ kubectl delete -f psp.yaml
 kubectl delete -f crds.yaml
 ```
 
-## Option B. [Install using Krew](https://github.com/rook/kubectl-rook-ceph)
+---
 
-```Bash
-kubectl krew install rook-ceph
-```
+### [Issue](https://github.com/helm/helm/issues/11287)
+
+> <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
+
+With Kubernetes 1.24.0:
+
+> <img width="622" alt="Screenshot 2023-01-31 at 11 07 12 AM" src="https://user-images.githubusercontent.com/20737479/215641540-5980ac86-1197-46b0-9fb9-59911b4ff131.png">
+
+Installing rook-ceph with Krew works, but the pods are not properly deployed.
 
 ---
 
