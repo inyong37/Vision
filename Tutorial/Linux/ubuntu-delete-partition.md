@@ -33,3 +33,13 @@ Syncing disks.
 ```
 
 > <img width="509" alt="Screenshot 2023-03-03 at 2 47 41 PM" src="https://user-images.githubusercontent.com/20737479/222641481-aa04cf63-2ba8-4a91-87e8-65fe0faba318.png">
+
+---
+
+(Todo) resize
+
+```Bash
+root@node87:~# gparted
+
+(gpartedbin:4836): Gtk-WARNING **: 16:04:52.569: cannot open display:
+```
