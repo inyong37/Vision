@@ -14,7 +14,7 @@ Ubuntu 22.04.1 LST with 128GB SSD (OS installed) and 1TB HDD (to clean-up)
 lsblk
 ```
 
-## [Format the volume](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/#cleaning-up-a-cluster)
+## [Format the volume](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/#cleaning-up-a-cluster) `/dev/sdb`
 
 ```Bash
 DISK="/dev/sdb"
