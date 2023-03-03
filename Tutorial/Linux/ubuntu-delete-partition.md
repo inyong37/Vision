@@ -6,7 +6,7 @@
 
 ## Environment
 
-Ubuntu 22.04.1 LTS with 128GB SSD (OS installed)
+Ubuntu 22.04.1 LTS with 1TB HDD (OS installed)
 
 ## Delete Partition `/dev/sda4/`
 
@@ -31,3 +31,5 @@ Command (m for help): w
 The partition table has been altered.
 Syncing disks.
 ```
+
+> <img width="509" alt="Screenshot 2023-03-03 at 2 47 41 PM" src="https://user-images.githubusercontent.com/20737479/222641481-aa04cf63-2ba8-4a91-87e8-65fe0faba318.png">
