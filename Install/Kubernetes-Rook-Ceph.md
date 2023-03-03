@@ -109,6 +109,22 @@ kubectl delete -f psp.yaml
 kubectl delete -f crds.yaml
 ```
 
+```Bash
+DISK="/dev/sdX"
+
+# Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
+sgdisk --zap-all $DISK
+
+# Wipe a large portion of the beginning of the disk to remove more LVM metadata that may be present
+dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
+
+# SSDs may be better cleaned with blkdiscard instead of dd
+blkdiscard $DISK
+
+# Inform the OS of partition table changes
+partprobe $DISK
+```
+
 ---
 
 ### [Issue](https://github.com/helm/helm/issues/11287)
@@ -133,3 +149,4 @@ Installing rook-ceph with Krew works, but the pods are not properly deployed.
 - Ceph Quickstart, https://rook.io/docs/rook/v1.9/quickstart.html, 2023-01-25-Wed.
 - Cleanup, https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/, 2023-01-25-Wed.
 - kubectl-rook-ceph, https://github.com/rook/kubectl-rook-ceph, 2023-01-30-Mon.
+- Install partprobe, https://command-not-found.com/partprobe, 2023-03-03-Fri.
