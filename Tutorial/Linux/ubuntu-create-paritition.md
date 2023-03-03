@@ -6,7 +6,7 @@
 
 ## Environment
 
-Ubuntu 22.04.1 LTS with 128GB SSD (OS installed)
+Ubuntu 22.04.1 LTS with 1TB HDD (OS installed)
 
 ## Create Partition on `/dev/sda/`
 
@@ -33,3 +33,5 @@ Command (m for help): w
 The partition table has been altered.
 Syncing disks.
 ```
+
+> <img width="663" alt="Screenshot 2023-03-03 at 2 48 38 PM" src="https://user-images.githubusercontent.com/20737479/222641631-4ba67ff9-360d-486c-b834-230e4476c216.png">
