@@ -88,6 +88,10 @@ Please, check the contents of the $HOME/.kube/config file.
 
 Delete node's pods before reset.
 
+```Bash
+root@master-node# kubectl drain {node}
+```
+
 Deleting node didn't clear the node's containers.
 
 ---
