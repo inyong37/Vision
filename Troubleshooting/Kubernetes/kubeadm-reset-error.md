@@ -86,6 +86,10 @@ Please, check the contents of the $HOME/.kube/config file.
 
 ## Solution
 
+Delete node's pods before reset.
+
+Deleting node didn't clear the node's containers.
+
 ---
 
 ### Reference
