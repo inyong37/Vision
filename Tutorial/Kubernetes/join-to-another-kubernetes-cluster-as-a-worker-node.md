@@ -12,14 +12,14 @@ Kubernetes 1.24.10
 
 ## Delete a node from Old Kubernetes Cluster
 
-### 1. Delete
+### 1. Delete the Node on Master Node
 
 ```Bash
 root@node238:~# kubectl drain node237
 root@node238:~# kubectl delete node node237
 ```
 
-### 2. Reset
+### 2. Reset the Worker Node itself
 
 ```Bash
 root@node237:~# kubeadm reset --cri-socket=/var/run/crio/crio.sock
