@@ -15,6 +15,7 @@ Kubernetes 1.24.10
 ### 1. Delete
 
 ```Bash
+root@node238:~# kubectl drain node237
 root@node238:~# kubectl delete node node237
 ```
 
