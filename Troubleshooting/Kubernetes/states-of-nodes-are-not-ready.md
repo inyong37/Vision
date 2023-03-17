@@ -1,4 +1,4 @@
-# Kubernetes Nodes' status are NotReady
+# states of nodes are NotReady
 
 ## Date
 
