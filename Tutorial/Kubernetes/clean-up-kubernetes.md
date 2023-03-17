@@ -1,4 +1,4 @@
-# Uninstall Kubernetes
+# Clean-up Kubernetes
 
 ## Date
 
