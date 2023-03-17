@@ -1,4 +1,4 @@
-# Minikube
+# Setup Minikube
 
 ## Environment
 
