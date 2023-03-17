@@ -1,4 +1,4 @@
-# [KubeVirt quickstart with Minikube](https://kubevirt.io/quickstart_minikube/)
+# [Use KubeVirt on Minikube](https://kubevirt.io/quickstart_minikube/)
 
 ## Environment
 
