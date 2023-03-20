@@ -81,52 +81,6 @@ kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 
 ---
 
-### [Cleanup](https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/)
-
-Delete the Block and File artifacts:
-
-```Bash
-# kubectl delete -f ../wordpress.yaml
-# kubectl delete -f ../mysql.yaml
-kubectl delete -n rook-ceph cephblockpool replicapool
-kubectl delete storageclass rook-ceph-block
-kubectl delete -f csi/cephfs/kube-registry.yaml
-kubectl delete storageclass csi-cephfs
-```
-
-Delete the `CephCluster` CR:
-
-```Bash
-kubectl -n rook-ceph delete cephcluster rook-ceph
-```
-
-Delete the Operator and related Resources:
-
-```Bash
-kubectl delete -f operator.yaml
-kubectl delete -f common.yaml
-kubectl delete -f psp.yaml
-kubectl delete -f crds.yaml
-```
-
-```Bash
-DISK="/dev/sdX"
-
-# Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
-sgdisk --zap-all $DISK
-
-# Wipe a large portion of the beginning of the disk to remove more LVM metadata that may be present
-dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
-
-# SSDs may be better cleaned with blkdiscard instead of dd
-blkdiscard $DISK
-
-# Inform the OS of partition table changes
-partprobe $DISK
-```
-
----
-
 ### [Issue](https://github.com/helm/helm/issues/11287)
 
 > <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
@@ -147,6 +101,5 @@ Installing rook-ceph with Krew works, but the pods are not properly deployed.
 - Rook Prerequisites, https://rook.io/docs/rook/v1.10/Getting-Started/Prerequisites/prerequisites/, 2023-01-20-Fri.
 - 쿠버네티스 가상스토리지(Ceph) 설치, https://danawalab.github.io/kubernetes/2020/01/28/kubernetes-rook-ceph.html, 2023-01-20-Fri.
 - Ceph Quickstart, https://rook.io/docs/rook/v1.9/quickstart.html, 2023-01-25-Wed.
-- Cleanup, https://rook.io/docs/rook/v1.10/Getting-Started/ceph-teardown/, 2023-01-25-Wed.
 - kubectl-rook-ceph, https://github.com/rook/kubectl-rook-ceph, 2023-01-30-Mon.
 - Install partprobe, https://command-not-found.com/partprobe, 2023-03-03-Fri.
