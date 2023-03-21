@@ -82,9 +82,15 @@ User:
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 ```
 
+### [Install glib](https://ubuntuforums.org/showthread.php?t=1245078)
+
+```Bash
+apt-get install libglib2.0-dev
+```
+
 ---
 
 ### Reference
 - pkg-config Command Error Blog KR, https://webcreate.tistory.com/entry/pkgconfig-command-not-found-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95, 2023-03-21-Tue.
-- PKG_CONFIG_PATH environment variable askubuntu, https://askubuntu.com/questions/210210/pkg-config-path-environment-variable, 2023-03-21-Tue.
-- https://ubuntuforums.org/showthread.php?t=1245078
+- PKG_CONFIG_PATH Environment Variable Askubuntu, https://askubuntu.com/questions/210210/pkg-config-path-environment-variable, 2023-03-21-Tue.
+- glib Error ubuntuforums, https://ubuntuforums.org/showthread.php?t=1245078
