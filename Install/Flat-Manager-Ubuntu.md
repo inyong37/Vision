@@ -17,6 +17,7 @@ apt-get install openssl libudev-dev file curl jq
 apt-get install build-essential libssl-dev git libclang-dev
 apt-get install intltool
 apt-get install libglib2.0-dev
+apt install gcc-multilib
 ```
 
 ### Install cargo
