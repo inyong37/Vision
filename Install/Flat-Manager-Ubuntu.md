@@ -38,7 +38,7 @@ apt-get -y install postgresql
 ### Install ostree
 
 ```Bash
-apt install ostree
+apt install ostree libostree-dev
 ```
 
 ### Clone flat-manager
