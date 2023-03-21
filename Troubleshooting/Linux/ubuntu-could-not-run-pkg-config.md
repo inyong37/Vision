@@ -60,15 +60,31 @@ Caused by:
   that require pkg-config.
 ```
 
-## [Solution](https://webcreate.tistory.com/entry/pkgconfig-command-not-found-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95)
+## Solution
 
-### Install `pkg-config`
+### [Install `pkg-config`](https://webcreate.tistory.com/entry/pkgconfig-command-not-found-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95)
 
 ```Bash
 apt install pkg-config
+```
+
+### [Set environment variable](https://askubuntu.com/questions/210210/pkg-config-path-environment-variable)
+
+Root:
+
+```Bash
+export PKG_CONFIG_PATH=/lib/pkgconfig
+```
+
+User:
+
+```Bash
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 ```
 
 ---
 
 ### Reference
 - pkg-config Command Error Blog KR, https://webcreate.tistory.com/entry/pkgconfig-command-not-found-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95, 2023-03-21-Tue.
+- PKG_CONFIG_PATH environment variable askubuntu, https://askubuntu.com/questions/210210/pkg-config-path-environment-variable, 2023-03-21-Tue.
+- https://ubuntuforums.org/showthread.php?t=1245078
