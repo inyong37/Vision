@@ -19,7 +19,7 @@ cargo install cargo-cache
 ### Clean-up
 
 ```Bash
-cargo cache -a
+cargo cache --remove-dir all
 ```
 
 ---
