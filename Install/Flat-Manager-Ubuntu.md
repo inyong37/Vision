@@ -60,3 +60,4 @@ cargo build
 - flat-manager GitHub, https://github.com/flatpak/flat-manager, 2023-03-20-Mon.
 - postgresql Download, https://www.postgresql.org/download/linux/ubuntu/, 2023-03-20-Mon.
 - failed to run custom build command, https://github.com/openethereum/openethereum/issues/415, 2023-03-21-Tue.
+- Install ostree-dev, https://zoomadmin.com/HowToInstall/UbuntuPackage/libostree-dev, 2023-03-21-Tue.
