@@ -52,7 +52,7 @@ Restart network service:
 systemctl restart network
 ```
 
-### [ssh](https://www.wikihow.com/Enable-Ssh-in-Centos-7)
+### [Set-up ssh](https://www.wikihow.com/Enable-Ssh-in-Centos-7)
 
 :key: Usually ssh server service is already set-up.
 
@@ -78,6 +78,26 @@ $ sudo systemctl status sshd
 
 > <img width="628" alt="Screenshot 2023-01-26 at 3 51 50 PM" src="https://user-images.githubusercontent.com/20737479/214774577-0c968390-c7af-4cc6-bcd5-b38147beae53.png">
 
+[Enable root login](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/v2v_guide/preparation_before_the_p2v_migration-enable_root_login_over_ssh)
+
+Edit ssh configuration:
+
+```Bash
+vi /etc/ssh/sshd_config
+```
+
+Delete comment out `#PermiteRootLogin` as below:
+
+```YAML
+PermitRootLogin yes
+```
+
+Restart ssh server:
+
+```Bash
+service sshd restart
+```
+
 ### [git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-centos-7)
 
 Install:
@@ -97,3 +117,4 @@ $ git --version
 - How to Enable SSH in CentOS 7, https://www.wikihow.com/Enable-Ssh-in-Centos-7, 2023-01-26-Thu.
 - How To Install Git on CentOS 7, https://www.digitalocean.com/community/tutorials/how-to-install-git-on-centos-7, 2023-01-26-Thu.
 - Set-up Static IP Blog KR, https://www.manualfactory.net/10004, 2023-03-22-Wed.
+- Enable root login over SSH RedHat, https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/v2v_guide/preparation_before_the_p2v_migration-enable_root_login_over_ssh, 2023-03-22-Wed.
