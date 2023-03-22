@@ -2,11 +2,15 @@
 
 ## Date
 
-2023-02-22-Wed.
+2023-02-22-Wednesday.
+
+2023-03-22-Wednesday.
 
 ## Environment
 
 Debian GNU/Linux 11 (bullseye)
+
+CentOS 7
 
 ## Problem
 
