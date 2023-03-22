@@ -59,7 +59,7 @@ systemctl restart network
 FYI:
 
 ```Bash
-$ sudo yum -y install openssh-server openssh-clients
+sudo yum -y install openssh-server openssh-clients
 ```
 
 > <img width="699" alt="Screenshot 2023-01-26 at 3 51 01 PM" src="https://user-images.githubusercontent.com/20737479/214774473-edd8d171-14e1-4559-8c80-50dfd2f65fe6.png">
@@ -67,13 +67,13 @@ $ sudo yum -y install openssh-server openssh-clients
 Start:
 
 ```Bash
-$ sudo systemctl start sshd
+sudo systemctl start sshd
 ```
 
 Check:
 
 ```Bash
-$ sudo systemctl status sshd
+sudo systemctl status sshd
 ```
 
 > <img width="628" alt="Screenshot 2023-01-26 at 3 51 50 PM" src="https://user-images.githubusercontent.com/20737479/214774577-0c968390-c7af-4cc6-bcd5-b38147beae53.png">
@@ -103,12 +103,12 @@ service sshd restart
 Install:
 
 ```Bash
-$ sudo yum install git
+sudo yum install git
 ```
 
 Verify:
 ```Bash
-$ git --version
+git --version
 ```
 
 ---
