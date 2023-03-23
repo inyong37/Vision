@@ -73,6 +73,22 @@ Install aiohttp package of Python 3:
 dnf install -y python3-aiohttp
 ```
 
+### Configuration
+
+```Bash
+cp example.env .env
+cp example-config.json config.json
+```
+
+### Database
+
+```Bash
+dnf install postgresql-server postgresql-contrib
+systemctl enable postgresql
+postgresql-setup --initdb --unit postgresql
+systemctl start postgresql
+```
+
 ---
 
 ## ~~2. Install flat-manager for Building Flatpak Repository on CentOS 7~~
