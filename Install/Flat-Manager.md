@@ -12,6 +12,50 @@
 2. CentOS Linux release 7.9.2009 (Core)
 3. Fedora 37
 
+## 3. Install flat-manager for Building Flatpak Repository on Fedora 37
+
+:bulb: All commands were executed on root authority.
+
+[Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html):
+
+```Bash
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+Install DNF:
+
+```Bash
+yum install -y dnf
+```
+
+Install cargo:
+
+```Bash
+dnf install -y cargo
+```
+
+Install PostgreSQL:
+
+```Bash
+dnf install postgresql-devel
+```
+
+Install ostree:
+
+```Bash
+dnf install ostree-devel
+```
+
+Build the server:
+
+```Bash
+git clone https://github.com/flatpak/flat-manager.git
+cd flat-manager
+cargo build
+```
+
+---
+
 ## ~~2. Install flat-manager for Building Flatpak Repository on CentOS 7~~
 
 All commands were executed on root authority.
@@ -89,6 +133,8 @@ Complete!
 ```
 
 :bulb: I need ostree version 2021.5 or higher to build this. [However, since Fedora 36, the 2021.5 version is supported.](https://bodhi.fedoraproject.org/updates/?packages=ostree&page=2) [The currently installed OS, CentOS 7, is compatible with Feodra 19 to 27, and CentOS 8 is compatible with Fedora 28.](https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html) So the flat-manager installation will retry with Fedora 37.
+
+---
 
 ## ~~1. Install flat-manager for Building Flatpak Repository on Ubuntu 22~~
 
@@ -173,3 +219,5 @@ error: could not compile `flat-manager` due to previous error
 - Rustup Install, https://forge.rust-lang.org/infra/other-installation-methods.html, 2023-03-22-Wed.
 - Fedora & RHEL Version, https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html, 2023-03-23-Thu.
 - Ostree Version Fedora, https://bodhi.fedoraproject.org/updates/?packages=ostree&page=2, 2023-03-23-Thu.
+- Install Rust, https://doc.rust-lang.org/book/ch01-01-installation.html, 2023-03-23-Thu.
+- 
