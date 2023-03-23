@@ -37,22 +37,33 @@ dnf install -y cargo
 Install PostgreSQL:
 
 ```Bash
-dnf install postgresql-devel
+dnf install -y postgresql-devel
 ```
 
 Install ostree:
 
 ```Bash
-dnf install ostree-devel
+dnf install -y ostree-devel
 ```
 
 Build the server:
 
 ```Bash
+dnf install -y git
 git clone https://github.com/flatpak/flat-manager.git
 cd flat-manager
 cargo build
 ```
+
+Build successed without any errors:
+
+```Bash
+    Finished dev [unoptimized + debuginfo] target(s) in 2m 16s
+warning: the following packages contain code that will be rejected by a future version of Rust: nom v4.2.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+```
+
+
 
 ---
 
