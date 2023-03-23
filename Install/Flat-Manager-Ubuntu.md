@@ -1,4 +1,4 @@
-# Install 'flat-manager' for Building Flatpak Repository on Ubuntu
+# Install flat-manager for Building Flatpak Repository on Ubuntu
 
 ## Date
 
