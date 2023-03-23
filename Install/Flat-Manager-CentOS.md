@@ -1,4 +1,4 @@
-# Install 'flatpak/flat-manager' on CentOS
+# Install flat-manager for Building Flatpak Repository on CentOS
 
 ## Date
 
