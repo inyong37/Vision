@@ -1,4 +1,4 @@
-# Install flatpak-manager on CentOS
+# Install 'flatpak/flat-manager' on CentOS
 
 ## Date
 
@@ -54,4 +54,5 @@ dnf groupinstall "Development Tools"
 ---
 
 ### Reference
+- flat-manager GitHub, https://github.com/flatpak/flat-manager, 2023-03-22-Wed.
 - Rustup Install, https://forge.rust-lang.org/infra/other-installation-methods.html, 2023-03-22-Wed.
