@@ -8,7 +8,7 @@
 
 SSH Client: macOS 13.0.1
 
-SSH Server: Ubuntu 22.04.1 LTS
+SSH Server: Ubuntu 22.04.1 LTS, Fedora 37
 
 ## Problem
 
