@@ -56,3 +56,5 @@ dnf groupinstall "Development Tools"
 ### Reference
 - flat-manager GitHub, https://github.com/flatpak/flat-manager, 2023-03-22-Wed.
 - Rustup Install, https://forge.rust-lang.org/infra/other-installation-methods.html, 2023-03-22-Wed.
+- Fedora & RHEL Version, https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html, 2023-03-23-Thu.
+- Ostree Version Fedora, https://bodhi.fedoraproject.org/updates/?packages=ostree&page=2, 2023-03-23-Thu.
