@@ -12,7 +12,6 @@
 2. CentOS Linux release 7.9.2009 (Core)
 3. Fedora 37
 
-
 ## ~~2. Install flat-manager for Building Flatpak Repository on CentOS 7~~
 
 All commands were executed on root authority.
