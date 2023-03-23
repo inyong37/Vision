@@ -16,6 +16,8 @@
 
 :bulb: All commands were executed on root authority.
 
+### Building the Server
+
 [Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html):
 
 ```Bash
@@ -55,7 +57,7 @@ cd flat-manager
 cargo build
 ```
 
-Build successed without any errors:
+:tada: Build successed without any errors:
 
 ```Bash
     Finished dev [unoptimized + debuginfo] target(s) in 2m 16s
@@ -63,7 +65,13 @@ warning: the following packages contain code that will be rejected by a future v
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
 ```
 
+### Building the Client
 
+Install aiohttp package of Python 3:
+
+```Bash
+dnf install -y python3-aiohttp
+```
 
 ---
 
