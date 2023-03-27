@@ -1,4 +1,4 @@
-# Install flat-manager for Building Flatpak Repository
+# Install Server of 'flat-manager' for Building/Hosting Flatpak Repository
 
 ## Date
 
