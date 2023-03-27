@@ -135,7 +135,7 @@ iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo setenforce 0
 ```
 
-Host server via ngrok:
+[Tunnel/Host server via ngrok](https://blog.outsider.ne.kr/1159):
 
 [Install ngrok](https://ngrok.com/download):
 
@@ -374,3 +374,5 @@ error: could not compile `flat-manager` due to previous error
 - Check Ports on External Machine Blog KR, https://meetup.nhncloud.com/posts/204, 2023-03-27-Mon.
 - Install GnuPG Fedora, https://fedoraproject.org/wiki/Cryptography, 2023-03-27-Mon.
 - Create GPG Key Fedora, https://fedoraproject.org/wiki/Creating_GPG_Keys, 2023-03-27-Mon.
+- ngrok, https://ngrok.com/, 2023-03-27-Mon.
+- Tunneling Service via ngrok Blog KR, https://blog.outsider.ne.kr/1159, 2023-03-27-Mon.
