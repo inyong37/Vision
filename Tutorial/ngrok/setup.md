@@ -13,6 +13,10 @@ Fedora 37
 If you start ngrok without setting authority, you would see this page.
 
 ```Bash
+ngrok http 8080
+```
+
+```Bash
 ngrok                                                                                                                                                              (Ctrl+C to quit)
 
 Add OAuth and webhook security to your ngrok (its free!): https://ngrok.com/free
@@ -24,7 +28,7 @@ Version                       3.2.1
 Region                        Japan (jp)
 Latency                       36ms
 Web Interface                 http://127.0.0.1:4040
-Forwarding                    https://c660-220-94-163-20.jp.ngrok.io -> http://localhost:8080
+Forwarding                    https://{something}.ngrok.io -> http://localhost:8080
 
 Connections                   ttl     opn     rt1     rt5     p50     p90
                               3       0       0.00    0.01    5.00    5.00
