@@ -145,7 +145,7 @@ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 cd /usr/local/bin
 sudo chmod 755 ngrok
-./ngrok
+ngrok http 8080
 ```
 
 [Install](https://fedoraproject.org/wiki/Cryptography) and [Make a GPG Key](https://fedoraproject.org/wiki/Creating_GPG_Keys):
