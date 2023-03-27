@@ -83,10 +83,69 @@ cp example-config.json config.json
 ### Database
 
 ```Bash
-dnf install postgresql-server postgresql-contrib
-systemctl enable postgresql
-postgresql-setup --initdb --unit postgresql
-systemctl start postgresql
+sudo dnf install postgresql-server postgresql-contrib
+sudo systemctl enable postgresql
+sudo opostgresql-setup --initdb --unit postgresql
+sudo systemctl start postgresql
+```
+
+Install 'ostree': command ostree didn't installed via installing 'ostree-devel':
+
+```Bash
+sudo dnf install -y ostree
+```
+
+Start flatpak-repository:
+
+```Bash
+[os12@node77 flat-manager]$ ostree --repo=repo init --mode=archive-z2
+[os12@node77 flat-manager]$ ostree --repo=beta-repo init --mode=archive-z2
+[os12@node77 flat-manager]$ mkdir build-repo
+[os12@node77 flat-manager]$ export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name testtoken)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+warning: the following packages contain code that will be rejected by a future version of Rust: nom v4.2.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 2`
+     Running `target/debug/gentoken --base64 --secret-file - --name testtoken`
+[os12@node77 flat-manager]$ cargo run --bin flat-manager
+    Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+warning: the following packages contain code that will be rejected by a future version of Rust: nom v4.2.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 3`
+     Running `target/debug/flat-manager`
+Running migration 20181023152211
+Running migration 20181023152228
+Running migration 20181023152240
+Running migration 20181102103939
+Running migration 20190124101838
+Running migration 20190204135447
+Running migration 20190307075207
+Running migration 20190307094436
+Running migration 20220805212616
+Running migration 20220906002415
+Running migration 20221214225546
+[2023-03-27T02:16:53Z INFO  actix_server::builder] Starting 12 workers
+[2023-03-27T02:16:53Z INFO  actix_server::builder] Starting server on 127.0.0.1:8080
+[2023-03-27T02:16:53Z INFO  flatmanager::app] Started http server: 127.0.0.1:8080
+```
+
+Check and set the port's firewall (with root authority):
+
+```Bash
+netstat -nat
+iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+sudo setenforce 0
+```
+
+Host server via ngrok:
+
+[Install ngrok](https://ngrok.com/download):
+
+```Bash
+cd
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+cd /usr/local/bin
+sudo chmod 755 ngrok
+./ngrok
 ```
 
 ---
@@ -255,4 +314,6 @@ error: could not compile `flat-manager` due to previous error
 - Fedora & RHEL Version, https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/index.html, 2023-03-23-Thu.
 - Ostree Version Fedora, https://bodhi.fedoraproject.org/updates/?packages=ostree&page=2, 2023-03-23-Thu.
 - Install Rust, https://doc.rust-lang.org/book/ch01-01-installation.html, 2023-03-23-Thu.
-- 
+- Install ngrok, https://ngrok.com/download, 2023-03-27-Mon.
+- Check Ports on Internal Machine Blog KR, https://fblens.com/16, 2023-03-27-Mon.
+- Check Ports on External Machine Blog KR, https://meetup.nhncloud.com/posts/204, 2023-03-27-Mon.
