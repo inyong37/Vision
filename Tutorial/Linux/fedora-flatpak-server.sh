@@ -1,5 +1,7 @@
 #!/usr/bin/ bash
 
+echo "========== SETTING FLATPAK CLIENT ON FEDORA(>=37) =========="
+
 # VARIABLES
 echo "CHECKING VARIABLES"
 echo $HOME
@@ -53,3 +55,5 @@ sudo chmod 755 ngrok
 
 # START NGROK
 ngrok http 8080
+
+echo "========== FINISHED =========="
