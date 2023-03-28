@@ -82,7 +82,7 @@ sudo chmod 755 ngrok
 
 # START NGROK IN A TMUX SESSION
 tmux new
-ngrok config authtoken {NGROK_TOKEN}
+ngrok config add-authtoken {NGROK_TOKEN}
 ngrok http 8080
 
 echo -e "\e[0;34m========== FINISHED ==========\e[0m"
