@@ -9,9 +9,15 @@
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER SERVER ON FEDORA(>=37) ==========\e[0m"
 
 # VARIABLES - REQUIRED; "NGROK_TOKEN"
+NGROK_TOKEN=""
 echo -e "\e[0;32m---------- variables ----------\e[0m"
 echo $HOME
-echo $NGROK_TOKEN
+if [ $NGROK_TOKEN = "" ]
+then
+  exit
+else
+  echo $NGROK_TOKEN
+fi
 
 # INSTALLING "RUST"
 echo -e "\e[0;32m---------- rust ----------"
