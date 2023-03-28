@@ -2,6 +2,9 @@
 
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-03-28-Tuesday.
+# Description: This shell script is to set flat-manager server for building and hosting a flatpak repositoty.
+# Command: "sh fedora-flat-manager-server.sh" with user authority due to start postgresql.
+# Note: User has to keep in mind to enter password for sudo commands.
 
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER SERVER ON FEDORA(>=37) ==========\e[0m"
 
