@@ -22,7 +22,7 @@ sudo yum install -y dnf
 echo -e "\e[0;32m---------- packages ----------\e[0m"
 sudo dnf install -y cargo postgresql-devel ostree-devel ostree git
 
-# CLONING A GIT REPOSITORY "FLAT MANAGER"
+# CLONING A GIT REPOSITORY "FLAT-MANAGER"
 echo -e "\e[0;32m---------- flat-manager ----------\e[0m"
 cd $HOME
 git clone https://github.com/flatpak/flat-manager.git
