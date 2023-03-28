@@ -376,3 +376,4 @@ error: could not compile `flat-manager` due to previous error
 - Create GPG Key Fedora, https://fedoraproject.org/wiki/Creating_GPG_Keys, 2023-03-27-Mon.
 - ngrok, https://ngrok.com/, 2023-03-27-Mon.
 - Tunneling Service via ngrok Blog KR, https://blog.outsider.ne.kr/1159, 2023-03-27-Mon.
+- Install RUST without any Interaction Stackoverflow, https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively, 2023-03-28-Tue.
