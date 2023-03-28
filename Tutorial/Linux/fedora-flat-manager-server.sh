@@ -84,7 +84,8 @@ cd /usr/local/bin
 sudo chmod 755 ngrok
 ngrok config add-authtoken {NGROK_TOKEN}
 
-# START NGROK IN A TMUX SESSION (TODO) IN NEW TMUX WINDOW tmux new && ngrok http 8080
+# START NGROK IN A TMUX SESSION (TODO) IN NEW TMUX WINDOW
+# tmux new && ngrok http 8080
 echo -e "\e[0;33m run the below command in another window: \e[0m"
 echo -e "\e[0;33m ngrok http 8080 \e[0m"
 
