@@ -45,6 +45,7 @@ iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo setenforce 0
 
 # INSTALL NGROK FOR TUNNELING
+cd $HOME
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 cd /usr/local/bin
