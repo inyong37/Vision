@@ -3,7 +3,7 @@
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-03-28-Tuesday.
 
-echo -e "\e[0;34m========== SETTING FLAT-MANAGER CLIENT ON FEDORA(>=37) ==========\e[0m"
+echo -e "\e[0;34m========== SETTING FLAT-MANAGER SERVER ON FEDORA(>=37) ==========\e[0m"
 
 # VARIABLES
 echo -e "\e[0;32m---------- variables ----------\e[0m"
