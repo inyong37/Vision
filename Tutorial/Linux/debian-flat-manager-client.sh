@@ -24,8 +24,7 @@ sudo apt install -y
   git libcurl4-openssl-dev libsoup2.4-dev autoconf dracut libtool libglib2.0-dev \
   libgpgme-dev bison liblzma-dev e2fslibs-dev libfuse-dev libsystemd-dev tree gtk-doc-tools \
   gir1.2-ostree-1.0 libostree-dev
-sudo pip3 install tenacity
-pip3 install pyparsing
+pip3 install tenacity pyparsing
 
 # INSTALLING OSTREE
 echo -e "\e[0;32m---------- ostree ----------\e[0m"
