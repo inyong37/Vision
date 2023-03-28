@@ -1,4 +1,4 @@
-# :construction: Set-up 'flat-manager' Client
+# Setup 'flat-manager' Client for Flatpak
 
 ## Date
 
@@ -21,4 +21,3 @@ git clone https://github.com/flatpak/flat-manager.git
 cd flat-manager/
 export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name testtoken)
 ./flat-manager-client push --commit $(./flat-manager-client create https://35a7-220-94-163-20.jp.ngrok.io stable) local-repo
-
