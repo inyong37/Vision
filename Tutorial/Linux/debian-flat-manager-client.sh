@@ -16,7 +16,14 @@ source "$HOME/.cargo/env"
 
 # INSTALLING PACKAGES
 echo -e "\e[0;32m---------- packages ----------\e[0m"
-sudo apt install -y git libcurl4-openssl-dev libsoup2.4-dev autoconf dracut libtool libglib2.0-dev libgpgme-dev bison liblzma-dev e2fslibs-dev libfuse-dev libsystemd-dev tree tmux gtk-doc-tools
+sudo apt install -y 
+  flatpak flatpak-builder cargo libpq-dev postgresql postgresql-contrib pkg-config libssl-dev \
+  python3-aiohttp python3-pip \
+  git libcurl4-openssl-dev libsoup2.4-dev autoconf dracut libtool libglib2.0-dev \
+  libgpgme-dev bison liblzma-dev e2fslibs-dev libfuse-dev libsystemd-dev tree gtk-doc-tools \
+  gir1.2-ostree-1.0 libostree-dev
+sudo pip3 install tenacity
+pip3 install pyparsing
 
 # INSTALLING OSTREE
 echo -e "\e[0;32m---------- ostree ----------\e[0m"
