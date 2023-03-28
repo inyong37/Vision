@@ -1,5 +1,8 @@
 #!/usr/bin/ bash
 
+# Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
+# Date: 2023-03-28-Tuesday.
+
 echo "========== SETTING FLATPAK CLIENT ON FEDORA(>=37) =========="
 
 # VARIABLES
