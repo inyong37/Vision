@@ -2,6 +2,8 @@
 
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-03-28-Tuesday.
+# Description: This shell script is to set flat-manager client for committing and pushing apps to flatpak repository.
+# Command: "sh debian-flat-manager-client.sh" with user authority.
 
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER CLIENT ON DEBIAN ==========\e[0m"
 
