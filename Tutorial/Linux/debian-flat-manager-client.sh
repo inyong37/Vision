@@ -3,19 +3,23 @@
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-03-28-Tuesday.
 
-echo "========== SETTING FLAT-MANAGER CLIENT ON DEBIAN =========="
+echo -e "\e[0;34m========== SETTING FLAT-MANAGER CLIENT ON DEBIAN ==========\e[0m"
 
 # VARIABLES
+echo -e "\e[0;32m---------- variables ----------\e[0m"
 echo $HOME
 
 # INSTALLING "RUST"
+echo -e "\e[0;32m---------- rust ----------"
 curl https://sh.rustup.rs -sSf | sh -s -- -y
+source "$HOME/.cargo/env"
 
 # INSTALLING PACKAGES
-sudo apt install -y cargo postgresql-devel ostree-devel ostree git
+echo -e "\e[0;32m---------- packages ----------\e[0m"
 sudo apt install -y git libcurl4-openssl-dev libsoup2.4-dev autoconf dracut libtool libglib2.0-dev libgpgme-dev bison liblzma-dev e2fslibs-dev libfuse-dev libsystemd-dev tree tmux gtk-doc-tools
 
 # INSTALLING OSTREE
+echo -e "\e[0;32m---------- ostree ----------\e[0m"
 cd $HOME
 git clone https://github.com/ostreedev/ostree.git
 cd ostree
@@ -25,7 +29,8 @@ env NOCONFIGURE=1 ./autogen.sh
 make -j
 sudo make install -j
 
-# CLONING A GIT REPOSITORY
+# CLONING A GIT REPOSITORY "FLAT-MANAGER"
+echo -e "\e[0;32m---------- flat-manager ----------\e[0m"
 cd $HOME
 git clone https://github.com/flatpak/flat-manager.git
 
@@ -42,4 +47,4 @@ ostree --repo=repo init --mode=archive-z2
 ostree --repo=beta-repo init --mode=archive-z2
 mkdir build-repo
 
-echo "========== FINISHED =========="
+echo -e "\e[0;34m========== FINISHED ==========\e[0m"
