@@ -14,6 +14,7 @@ echo -e "\e[0;32m---------- variables ----------\e[0m"
 echo $HOME
 if [ $NGROK_TOKEN = "" ]
 then
+  echo -e "\e[0;31m SET NGROK TOKEN IN SH \e[0m"
   exit
 else
   echo $NGROK_TOKEN
@@ -65,8 +66,10 @@ mkdir build-repo
 # ISSUING TOKEN FOR REPOSITORY 
 export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name testtoken)
 
-# RUN THE REPOSITORY
-tmux split-window "sudo cargo run --bin flat-manager"
+# RUN THE REPOSITORY (TODO) IN NEW TMUX WINDOW
+# tmux new && cd $HOME/flat-manager && cargo run --bin flat-manager
+echo -e "\e[0;33m run the below command in another window: \e[0m"
+echo -e "\e[0;33m cd $HOME/flat-manager && cargo run --bin flat-manager \e[0m"
 
 # ENABLE THE PORT
 iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
@@ -79,10 +82,10 @@ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 cd /usr/local/bin
 sudo chmod 755 ngrok
-
-# START NGROK IN A TMUX SESSION
-tmux new
 ngrok config add-authtoken {NGROK_TOKEN}
-ngrok http 8080
+
+# START NGROK IN A TMUX SESSION (TODO) IN NEW TMUX WINDOW tmux new && ngrok http 8080
+echo -e "\e[0;33m run the below command in another window: \e[0m"
+echo -e "\e[0;33m ngrok http 8080 \e[0m"
 
 echo -e "\e[0;34m========== FINISHED ==========\e[0m"
