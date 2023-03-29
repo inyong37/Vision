@@ -58,6 +58,8 @@ sudo postgresql-setup --initdb --unit postgresql
 sudo systemctl start postgresql
 
 # CREATE "REPO" DATABASE WITH CURRENT USER
+# Note: There might be changing errors errors, 
+# but the createuser and createdb commands are executed.
 sudo -u postgres createuser $(whoami)
 sudo -u postgres createdb --owner=$(whoami) repo
 
