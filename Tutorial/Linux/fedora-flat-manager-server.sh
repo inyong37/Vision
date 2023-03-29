@@ -76,7 +76,7 @@ echo -e "\e[0;33m run the below command in another window: \e[0m"
 echo -e "\e[0;33m cd $HOME/flat-manager && cargo run --bin flat-manager \e[0m"
 
 # ENABLE THE PORT
-iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo setenforce 0
 
 # INSTALL NGROK FOR TUNNELING
