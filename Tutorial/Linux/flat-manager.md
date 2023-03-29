@@ -1,4 +1,4 @@
-# Setup flat-manager'
+# Setup flat-manager
 
 Setup Server of 'flat-manager' for Building and Hosting Flatpak Repository on Fedora 37
 
