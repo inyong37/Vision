@@ -1,63 +1,52 @@
-# Install Server of 'flat-manager' for Building/Hosting Flatpak Repository
+# Setup flat-manager'
+
+Setup Server of 'flat-manager' for Building and Hosting Flatpak Repository on Fedora 37
+
+Setup Client of 'flat-manager' for Committing Applications and Publishing Flatpak Repository on Debian 11
 
 ## Date
 
-1. 2023-03-20-Monday.
-2. 2023-03-22-Wednesday.
+1. ~~2023-03-20-Monday.~~
+2. ~~2023-03-22-Wednesday.~~
 3. 2023-03-23-Thursday.
+4. 2023-03-29-Wednesday.
 
 ## Environment
 
-1. Ubuntu 22.04.1 LTS
-2. CentOS Linux release 7.9.2009 (Core)
+1. ~~Ubuntu 22.04.1 LTS~~
+2. ~~CentOS Linux release 7.9.2009 (Core)~~
 3. Fedora 37
+4. Debian GNU/Linux 11 (bullseye)
 
-## 3. Install flat-manager for Building Flatpak Repository on Fedora 37
+## 3. Install Server of flat-manager for Building Flatpak Repository on Fedora 37
 
-:bulb: All commands were executed on root authority.
-
-### Building the Server
-
-[Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html):
+1. [Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html):
 
 ```Bash
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+cd $HOME
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source "$HOME/.cargo/env"
 ```
 
-Install DNF:
+2. Install Package Manager DNF and Packages; cargo, postgresql, ostree, git, and tmux:
+
+:bulb: `ostree`: command `ostree` didn't installed via installing 'ostree-devel'
 
 ```Bash
-yum install -y dnf
+sudo yum install -y dnf
+sudo dnf install -y cargo postgresql-devel ostree-devel ostree git tmux
 ```
 
-Install cargo:
+3. Build "flat-manager":
 
 ```Bash
-dnf install -y cargo
-```
-
-Install PostgreSQL:
-
-```Bash
-dnf install -y postgresql-devel
-```
-
-Install ostree:
-
-```Bash
-dnf install -y ostree-devel
-```
-
-Build the server:
-
-```Bash
-dnf install -y git
+cd $HOME
 git clone https://github.com/flatpak/flat-manager.git
 cd flat-manager
 cargo build
 ```
 
-:tada: Build successed without any errors:
+:tada: Building successed without any errors:
 
 ```Bash
     Finished dev [unoptimized + debuginfo] target(s) in 2m 16s
@@ -65,48 +54,46 @@ warning: the following packages contain code that will be rejected by a future v
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
 ```
 
-### Building the Client
-
-Install aiohttp package of Python 3:
+4. Start Database:
 
 ```Bash
-dnf install -y python3-aiohttp
+sudo dnf install -y postgresql-server postgresql-contrib
+sudo systemctl enable postgresql
+sudo postgresql-setup --initdb --unit postgresql
+sudo systemctl start postgresql
+sudo -u postgres createuser $(whoami)
+sudo -u postgres createdb --owner=$(whoami) repo
 ```
 
-### Configuration
+5. Build the Repository Server:
 
 ```Bash
 cp example.env .env
 cp example-config.json config.json
+ostree --repo=repo init --mode=archive-z2
+ostree --repo=beta-repo init --mode=archive-z2
+mkdir build-repo
+export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name testtoken)
 ```
 
-### Database
+:tada: Output:
 
 ```Bash
-sudo dnf install postgresql-server postgresql-contrib
-sudo systemctl enable postgresql
-sudo opostgresql-setup --initdb --unit postgresql
-sudo systemctl start postgresql
-```
-
-Install 'ostree': command ostree didn't installed via installing 'ostree-devel':
-
-```Bash
-sudo dnf install -y ostree
-```
-
-Start flatpak-repository:
-
-```Bash
-[os12@node77 flat-manager]$ ostree --repo=repo init --mode=archive-z2
-[os12@node77 flat-manager]$ ostree --repo=beta-repo init --mode=archive-z2
-[os12@node77 flat-manager]$ mkdir build-repo
-[os12@node77 flat-manager]$ export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name testtoken)
     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
 warning: the following packages contain code that will be rejected by a future version of Rust: nom v4.2.3
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 2`
      Running `target/debug/gentoken --base64 --secret-file - --name testtoken`
-[os12@node77 flat-manager]$ cargo run --bin flat-manager
+```
+
+6. Run the Repository Server
+
+```Bash
+cargo run --bin flat-manager
+```
+
+:tada: Output:
+
+```
     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
 warning: the following packages contain code that will be rejected by a future version of Rust: nom v4.2.3
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 3`
@@ -127,20 +114,17 @@ Running migration 20221214225546
 [2023-03-27T02:16:53Z INFO  flatmanager::app] Started http server: 127.0.0.1:8080
 ```
 
-Check and set the port's firewall (with root authority):
+7. Enable Port
 
 ```Bash
-netstat -nat
-iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo setenforce 0
 ```
 
-[Tunnel/Host server via ngrok](https://blog.outsider.ne.kr/1159):
-
-[Install ngrok](https://ngrok.com/download):
+8. [Tunnel the Server via Ngrok (KR)](https://blog.outsider.ne.kr/1159):
 
 ```Bash
-cd
+cd $HOME
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 cd /usr/local/bin
@@ -148,7 +132,7 @@ sudo chmod 755 ngrok
 ngrok http 8080
 ```
 
-[Install](https://fedoraproject.org/wiki/Cryptography) and [Make a GPG Key](https://fedoraproject.org/wiki/Creating_GPG_Keys):
+A. [Install](https://fedoraproject.org/wiki/Cryptography) and [Make a GPG Key](https://fedoraproject.org/wiki/Creating_GPG_Keys):
 
 ```Bash
 [root@node77 ~]# dnf install -y gnupg
