@@ -172,11 +172,11 @@ Is this correct? (y/N) y
 
 GnuPG needs to construct a user ID to identify your key.
 
-Real name: os12
-Email address: inyong_hwang@tmax.co.kr
+Real name: user
+Email address: 
 Comment: test
 You selected this USER-ID:
-    "os12 (test) <inyong_hwang@tmax.co.kr>"
+    "user (test) <>"
 
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
 We need to generate a lot of random bytes. It is a good idea to perform
