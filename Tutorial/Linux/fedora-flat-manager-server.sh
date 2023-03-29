@@ -5,6 +5,7 @@
 # Description: This shell script is to set flat-manager server for building and hosting a flatpak repository.
 # Command: "sh fedora-flat-manager-server.sh" with user authority due to start postgresql.
 # Note: User has to keep in mind to enter password for sudo commands.
+# Todo: split windows to hosting server and tunneling service with adding token.
 
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER SERVER ON FEDORA(>=37) ==========\e[0m"
 
