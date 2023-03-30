@@ -202,6 +202,65 @@ Content Bytes Written: 798 (798 bytes)
 Pruning cache
 ```
 
+:tada: tree:
+
+```Bash
+inyong@server:~/flatpak-test$ tree
+.
+├── build-dir
+│   ├── export
+│   ├── files
+│   │   ├── bin
+│   │   │   └── hello.sh
+│   │   └── manifest.json
+│   ├── metadata
+│   └── var
+│       ├── lib
+│       ├── run -> /run
+│       └── tmp
+├── hello.sh
+├── local-repo
+│   ├── config
+│   ├── extensions
+│   ├── objects
+│   │   ├── 0d
+│   │   │   └── c64aef26faea20d71a8a99e51125a56067591a54d7c9af6bded0fbef8abcb9.dirtree
+│   │   ├── 18
+│   │   │   └── c68c8243971a2883af87955e09e1775ddfa32cfe71bf3e07a5d4da4d6992ed.dirtree
+│   │   ├── 2b
+│   │   │   └── 0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac.commit
+│   │   ├── 2c
+│   │   │   └── fcc77551586544815fe7c2f30833c59478d1d37331649c90a1c24ed7213db1.filez
+│   │   ├── 44
+│   │   │   └── 6a0ef11b7cc167f3b603e585c7eeeeb675faa412d5ec73f62988eb0b6c5488.dirmeta
+│   │   ├── 67
+│   │   │   └── 479d0bc71b4539338cfabd530ae2d14d8b179f636d357ab33d484cef399115.dirtree
+│   │   ├── 6e
+│   │   │   └── 340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d.dirtree
+│   │   ├── 7d
+│   │   │   └── 3c83417371d89a7109188baa681eed17aad7719f448a4851ce222f2b7620a8.filez
+│   │   └── ab
+│   │       └── 1cf5765752e967d81c35b76f338d01d4aff543f7d5040faa6f02d4e733e0b6.filez
+│   ├── refs
+│   │   ├── heads
+│   │   │   └── app
+│   │   │       └── org.flatpak.Hello
+│   │   │           └── x86_64
+│   │   │               └── master
+│   │   ├── mirrors
+│   │   └── remotes
+│   ├── state
+│   ├── summaries
+│   │   └── 8200f188362affb9dca2791e37c22a65351d96c8e30a401f8abde5adee22c08c.gz
+│   ├── summary
+│   ├── summary.idx
+│   └── tmp
+│       └── cache
+└── org.flatpak.Hello.yml
+
+31 directories, 19 files
+```
+
 ---
 
 ## Install and run the app from the local repo
