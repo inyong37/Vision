@@ -38,7 +38,7 @@ echo -e "\e[0;31m PASSWORD FOR ROOT COMMAND \e[0m"
 su -
 apt install flatpak flatpak-builder gnome-software-plugin-flatpak
 # flatpak remote-add test-repo $FLAT_REPO --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
+flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08 -y
 
 echo -e "\e[0;33m RESTART YOUR SYSTEM TO COMPLETE SETUP \e[0m"
 
