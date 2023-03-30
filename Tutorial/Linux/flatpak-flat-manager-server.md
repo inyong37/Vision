@@ -187,6 +187,33 @@ gpg: agent_genkey failed: No pinentry
 Key generation failed: No pinentry
 ```
 
+### Commit Local Repository to Remote Repository
+
+Build 
+
+```Bash
+export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name test)
+# ./flat-manager-client push --commit $(./flat-manager-client create http://127.0.0.1:8080 stable) {application}/{local_repo}
+./flat-manager-client push --commit $(./flat-manager-client create http://127.0.0.1:8080 stable) flatpak-test/local-repo
+```
+
+:tada: Output:
+
+```Bash
+Uploading refs to http://127.0.0.1:8080/api/v1/build/6: ['app/org.flatpak.Hello/x86_64/master']
+Refs contain 6 metadata objects
+Remote missing 6 of those
+Has 3 file objects for those
+Remote missing 3 of those
+Uploading file objects
+Uploading 3 files (568 bytes)
+Uploading metadata objects
+Uploading 6 files (964 bytes)
+Uploading deltas
+Creating ref app/org.flatpak.Hello/x86_64/master with commit 2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac
+Committing build http://127.0.0.1:8080/api/v1/build/6
+```
+
 ---
 
 ## ~~2. Install flat-manager for Building Flatpak Repository on CentOS 7~~
