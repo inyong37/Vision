@@ -2,21 +2,21 @@
 
 Setup Server of 'flat-manager' for Building and Hosting Flatpak Repository on Fedora 37
 
-Setup Client of 'flat-manager' for Committing Applications and Publishing Flatpak Repository on Debian 11
+:construction: Setup Client of 'flat-manager' for Committing Applications and Publishing Flatpak Repository on Debian 11
 
 ## Date
 
 1. ~~2023-03-20-Monday.~~
 2. ~~2023-03-22-Wednesday.~~
 3. 2023-03-23-Thursday.
-4. 2023-03-29-Wednesday.
+4. 2023-03-29-Wednesday. :construction:
 
 ## Environment
 
 1. ~~Ubuntu 22.04.1 LTS~~
 2. ~~CentOS Linux release 7.9.2009 (Core)~~
 3. Fedora 37
-4. Debian GNU/Linux 11 (bullseye)
+4. Debian GNU/Linux 11 (bullseye) :construction:
 
 ## 3. Install Server of flat-manager for Building Flatpak Repository on Fedora 37
 
