@@ -251,8 +251,8 @@ Downloaded 323 crates (21.8 MB) in 2.15s (largest was `ring` at 5.1 MB)
 Client #2:
 
 ```Bash
-inyong@server:~/flat-manager$ ./flat-manager-client push --commit $(./flat-manager-client create https://bc73-220-94-163-20.jp.ngrok.io stable) ../flatpak-test/local-repo
-Uploading refs to https://bc73-220-94-163-20.jp.ngrok.io/api/v1/build/7: ['app/org.flatpak.Hello/x86_64/master']
+inyong@server:~/flat-manager$ ./flat-manager-client push --commit $(./flat-manager-client create https://{random.ngrok.io} stable) ../flatpak-test/local-repo
+Uploading refs to https://{random.ngrok.io}.ngrok.io/api/v1/build/7: ['app/org.flatpak.Hello/x86_64/master']
 Refs contain 6 metadata objects
 Remote missing 6 of those
 Has 3 file objects for those
@@ -263,10 +263,10 @@ Uploading metadata objects
 Uploading 6 files (964 bytes)
 Uploading deltas
 Creating ref app/org.flatpak.Hello/x86_64/master with commit 2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac
-Committing build https://bc73-220-94-163-20.jp.ngrok.io/api/v1/build/7
+Committing build https://{random.ngrok.io}.ngrok.io/api/v1/build/7
 ```
 
-Server #1:
+Server #1 before installing 'flatpak' on the server machine:
 
 ```Bash
 [2023-03-30T06:56:31Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build HTTP/1.1" test 200 150 Python/3.10 aiohttp/3.8.1 0.008887
@@ -280,6 +280,44 @@ Server #1:
 [2023-03-30T06:56:32Z INFO  flatmanager::jobs::commit_job] #2: Committing ref app/org.flatpak.Hello/x86_64/master (2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac)
 [2023-03-30T06:56:32Z ERROR flatmanager::jobs::job_executor] #2: Job failed: InternalError: Failed to run "flatpak" "build-commit-from" "--timestamp=NOW" "--no-update-summary" "--untrusted" "--force" "--disable-fsync" "--src-repo=build-repo/7/upload" "--src-ref=2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac" "build-repo/7" "app/org.flatpak.Hello/x86_64/master": No such file or directory (os error 2)
 [2023-03-30T06:56:33Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/7 HTTP/1.1" test 200 556 Python/3.10 aiohttp/3.8.1 0.003020
+```
+
+### After Installing 'flatpak' on the Server Machine:
+
+Client #1:
+
+```Bash
+inyong@server:~/flat-manager$ ./flat-manager-client push --commit $(./flat-manager-client create https://{random.ngrok.io}.ngrok.io stable) ../flatpak-test/local-repo
+Uploading refs to https://{random.ngrok.io}.ngrok.io/api/v1/build/8: ['app/org.flatpak.Hello/x86_64/master']
+Refs contain 6 metadata objects
+Remote missing 6 of those
+Has 3 file objects for those
+Remote missing 3 of those
+Uploading file objects
+Uploading 3 files (568 bytes)
+Uploading metadata objects
+Uploading 6 files (964 bytes)
+Uploading deltas
+Creating ref app/org.flatpak.Hello/x86_64/master with commit 2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac
+Committing build https://{random.ngrok.io}.ngrok.io/api/v1/build/8
+```
+
+Server #1:
+
+```Bash
+[2023-03-30T07:20:28Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build HTTP/1.1" test 200 150 Python/3.10 aiohttp/3.8.1 0.008955
+[2023-03-30T07:20:28Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/8/missing_objects HTTP/1.1" test 200 462 Python/3.10 aiohttp/3.8.1 0.004631
+[2023-03-30T07:20:28Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/8/missing_objects HTTP/1.1" test 200 232 Python/3.10 aiohttp/3.8.1 0.001258
+[2023-03-30T07:20:29Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/8/upload HTTP/1.1" test 200 12 Python/3.10 aiohttp/3.8.1 0.036976
+[2023-03-30T07:20:29Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/8/upload HTTP/1.1" test 200 21 Python/3.10 aiohttp/3.8.1 0.007179
+[2023-03-30T07:20:29Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/8/build_ref HTTP/1.1" test 200 146 Python/3.10 aiohttp/3.8.1 0.008533
+[2023-03-30T07:20:29Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/8/commit HTTP/1.1" test 200 160 Python/3.10 aiohttp/3.8.1 0.009812
+[2023-03-30T07:20:29Z INFO  flatmanager::jobs::commit_job] #3: Handling Job Commit: build: 8, end-of-life: , eol-rebase: , token-type: None
+[2023-03-30T07:20:29Z INFO  flatmanager::jobs::commit_job] #3: Committing ref app/org.flatpak.Hello/x86_64/master (2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac)
+[2023-03-30T07:20:29Z INFO  flatmanager::jobs::commit_job] #3: running build-update-repo
+[2023-03-30T07:20:29Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/8 HTTP/1.1" test 200 168 Python/3.10 aiohttp/3.8.1 0.001322
+[2023-03-30T07:20:29Z INFO  flatmanager::jobs::commit_job] #3: Removing upload directory
+[2023-03-30T07:20:29Z INFO  flatmanager::jobs::job_executor] #3: Job succeeded
 ```
 
 ---
