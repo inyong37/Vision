@@ -242,3 +242,4 @@ Hello world, from a sandbox
 
 ### Reference
 - Building your first Flatpak, https://docs.flatpak.org/en/latest/first-build.html, 2023-03-30-Thu.
+- Flatpak Repository LinuxConfig, https://linuxconfig.org/how-to-list-all-flatpak-repositories, 2023-03-30-Thu.
