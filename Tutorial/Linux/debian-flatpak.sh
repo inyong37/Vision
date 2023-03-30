@@ -9,8 +9,10 @@
 echo -e "\e[0;34m========== SETTING FLATPAK ON DEBIAN 11 ==========\e[0m"
 
 # VARIABLES
+FLAT_REPO = ""
 echo -e "\e[0;32m---------- variables ----------\e[0m"
 echo $HOME
+echo $FLAT_REPO
 
 # INSTALLING PACKAGES
 echo -e "\e[0;32m---------- packages ----------\e[0m"
@@ -20,7 +22,7 @@ sudo apt install -y git python3-aiohttp python3-pip autoconf gtk-doc-tools libgl
 pip3 install tenacity
 
 # INSTALLING OSTREE
-echo -e "\e[0;32m---------- ppa-ostree ----------\e[0m"
+echo -e "\e[0;32m---------- ostree ----------\e[0m"
 cd $HOME
 git clone https://github.com/flatpak/ppa-ostree.git
 cd ppa-ostree
@@ -29,5 +31,15 @@ env NOCONFIGURE=1 ./autogen.sh
 ./configure --prefix=/usr --with-dracut --with-curl --with-builtin-grub2-mkconfig
 make -j
 sudo make install -j
+
+# INSTALLING FLATPAK
+echo -e "\e[0;32m---------- flatpak ----------\e[0m"
+echo -e "\e[0;31m PASSWORD FOR ROOT COMMAND \e[0m"
+su -
+apt install flatpak flatpak-builder gnome-software-plugin-flatpak
+# flatpak remote-add test-repo $FLAT_REPO --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
+
+echo -e "\e[0;33m RESTART YOUR SYSTEM TO COMPLETE SETUP \e[0m"
 
 echo -e "\e[0;34m========== FINISHED ==========\e[0m"
