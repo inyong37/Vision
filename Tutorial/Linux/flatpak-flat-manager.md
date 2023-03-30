@@ -187,7 +187,7 @@ gpg: agent_genkey failed: No pinentry
 Key generation failed: No pinentry
 ```
 
-### Commit Local Repository to Remote Repository
+### Commit Local Repository to Remote Repository on 'flat-manager' installed Fedora 37 Machine
 
 Build 
 
@@ -212,6 +212,74 @@ Uploading 6 files (964 bytes)
 Uploading deltas
 Creating ref app/org.flatpak.Hello/x86_64/master with commit 2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac
 Committing build http://127.0.0.1:8080/api/v1/build/6
+```
+
+Logs on Server:
+
+```Bash
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55764 "POST /api/v1/build HTTP/1.1" test 200 150 Python/3.11 aiohttp/3.8.4 0.005146
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "GET /api/v1/build/6/missing_objects HTTP/1.1" test 200 462 Python/3.11 aiohttp/3.8.4 0.001893
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "GET /api/v1/build/6/missing_objects HTTP/1.1" test 200 232 Python/3.11 aiohttp/3.8.4 0.000933
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "POST /api/v1/build/6/upload HTTP/1.1" test 200 12 Python/3.11 aiohttp/3.8.4 0.001075
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "POST /api/v1/build/6/upload HTTP/1.1" test 200 21 Python/3.11 aiohttp/3.8.4 0.001363
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "POST /api/v1/build/6/build_ref HTTP/1.1" test 200 146 Python/3.11 aiohttp/3.8.4 0.003728
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "POST /api/v1/build/6/commit HTTP/1.1" test 200 160 Python/3.11 aiohttp/3.8.4 0.002865
+[2023-03-30T05:48:58Z INFO  flatmanager::logger] 127.0.0.1:55780 "GET /api/v1/build/6 HTTP/1.1" test 200 168 Python/3.11 aiohttp/3.8.4 0.000987
+[2023-03-30T05:48:58Z INFO  flatmanager::jobs::commit_job] #1: Handling Job Commit: build: 6, end-of-life: , eol-rebase: , token-type: None
+[2023-03-30T05:48:58Z INFO  flatmanager::jobs::commit_job] #1: Committing ref app/org.flatpak.Hello/x86_64/master (2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac)
+[2023-03-30T05:48:58Z ERROR flatmanager::jobs::job_executor] #1: Job failed: InternalError: Failed to run "flatpak" "build-commit-from" "--timestamp=NOW" "--no-update-summary" "--untrusted" "--force" "--disable-fsync" "--src-repo=build-repo/6/upload" "--src-ref=2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac" "build-repo/6" "app/org.flatpak.Hello/x86_64/master": No such file or directory (os error 2)
+```
+
+### Committing Local Repository to Remote Repository on 'flatpak' installed Debian 11 Machine
+
+Client #1:
+
+```Bash
+inyong@server:~/flat-manager$ export REPO_TOKEN=$(echo -n "secret" | base64 | cargo run --bin gentoken -- --base64 --secret-file - --name test)
+  Updating crates.io index
+Downloaded quick-error v1.2.3
+...
+Downloaded trust-dns-proto v0.7.4
+Downloaded 323 crates (21.8 MB) in 2.15s (largest was `ring` at 5.1 MB)
+  Compiling autocfg v1.1.0
+  ...
+  Compiling flat-manager v0.4.1 (/home/inyong/flat-manager)
+    Finished dev [unoptimized + debuginfo] target(s) in 3m 56s
+      Running `target/debug/gentoken --base64 --secret-file - --name test`
+```
+
+Client #2:
+
+```Bash
+inyong@server:~/flat-manager$ ./flat-manager-client push --commit $(./flat-manager-client create https://bc73-220-94-163-20.jp.ngrok.io stable) ../flatpak-test/local-repo
+Uploading refs to https://bc73-220-94-163-20.jp.ngrok.io/api/v1/build/7: ['app/org.flatpak.Hello/x86_64/master']
+Refs contain 6 metadata objects
+Remote missing 6 of those
+Has 3 file objects for those
+Remote missing 3 of those
+Uploading file objects
+Uploading 3 files (568 bytes)
+Uploading metadata objects
+Uploading 6 files (964 bytes)
+Uploading deltas
+Creating ref app/org.flatpak.Hello/x86_64/master with commit 2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac
+Committing build https://bc73-220-94-163-20.jp.ngrok.io/api/v1/build/7
+```
+
+Server #1:
+
+```Bash
+[2023-03-30T06:56:31Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build HTTP/1.1" test 200 150 Python/3.10 aiohttp/3.8.1 0.008887
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/7/missing_objects HTTP/1.1" test 200 462 Python/3.10 aiohttp/3.8.1 0.008166
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/7/missing_objects HTTP/1.1" test 200 232 Python/3.10 aiohttp/3.8.1 0.004853
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/7/upload HTTP/1.1" test 200 12 Python/3.10 aiohttp/3.8.1 0.034073
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/7/upload HTTP/1.1" test 200 21 Python/3.10 aiohttp/3.8.1 0.038063
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/7/build_ref HTTP/1.1" test 200 146 Python/3.10 aiohttp/3.8.1 0.008277
+[2023-03-30T06:56:32Z INFO  flatmanager::logger] {client_address} "POST /api/v1/build/7/commit HTTP/1.1" test 200 160 Python/3.10 aiohttp/3.8.1 0.009280
+[2023-03-30T06:56:32Z INFO  flatmanager::jobs::commit_job] #2: Handling Job Commit: build: 7, end-of-life: , eol-rebase: , token-type: None
+[2023-03-30T06:56:32Z INFO  flatmanager::jobs::commit_job] #2: Committing ref app/org.flatpak.Hello/x86_64/master (2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac)
+[2023-03-30T06:56:32Z ERROR flatmanager::jobs::job_executor] #2: Job failed: InternalError: Failed to run "flatpak" "build-commit-from" "--timestamp=NOW" "--no-update-summary" "--untrusted" "--force" "--disable-fsync" "--src-repo=build-repo/7/upload" "--src-ref=2b0af3d5191525e896226d34e4eac262cb6b6827e4ef3867ca293d221d33d9ac" "build-repo/7" "app/org.flatpak.Hello/x86_64/master": No such file or directory (os error 2)
+[2023-03-30T06:56:33Z INFO  flatmanager::logger] {client_address} "GET /api/v1/build/7 HTTP/1.1" test 200 556 Python/3.10 aiohttp/3.8.1 0.003020
 ```
 
 ---
