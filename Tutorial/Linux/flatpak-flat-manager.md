@@ -320,6 +320,54 @@ Server #1:
 [2023-03-30T07:20:29Z INFO  flatmanager::jobs::job_executor] #3: Job succeeded
 ```
 
+## [Setup GPG](https://blogs.gnome.org/alexl/2017/02/10/maintaining-a-flatpak-repository/)
+
+:bulb: Before to start installing packages, shutdown the server. 
+
+```Bash
+sudo dnf install -y gnupg pinentry
+```
+
+Create a custom key:
+
+```Bash
+mkdir gpg
+gpg2 --homedir gpg --quick-gen-key {user_name}@{domain}
+```
+
+:tada: Output:
+
+```Bash
+pub   ed25519 2023-03-31 [SC] [expires: 2025-03-30]
+      35752B2F847935C5A822F10FA3EFDAA6552EECBF
+uid                      user@example.com
+sub   cv25519 2023-03-31 [E]
+```
+
+Sign the repo:
+
+```Bash
+flatpak build-sign repo --gpg-sign=35752B2F847935C5A822F10FA3EFDAA6552EECBF --gpg-homedir=gpg
+```
+
+Sign the summary file:
+
+```Bash
+flatpak build-update-repo repo --gpg-sign=35752B2F847935C5A822F10FA3EFDAA6552EECBF --gpg-homedir=gpg
+```
+
+Export the public key for the repo:
+
+```Bash
+gpg2 --homedir=gpg --export 35752B2F847935C5A822F10FA3EFDAA6552EECBF > example.gpg
+```
+
+Use this key instead of `--no-gpg-verify` on user-side:
+
+```Bash
+flatpak remote-add --gpg-import=example.gpg example-repo http://example.com/repo
+```
+
 ---
 
 ## ~~2. Install flat-manager for Building Flatpak Repository on CentOS 7~~
@@ -494,3 +542,4 @@ error: could not compile `flat-manager` due to previous error
 - ngrok, https://ngrok.com/, 2023-03-27-Mon.
 - Tunneling Service via ngrok Blog KR, https://blog.outsider.ne.kr/1159, 2023-03-27-Mon.
 - Install RUST without any Interaction Stackoverflow, https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively, 2023-03-28-Tue.
+- Hosting a Flatpak Repository Blog, https://blogs.gnome.org/alexl/2017/02/10/maintaining-a-flatpak-repository/, 2023-03-31-Fri.
