@@ -35,7 +35,7 @@ sudo make install -j
 # INSTALLING FLATPAK
 echo -e "\e[0;32m---------- flatpak ----------\e[0m"
 sudo apt install -y flatpak flatpak-builder gnome-software-plugin-flatpak
-flatpak remote-add $FLAT_REPO --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install -y flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
 
 echo -e "\e[0;34m========== FINISHED ==========\e[0m"
