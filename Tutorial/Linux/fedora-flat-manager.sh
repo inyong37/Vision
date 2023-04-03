@@ -37,6 +37,8 @@ sudo yum install -y dnf
 echo -e "\e[0;32m---------- packages ----------\e[0m"
 sudo dnf install -y cargo postgresql-devel ostree-devel ostree git tmux python3-pip python3-aiohttp flatpak flatpak-builder
 pip3 install tenacity
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install -y flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
 
 # CLONING A GIT REPOSITORY "FLAT-MANAGER"
 echo -e "\e[0;32m---------- flat-manager ----------\e[0m"
