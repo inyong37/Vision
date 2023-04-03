@@ -35,7 +35,7 @@ sudo yum install -y dnf
 
 # INSTALLING PACKAGES
 echo -e "\e[0;32m---------- packages ----------\e[0m"
-sudo dnf install -y cargo postgresql-devel ostree-devel ostree git tmux python3-pip python3-aiohttp flatpak
+sudo dnf install -y cargo postgresql-devel ostree-devel ostree git tmux python3-pip python3-aiohttp flatpak flatpak-builder
 pip3 install tenacity
 
 # CLONING A GIT REPOSITORY "FLAT-MANAGER"
