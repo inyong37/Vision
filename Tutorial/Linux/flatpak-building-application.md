@@ -340,6 +340,8 @@ hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache
 
 :bulb: Remove the repository: `flatpak remote-delete {repo_name=tutorial-repo}`
 
+:bulb: See installed applications and runtimes: `flatpak list`
+
 :bulb: uninstall the application: `flatpak uninstall {app_name=org.flatpak.Hello}`
 
 ---
