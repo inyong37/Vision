@@ -329,8 +329,6 @@ Hello world, from a sandbox
 
 :bulb: See repositories: `flatpak remotes --show-details`
 
-Output:
-
 ```Bash
 Name          Title      URL                                                     Collection ID Subset Filter Priority Options                         … … Homepage             Icon
 flathub       Flathub    https://dl.flathub.org/repo/                            -             -      -      1        system                          … … https://flathub.org/ https://dl.flathub.org/repo/logo.svg
@@ -341,6 +339,18 @@ hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache
 :bulb: Remove the repository: `flatpak remote-delete {repo_name=tutorial-repo}`
 
 :bulb: See installed applications and runtimes: `flatpak list`
+
+```Bash
+Name                          Application ID                                Version          Branch               Origin                Installation
+Hello                         org.flatpak.Hello                                              master               tutorial-repo         user
+hello-app                     org.flatpak.hello-app                                          master               remote-repo           user
+Freedesktop Platform          org.freedesktop.Platform                      22.08.9          22.08                flathub               system
+Mesa                          org.freedesktop.Platform.GL.default           22.3.5           22.08                flathub               system
+Mesa (Extra)                  org.freedesktop.Platform.GL.default           22.3.5           22.08-extra          flathub               system
+Intel                         org.freedesktop.Platform.VAAPI.Intel                           22.08                flathub               system
+openh264                      org.freedesktop.Platform.openh264             2.1.0            2.2.0                flathub               system
+Freedesktop SDK               org.freedesktop.Sdk                           22.08.9          22.08                flathub               system
+```
 
 :bulb: uninstall the application: `flatpak uninstall {app_name=org.flatpak.Hello}`
 
