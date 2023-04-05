@@ -338,18 +338,18 @@ hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache
 
 :bulb: Remove the repository: `flatpak remote-delete {repo_name=tutorial-repo}`
 
-:bulb: See installed applications and runtimes: `flatpak list`
+:bulb: See installed applications and runtimes: `flatpak list --show-details`
 
 ```Bash
-Name                          Application ID                                Version          Branch               Origin                Installation
-Hello                         org.flatpak.Hello                                              master               tutorial-repo         user
-hello-app                     org.flatpak.hello-app                                          master               remote-repo           user
-Freedesktop Platform          org.freedesktop.Platform                      22.08.9          22.08                flathub               system
-Mesa                          org.freedesktop.Platform.GL.default           22.3.5           22.08                flathub               system
-Mesa (Extra)                  org.freedesktop.Platform.GL.default           22.3.5           22.08-extra          flathub               system
-Intel                         org.freedesktop.Platform.VAAPI.Intel                           22.08                flathub               system
-openh264                      org.freedesktop.Platform.openh264             2.1.0            2.2.0                flathub               system
-Freedesktop SDK               org.freedesktop.Sdk                           22.08.9          22.08                flathub               system
+… Desc… Applicatio… Version Branch      Arch   Origin        Installation Ref                                                    Active commit Latest commit Installed size Options
+…       …tpak.Hello         master      x86_64 tutorial-repo user         org.flatpak.Hello/x86_64/master                        2b0af3d51915  -               2.0 kB       user,c…
+…       ….hello-app         master      x86_64 remote-repo   user         org.flatpak.hello-app/x86_64/master                    2027e964adac  -               2.0 kB       user,c…
+… Shar… …p.Platform 22.08.9 22.08       x86_64 flathub       system       org.freedesktop.Platform/x86_64/22.08                  1f786f0b0eb6  -             576.2 MB       system…
+… Mesa… …GL.default 22.3.5  22.08       x86_64 flathub       system       org.freedesktop.Platform.GL.default/x86_64/22.08       1bbf632d2739  -             385.2 MB       system…
+… Mesa… …GL.default 22.3.5  22.08-extra x86_64 flathub       system       org.freedesktop.Platform.GL.default/x86_64/22.08-extra 87220a5fe19b  -             385.2 MB       system…
+…       …AAPI.Intel         22.08       x86_64 flathub       system       org.freedesktop.Platform.VAAPI.Intel/x86_64/22.08      601730e8e63a  -              53.3 MB       system…
+… Open… …m.openh264 2.1.0   2.2.0       x86_64 flathub       system       org.freedesktop.Platform.openh264/x86_64/2.2.0         bf24f23f3ba3  -             790.0 kB       system…
+… Tool… …esktop.Sdk 22.08.9 22.08       x86_64 flathub       system       org.freedesktop.Sdk/x86_64/22.08                       53dcfb493253  -               1.5 GB       system…
 ```
 
 :bulb: uninstall the application: `flatpak uninstall {app_name=org.flatpak.Hello}`
