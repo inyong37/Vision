@@ -263,14 +263,14 @@ inyong@server:~/flatpak-test$ tree
 
 ---
 
-## Install and run the app from the local repo
+## Install and Run the Application from a Local Repository
 
-### Add a repository
+Add a local repository:
 
-This command has to be executed on workspace such as `cd $HOME/flatpak-test`, and `{repo}` is the name of local-repo we used in #6 command:
+:bulb: This command has to be executed on workspace such as `cd $HOME/flatpak-test`, and `{repo}` is the name of local-repo we used in #6 command.
 
 ```Bash
-flatpak --user remote-add --no-gpg-verify tutorial-repo {repo=https://repo.com/repo/stable}
+flatpak --user remote-add --no-gpg-verify {repo_name=tutorial-repo} {repo_dir=local-repo}
 ```
 
 :bulb: See repositories and FYI: remove-delete
@@ -284,16 +284,51 @@ hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache
 ```
 
 ```Bash
-inyong@server:~$ flatpak remote-delete tutorial-repo
+inyong@server:~$ flatpak remote-delete {repo_name=tutorial-repo}
 ```
 
-### Install and Run
+Install the application:
 
 ```Bash
-inyong@server:~/flatpak-test$ flatpak --user install tutorial-repo org.flatpak.Hello
+inyong@server:~/flatpak-test$ flatpak --user install {repo_name=tutorial-repo} {app_name=org.flatpak.Hello}
 Looking for matches…
 error: org.flatpak.Hello/x86_64/master is already installed from remote hello-origin
-inyong@server:~/flatpak-test$ flatpak run org.flatpak.Hello
+```
+
+Run the applicat:
+
+```Bash
+inyong@server:~/flatpak-test$ flatpak run {app_name=org.flatpak.Hello}
+Hello world, from a sandbox
+```
+
+---
+
+## Install and Run the Application from a Remote Repository
+
+Add a remote repository:
+
+```Bash
+flatpak remote-add --user --no-gpg-verify {repo_name=remote-repo} {url=https://random.jp.ngork.io/repo/stable}
+```
+
+Install the application:
+
+```Bash
+inyong@server:~$ flatpak --user install {repo_name=remote-repo} {app_name=org.flatpak.hello-app}
+Looking for matches…
+
+
+        ID                              Branch          Op          Remote               Download
+ 1. [✓] org.flatpak.hello-app           master          i           remote-repo          1.0 kB / 1.0 kB
+
+Installation complete.
+```
+
+Run the application:
+
+```Bash
+inyong@server:~$ flatpak run {app_name=org.flatpak.hello-app}
 Hello world, from a sandbox
 ```
 
