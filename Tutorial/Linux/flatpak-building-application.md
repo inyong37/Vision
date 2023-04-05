@@ -273,29 +273,20 @@ Add a local repository:
 flatpak --user remote-add --no-gpg-verify {repo_name=tutorial-repo} {repo_dir=local-repo}
 ```
 
-:bulb: See repositories and FYI: remove-delete
-
-```Bash
-inyong@server:~/flatpak-test$ flatpak remotes --show-details
-Name          Title      URL                                                     Collection ID Subset Filter Priority Options                         … … Homepage             Icon
-flathub       Flathub    https://dl.flathub.org/repo/                            -             -      -      1        system                          … … https://flathub.org/ https://dl.flathub.org/repo/logo.svg
-tutorial-repo -          file:///home/inyong/flatpak-test/local-repo             -             -      -      1        user,no-gpg-verify              … … -                    -
-hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache -             -      -      0        user,no-enumerate,no-gpg-verify … … -                    -
-```
-
-```Bash
-inyong@server:~$ flatpak remote-delete {repo_name=tutorial-repo}
-```
-
 Install the application:
 
 ```Bash
 inyong@server:~/flatpak-test$ flatpak --user install {repo_name=tutorial-repo} {app_name=org.flatpak.Hello}
 Looking for matches…
-error: org.flatpak.Hello/x86_64/master is already installed from remote hello-origin
+
+
+        ID                         Branch          Op          Remote                 Download
+ 1. [✓] org.flatpak.Hello          master          i           tutorial-repo          1.0 kB / 1.0 kB
+
+Installation complete.
 ```
 
-Run the applicat:
+Run the application:
 
 ```Bash
 inyong@server:~/flatpak-test$ flatpak run {app_name=org.flatpak.Hello}
@@ -334,6 +325,26 @@ Hello world, from a sandbox
 
 ---
 
+### FYI: Flatpak Commands
+
+:bulb: See repositories: `flatpak remotes --show-details`
+
+Output:
+
+```Bash
+Name          Title      URL                                                     Collection ID Subset Filter Priority Options                         … … Homepage             Icon
+flathub       Flathub    https://dl.flathub.org/repo/                            -             -      -      1        system                          … … https://flathub.org/ https://dl.flathub.org/repo/logo.svg
+tutorial-repo -          file:///home/inyong/flatpak-test/local-repo             -             -      -      1        user,no-gpg-verify              … … -                    -
+hello-origin  Local repo file:///home/inyong/flatpak-test/.flatpak-builder/cache -             -      -      0        user,no-enumerate,no-gpg-verify … … -                    -
+```
+
+:bulb: Remove the repository: `flatpak remote-delete {repo_name=tutorial-repo}`
+
+:bulb: uninstall the application: `flatpak uninstall {app_name=org.flatpak.Hello}`
+
+---
+
 ### Reference
 - Building your first Flatpak, https://docs.flatpak.org/en/latest/first-build.html, 2023-03-30-Thu.
 - Flatpak Repository LinuxConfig, https://linuxconfig.org/how-to-list-all-flatpak-repositories, 2023-03-30-Thu.
+- Commands Flatpak, https://docs.flatpak.org/en/latest/flatpak-command-reference.html, 2023-04-05-Wed.
