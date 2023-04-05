@@ -270,7 +270,7 @@ inyong@server:~/flatpak-test$ tree
 This command has to be executed on workspace such as `cd $HOME/flatpak-test`, and `{repo}` is the name of local-repo we used in #6 command:
 
 ```Bash
-flatpak --user remote-add --no-gpg-verify tutorial-repo {repo}
+flatpak --user remote-add --no-gpg-verify tutorial-repo {repo=https://repo.com/repo/stable}
 ```
 
 :bulb: See repositories and FYI: remove-delete
