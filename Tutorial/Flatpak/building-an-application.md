@@ -1,4 +1,4 @@
-# Building Flatpak Application
+# Building a Flatpak Application
 
 ## Date
 
