@@ -1,4 +1,4 @@
-# Set-up ngrok
+# Setup Ngrok
 
 ## Date
 
