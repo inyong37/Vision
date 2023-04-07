@@ -12,7 +12,7 @@ Ubuntu 20.04.4 LTS
 
 Docker 23.0.3
 
-### [Scale the service in the swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/scale-service/) | [Blog (KR)](https://sarc.io/index.php/cloud/1775-docker-19)
+### Scale the service in the swarm
 
 Once you have deployed a service to a swarm, you are ready to use the Docker CLI to scale the number of containers in the service. Continers running in a service are called "tasks".
 
