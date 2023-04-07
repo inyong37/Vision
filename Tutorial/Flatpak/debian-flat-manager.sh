@@ -53,6 +53,9 @@ cp example-config.json config.json
 
 # BUILDING DATABASE "POSTGRESQL"
 echo -e "\e[0;32m---------- database ----------\e[0m"
+# NEED TO FIX as sudo apt install -y postgresql-12
+# sudo postgresql-setup --initdb --unit postgresql
+# sudo: postgresql-setup: command not found
 sudo apt install -y postgresql-server postgresql-contrib
 sudo systemctl enable postgresql
 sudo postgresql-setup --initdb --unit postgresql
