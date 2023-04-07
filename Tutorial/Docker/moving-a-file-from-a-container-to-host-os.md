@@ -1,4 +1,4 @@
-# Moving a File from a-Container to Host OS
+# Moving a File from a Container to Host OS
 
 ## Date
 
