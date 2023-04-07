@@ -12,7 +12,7 @@ Ubuntu 20.04.4 LTS
 
 Docker 23.0.3
 
-### [Apply rolling updates to a service]
+### Apply rolling updates to a service
 
 1. If you haven't already, open a terminal and ssh into the machine where you run your manage node. For example, the tutorial uses a machine named `manager1`.
 
