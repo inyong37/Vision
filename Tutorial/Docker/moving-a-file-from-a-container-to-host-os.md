@@ -1,4 +1,4 @@
-# Get a File from a Container
+# Moving a File from a-Container to Host OS
 
 ## Date
 
@@ -11,7 +11,7 @@ Ubuntu 20.04.4 LTS
 ## Get a File from a Container
 
 ```Bash
-sudo docker cp {container_id/name}:/home/{username}/foofile /home/{username}/
+sudo docker cp {container_id or container_name}:/home/{user_name}/{file_name} /home/{user_name}/
 ```
 
 ---
