@@ -1,4 +1,4 @@
-# Send a File to a Container
+# Moving a File from Host OS to a Container
 
 ## Date
 
@@ -11,7 +11,7 @@ Ubuntu 20.04.4 LTS
 ### Send a File to a Container
 
 ```Bash
-sudo docker cp foofile {container_id/name}:/
+sudo docker cp {file_name} {container_id or container_name}:/
 ```
 
 ---
