@@ -53,19 +53,14 @@ cp example-config.json config.json
 
 # BUILDING DATABASE "POSTGRESQL"
 echo -e "\e[0;32m---------- database ----------\e[0m"
-# NEED TO FIX as sudo apt install -y postgresql-12
-# sudo postgresql-setup --initdb --unit postgresql
-# sudo: postgresql-setup: command not found
-sudo apt install -y postgresql-server postgresql-contrib
+sudo apt install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql
-sudo postgresql-setup --initdb --unit postgresql
-sudo systemctl start postgresql
-
 # CREATE "REPO" DATABASE WITH CURRENT USER
 # Note: There might be changing errors errors, 
 # but the createuser and createdb commands are executed.
 sudo -u postgres createuser $(whoami)
 sudo -u postgres createdb --owner=$(whoami) repo
+sudo systemctl start postgresql
 
 # BUILDING REPOSITORY
 echo -e "\e[0;32m---------- repository ----------\e[0m"
@@ -83,7 +78,7 @@ echo -e "\e[0;33m cd $HOME/flat-manager && cargo run --bin flat-manager \e[0m"
 
 # ENABLE THE PORT
 sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
-sudo setenforce 0
+# sudo setenforce 0
 
 # INSTALL NGROK FOR TUNNELING
 echo -e "\e[0;32m---------- tunneling ----------\e[0m"
