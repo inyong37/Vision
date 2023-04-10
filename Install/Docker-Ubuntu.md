@@ -51,7 +51,8 @@ sudo apt-cache madison docker-ce | awk '{ print $3 }'
 2-A. Specify docker engine version
 
 ```Bash
-DOCKER_VERSION=5:20.10.13~3-0~ubuntu-jammy
+DOCKER_VERSION=5:20.10.13~3-0~ubuntu-jammy # Ubuntu 22.04 LTS
+# DOCKER_VERSION=5:23.0.3-1~ubuntu.20.04~focal # Ubuntu 20.04 LTS
 ```
 
 Install specified version of docker engine:
