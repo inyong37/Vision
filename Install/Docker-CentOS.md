@@ -1,27 +1,27 @@
-# [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
+# :whale: Install Docker Engine on CentOS
+
+## Date
+
+2023-01-26-Thursday.
 
 ## Environment 
 
 CentOS 7
 
-## Requirement
+## OS Requirements
 
-CentOS 7
+CentOS 7 / CentOS 8 (stream) / CentOS 9 (stream)
 
-CentOS 8 (stream)
-
-CentOS 9 (stream)
-
-## Install using the repository
+## [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
 
 ### 1. Set up the repository
 
 ```Bash
-$ sudo yum install -y yum-utils
+sudo yum install -y yum-utils
 ```
 
 ```Bash
-$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
 ### 2. Install Docker Engine
@@ -29,32 +29,38 @@ $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/do
 Check available versions:
 
 ```Bash
-$ sudo yum list docker-ce --showduplicates | sort -r
+sudo yum list docker-ce --showduplicates | sort -r
 ```
 
-A. Specify `$DOCKER_VERSION`
+2-A. Specify docker engine version
 
 ```Bash
-$ DOCKER_VERSION=docker-ce-18.09.1
-$ sudo yum install docker-ce-<DOCKER_VERSION> docker-ce-cli-<DOCKER_VERSION> containerd.io docker-compose-plugin
+DOCKER_VERSION=18.09.1
 ```
 
-B. To install the latest version, run:
+Install specified version of docker engine:
 
 ```Bash
-$ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo yum install -y docker-ce-<DOCKER_VERSION> docker-ce-cli-<DOCKER_VERSION> containerd.io docker-compose-plugin
+```
+
+2-B. Install the latest version of docker engine
+
+```Bash
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 ### 3. Start
 
 ```Bash
-$ sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl start docker
 ```
 
-### 4. Verify
+### :tada: Verify
 
 ```Bash
-$ sudo docker run hello-world
+sudo docker run hello-world
 ```
 
 ---
