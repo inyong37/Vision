@@ -170,7 +170,7 @@ inyong@server:~/flatpak-test$ tree
 8 directories, 5 files
 ```
 
-### 6. Put the app in a repository
+### 6. Put the app in a local repository
 
 ```Bash
 flatpak-builder --repo={repo} --force-clean build-dir org.flatpak.Hello.yml
@@ -259,6 +259,14 @@ inyong@server:~/flatpak-test$ tree
 └── org.flatpak.Hello.yml
 
 31 directories, 19 files
+```
+
+### 7. Put the app in a remote repository
+
+```Bash
+cd $HOME/flat-manager
+./flat-manager-client push --commit $(./flat-manager-client create {remote_repo_url=https://random.ngrok.io} {branch_name=stable}) {loca_repo_name=../flatpak-test/local-repo}
+./flat-manager-client publish {remote_repo_url=https://random.ngrok.io}/api/v1/build/{number=1}
 ```
 
 ---
