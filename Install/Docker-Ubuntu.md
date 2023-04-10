@@ -1,4 +1,8 @@
-# Install Docker Engine on Ubuntu]
+# :whale: Install Docker Engine on Ubuntu
+
+## Date
+
+2023-02-01-Wednesday.
 
 ## Environment
 
@@ -8,7 +12,7 @@ Ubuntu 22.04 LTS
 
 64-bit version of Ubuntu 22.10 Kinetic / Ubuntu 22.04 LTS Jammy / Ubuntu 20.04 LTS Focal / Ubuntu 18.04 LTS Bionic
 
-## :whale: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+## [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 ### 1. Set up the repository
 
@@ -53,13 +57,13 @@ DOCKER_VERSION=5:20.10.13~3-0~ubuntu-jammy
 Install specified version of docker engine:
 
 ```Bash
-sudo apt-get install docker-ce=$DOCKER_VERSION docker-ce-cli=$DOCKER_VERSION containerd.io docker-compose-plugin
+sudo apt-get install -y docker-ce=$DOCKER_VERSION docker-ce-cli=$DOCKER_VERSION containerd.io docker-compose-plugin
 ```
 
-2-B. Install latest version of docker engine
+2-B. Install the latest version of docker engine
 
 ```Bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 ### :tada: Verify
