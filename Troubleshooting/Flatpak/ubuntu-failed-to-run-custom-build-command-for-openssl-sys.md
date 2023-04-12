@@ -8,6 +8,8 @@
 
 Ubuntu 22.04.2 LTS
 
+Docker 23.0.3
+
 ## Problem
 
 While Building flat-manager on Docker container:
