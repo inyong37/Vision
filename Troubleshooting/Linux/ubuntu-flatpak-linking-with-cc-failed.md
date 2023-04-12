@@ -31,3 +31,9 @@ error: linking with `cc` failed: exit status: 1
 
 error: could not compile `flat-manager` due to previous error
 ```
+
+## Solution
+
+```Bash
+apt install -y gcc-multilib
+```
