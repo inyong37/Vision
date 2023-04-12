@@ -9,16 +9,22 @@ Setup Server of 'flat-manager' for Building and Hosting Flatpak Repository on Fe
 1. ~~2023-03-20-Monday.~~
 2. ~~2023-03-22-Wednesday.~~
 3. 2023-03-23-Thursday.
-4. 2023-03-29-Wednesday. :construction:
+4. 2023-03-29-Wednesday.
+5. 2023-04-10-Monday.
 
 ## Environment
 
 1. ~~Ubuntu 22.04.1 LTS~~
 2. ~~CentOS Linux release 7.9.2009 (Core)~~
-3. Fedora 37
-4. Debian GNU/Linux 11 (bullseye) :construction:
+3. Fedora 37 with User Authority
+4. Debian GNU/Linux 11 (bullseye) with User Authority
+5. Ubuntu 22.04.02 LTS & Docker Image/Contiainer with Root Authority
 
-## 3. Install Server of flat-manager for Building Flatpak Repository on Fedora 37
+## 5. [Install Server of flat-manager for Building and Publishing Repository on Ubuntu 22 Container]
+
+## 4. [Install Server of flat-manager for Building and Publishing Repository on Debian 11](debian-user-flat-manager.sh)
+
+## 3. [Install Server of flat-manager for Building and Publishing Flatpak Repository on Fedora 37](fedora-user-flat-manager.sh)
 
 1. [Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html):
 
