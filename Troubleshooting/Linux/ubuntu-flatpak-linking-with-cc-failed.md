@@ -1,4 +1,4 @@
-#
+# Linking with 'cc' failed
 
 ## Date
 
