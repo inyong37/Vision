@@ -3,7 +3,7 @@
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-04-12-Wednesday.
 # Description: This shell script is to set flat-manager for flatpak repository.
-# Command: "sh ubuntu-flat-manager.sh" with root authority.
+# Command: "sh ubuntu-flat-manager.sh" with root authority (in docker image/container).
 
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER ON Ubuntu 22.04 ==========\e[0m"
 
