@@ -1,40 +1,40 @@
-#!/usr/bin/ bash
+#!/usr/bin/bash
 
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
-# Date: 2023-04-06-Thursday.
+# Date: 2023-04-12-Wednesday.
 # Description: This shell script is to set flat-manager for flatpak repository.
-# Command: "sh debian-flat-manager.sh" with user authority.
+# Command: "sh ubuntu-flat-manager.sh" with root authority.
 
-echo -e "\e[0;34m========== SETTING FLAT-MANAGER ON DEBIAN 11 ==========\e[0m"
+echo -e "\e[0;34m========== SETTING FLAT-MANAGER ON Ubuntu 22.04 ==========\e[0m"
 
 # VARIABLES
 echo -e "\e[0;32m---------- variables ----------\e[0m"
 echo $HOME
+
+# INSTALLING PACKAGES
+echo -e "\e[0;32m---------- packages ----------\e[0m"
+apt install -y curl git python3-aiohttp python3-pip autoconf gtk-doc-tools libglib2.0-dev libgpgme-dev libtool bison liblzma-dev e2fslibs-dev libcurl4-openssl-dev libsoup2.4-dev libfuse-dev libssl-dev
+pip3 install tenacity
 
 # INSTALLING "RUST"
 echo -e "\e[0;32m---------- rust ----------"
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source "$HOME/.cargo/env"
 
-# INSTALLING PACKAGES
-echo -e "\e[0;32m---------- packages ----------\e[0m"
-apt install -y git python3-aiohttp python3-pip autoconf gtk-doc-tools libglib2.0-dev libgpgme-dev libtool bison liblzma-dev e2fslibs-dev libcurl4-openssl-dev libsoup2.4-dev libfuse-dev libssl-dev
-pip3 install tenacity
-
 # INSTALLING OSTREE
-echo -e "\e[0;32m---------- ostree ----------\e[0m"
-cd $HOME
-git clone https://github.com/flatpak/ppa-ostree.git
-cd ppa-ostree
-git submodule update --init
-env NOCONFIGURE=1 ./autogen.sh
-./configure
-make -j
-make install -j
+# echo -e "\e[0;32m---------- ostree ----------\e[0m"
+# cd $HOME
+# git clone https://github.com/flatpak/ppa-ostree.git
+# cd ppa-ostree
+# git submodule update --init
+# env NOCONFIGURE=1 ./autogen.sh
+# ./configure
+# make -j
+# make install -j
 
 # INSTALLING FLATPAK
 echo -e "\e[0;32m---------- flatpak ----------\e[0m"
-apt install -y flatpak flatpak-builder gnome-software-plugin-flatpak ostree libostree-dev
+apt install -y flatpak flatpak-builder gnome-software-plugin-flatpak ostree # libostree-dev
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
 
