@@ -14,6 +14,10 @@ Ubuntu 22.04.2 LTS Image
 
 ## 1. Save & Load
 
+Export는 container를 동작하는데 필요한 모든 파일(root의 파일 시스템 전체)이 압축된다. 
+
+Save는 layer 구조, history를 포함한 형태로 압축이 된다.
+
 Check docker images:
 
 ```Bash
@@ -90,9 +94,14 @@ sudo docker import {file-name or url} - {image-name}:{tag}
 -rw-------  1 root   root    345286656 Apr 13 14:15  ubuntu-flatpak-repository-save.tar
 ```
 
-Export는 container를 동작하는데 필요한 모든 파일(root의 파일 시스템 전체)이 압축된다. 
+### Deploy a Container
 
-Save는 layer 구조, history를 포함한 형태로 압축이 왼다.
+```Bash
+docker run --name={container_name} -it {image_name}:{tag} /bin/bash
+# docker run --name=repo -it flatpak-repository:0.0.1 /bin/bash
+```
+
+Run command는 exit하면 stop이 되기 때문에 다른 방식으로 나오거나 나온 뒤 start로 다시 키고 접속해야 한다.
 
 ---
 
