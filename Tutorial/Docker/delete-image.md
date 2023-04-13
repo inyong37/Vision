@@ -16,9 +16,11 @@ Docker 23.0.3
 sudo docker images rm {image_id}
 ```
 
+Before deleting an image, make sure that related containers are removed.
+
 ---
 
-## Step-by-Step
+### Step-by-Step
 
 Check images:
 
@@ -63,7 +65,7 @@ progrium/stress               latest    db646a8f4087   8 years ago      282MB
 
 ---
 
-## Giving Repository Name as an Argument
+### Giving Repository Name as an Argument
 
 Check images:
 
@@ -111,6 +113,39 @@ ubuntu                        latest    cdb68b455a14   5 months ago    77.8MB
 gcr.io/k8s-minikube/kicbase   v0.0.35   7fb60d0ea30e   6 months ago    1.12GB
 urpylka/aptly                 latest    6a730f747e5e   7 months ago    322MB
 tibero                        latest    1a6ada668b7c   14 months ago   4.01GB
+hello-world                   latest    feb5d9fea6a5   18 months ago   13.3kB
+progrium/stress               latest    db646a8f4087   8 years ago     282MB
+```
+
+---
+
+### Repository Name Worked... Hmmm...
+
+```Bash
+(base) inyong@desktop:~$ sudo docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
+ubuntu                        22.04     08d22c0ceb15   5 weeks ago     77.8MB
+infra/ubuntu-aptget-test      v0.0.1    2b81ec1d5dfd   5 months ago    246MB
+ubuntu                        latest    cdb68b455a14   5 months ago    77.8MB
+gcr.io/k8s-minikube/kicbase   v0.0.35   7fb60d0ea30e   6 months ago    1.12GB
+urpylka/aptly                 latest    6a730f747e5e   7 months ago    322MB
+tibero                        latest    1a6ada668b7c   14 months ago   4.01GB
+hello-world                   latest    feb5d9fea6a5   18 months ago   13.3kB
+progrium/stress               latest    db646a8f4087   8 years ago     282MB
+(base) inyong@desktop:~$ sudo docker image rm tibero
+Untagged: tibero:latest
+Deleted: sha256:1a6ada668b7ca5cb7dcc17bd7e85e2883c74ddb2bbaaa6de27f45fb067a2d49f
+Deleted: sha256:7abb935e5fb5ac8ef1d277695b7bf1d75e32ee793b1639cc7863b3e63e7d1f6f
+Deleted: sha256:2c6dce37f6d10239f6b92f630edf84410ef2d1513f62b273cd4ae16b2ecb58ea
+Deleted: sha256:1f04d3bb0a774679683e487499e157682af1ba13a4cdb775041b879e344a82d4
+Deleted: sha256:9f54eef412758095c8079ac465d494a2872e02e90bf1fb5f12a1641c0d1bb78b
+(base) inyong@desktop:~$ sudo docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
+ubuntu                        22.04     08d22c0ceb15   5 weeks ago     77.8MB
+infra/ubuntu-aptget-test      v0.0.1    2b81ec1d5dfd   5 months ago    246MB
+ubuntu                        latest    cdb68b455a14   5 months ago    77.8MB
+gcr.io/k8s-minikube/kicbase   v0.0.35   7fb60d0ea30e   6 months ago    1.12GB
+urpylka/aptly                 latest    6a730f747e5e   7 months ago    322MB
 hello-world                   latest    feb5d9fea6a5   18 months ago   13.3kB
 progrium/stress               latest    db646a8f4087   8 years ago     282MB
 ```
