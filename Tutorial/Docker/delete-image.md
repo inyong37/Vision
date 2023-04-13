@@ -12,6 +12,14 @@ Docker 23.0.3
 
 ## Delete an Image
 
+```Bash
+sudo docker images rm {image_id}
+```
+
+---
+
+## Step-by-Step
+
 Check images:
 
 ```Bash
@@ -55,7 +63,7 @@ progrium/stress               latest    db646a8f4087   8 years ago      282MB
 
 ---
 
-### Try
+## Giving Repository Name as an Argument
 
 Check images:
 
