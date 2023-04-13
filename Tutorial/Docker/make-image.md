@@ -40,6 +40,17 @@ sudo docker load -i {file-name}.tar
 # sudo docker load -i ubuntu-flatpak-repository-save.tar
 ```
 
+Output:
+
+```Bash
+(base) inyong@desktop:~$ sudo docker load -i ubuntu-flatpak-repository-save.tar
+7363a407772c: Loading layer [==================================================>]  6.019GB/6.019GB
+Loaded image: flatpak-repository:0.0.1
+```
+
+
+---
+
 ## 2. Export & Import
 
 Check docker containers:
@@ -96,7 +107,9 @@ sudo docker import {file-name or url} - {image-name}:{tag}
 -rw-------  1 root   root   6018527232 Apr 13 16:13  ubuntu-flatpak-repository-save.tar
 ```
 
-### Deploy a Container
+---
+
+## Deploy a Container
 
 ```Bash
 docker run --name={container_name} -it {image_name}:{tag} /bin/bash
