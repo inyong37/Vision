@@ -35,5 +35,5 @@ error: could not compile `flat-manager` due to previous error
 ## Solution
 
 ```Bash
-apt install -y gcc-multilib
+apt install -y libpq-dev # gcc-multilib
 ```
