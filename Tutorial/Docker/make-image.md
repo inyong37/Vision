@@ -90,8 +90,8 @@ sudo docker import {file-name or url} - {image-name}:{tag}
 :tada: Verify
 
 ```Bash
--rw-rw-r--  1 inyong inyong 6018519040 Apr 13 14:17  ubuntu-flatpak-repository-export.tar
--rw-------  1 root   root    345286656 Apr 13 14:15  ubuntu-flatpak-repository-save.tar
+-rw-rw-r--  1 inyong inyong 5.7G Apr 13 14:17  ubuntu-flatpak-repository-export.tar
+-rw-------  1 root   root   5.7G Apr 13 16:13  ubuntu-flatpak-repository-save.tar
 ```
 
 ### Deploy a Container
