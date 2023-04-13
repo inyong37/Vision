@@ -37,6 +37,8 @@ Deleted: sha256:8715103a39da07f16f47915572d1452a35a5f965393acc9e63ea5d5e4058de8a
 Deleted: sha256:7363a407772c4fe3db90068f8eb9ed9a42474ebec2adc7a136b97a364d38ec8b
 ```
 
+---
+
 ### Try
 
 Check images:
