@@ -67,6 +67,7 @@ root@1b0ca2b05e14:/# service postgresql start
 ---
 
 ### Reference
+- Install systemd, https://linuxhint.com/fix-systemctl-command-not-found-error-linux/, 2023-04-13-Thu.
 - systemctl Blog KR, https://velog.io/@steveloper/Ubuntu-docker-container-%EC%97%90%EC%84%9C-systemctl-%EC%82%AC%EC%9A%A9%EC%8B%9C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EB%AC%B8%EC%A0%9CSystem-has-not-been-booted-with-systemd-as-init-system-PID-1.-Cant-operate.Failed-to-connect-to-bus-Host-is-down, 2023-04-12-Wed.
 - systemctl Blog KR, https://sangchul.kr/290, 2023-04-12-Wed.
 - Enable systemctl, https://forums.docker.com/t/systemctl-status-is-not-working-in-my-docker-container/9075, 2023-04-13-Thu.
