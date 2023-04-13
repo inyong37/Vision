@@ -55,6 +55,29 @@ sudo docker export {container-name or container-id} > {file-name}.tar
 
 ### Import
 
+Method 1:
+
+```Bash
+cat {file-name}.tar | docker import - {repository-name}:{tag}
+# cat ubuntu-flatpak-repository-export.tar | docker import - flatpak-repository:0.0.1
+```
+
+:tada: Verify:
+
+```Bash
+(base) inyong@desktop:~$ cat ubuntu-flatpak-repository-export.tar | docker import - flatpak-repository:0.0.1
+sha256:ecb5a13275a6fe92da5edf83eacf89b0610bfac988d6e825c6587798c6bbb183
+(base) inyong@desktop:~$ docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+flatpak-repository         0.0.1     ecb5a13275a6   34 seconds ago   5.95GB
+ubuntu                     22.04     08d22c0ceb15   5 weeks ago      77.8MB
+infra/ubuntu-aptget-test   v0.0.1    2b81ec1d5dfd   5 months ago     246MB
+urpylka/aptly              latest    6a730f747e5e   7 months ago     322MB
+progrium/stress            latest    db646a8f4087   8 years ago      282MB
+```
+
+Method 2:
+
 ```Bash
 sudo docker import {file-name or url} - {image-name}:{tag}
 # sudo docker import ubuntu-flatpak-repository-export.tar
