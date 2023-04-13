@@ -22,15 +22,15 @@ Check docker images:
 
 ```Bash
 (base) inyong@desktop:~$ sudo docker images
-REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
-flat-manager                  0.1       a9ff3b483c58   24 hours ago    329MB
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+flatpak-repository         0.0.1     ecb5a13275a6   58 minutes ago   5.95GB
 ```
 
 ### Save
 
 ```Bash
 sudo docker save -o {file-name}.tar {image-name}:{tag}
-# sudo docker save -o ubuntu-flatpak-repository-save.tar flat-manager
+# sudo docker save -o ubuntu-flatpak-repository-save.tar flatpak-repository:0.0.1
 ```
 
 ### Load
