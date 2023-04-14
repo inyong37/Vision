@@ -3,7 +3,7 @@
 # Author: In Yong Hwang (inyong1020 [at] gmail {dot} com)
 # Date: 2023-03-28-Tuesday.
 # Description: This shell script is to flat-manager for building/hosting/publishing a flatpak repository.
-# Command: "sh flat-manager.sh" with user authority due to start postgresql.
+# Command: "sh fedora-flat-manager.sh" with user authority due to start postgresql.
 # Note: User has to keep in mind to enter password for sudo commands.
 # Todo: split windows to hosting server and tunneling service with adding token.
 
