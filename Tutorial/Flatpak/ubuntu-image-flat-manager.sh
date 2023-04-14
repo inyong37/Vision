@@ -6,7 +6,7 @@
 # To use this script,
 # 1. "apt-get update && apt-get install -y wget"
 # 2. "wget https://raw.githubusercontent.com/inyong37/Vision/master/Tutorial/Flatpak/ubuntu-flat-manager.sh"
-# Command: "sh ubuntu-flat-manager.sh" with root authority (in docker image/container).
+# Command: "sh ubuntu-image-container-flat-manager.sh" with root authority (in docker image/container).
 
 echo -e "\e[0;34m========== SETTING FLAT-MANAGER ON UBUNTU 22.04 IMAGE CONTAINER ==========\e[0m"
 
