@@ -43,7 +43,8 @@ flatpak-repository                             0.0.1     ecb5a13275a6   3 days a
 1. Commit
 
 ```Bash
-docker commit repo-con flatpak-repository:0.0.2
+docker commit {container_id or container_name} {image_name}:{tag}
+# docker commit repo-con flatpak-repository:0.0.2
 ```
 
 Verify:
