@@ -40,7 +40,7 @@ REPOSITORY                                     TAG       IMAGE ID       CREATED 
 flatpak-repository                             0.0.1     ecb5a13275a6   3 days ago     5.95GB
 ```
 
-1. Commit
+### Commit
 
 ```Bash
 docker commit {container_id or container_name} {image_name}:{tag}
