@@ -85,13 +85,20 @@ Add the following to the kubevirt.yaml file:
           useEmulation: true
 ```
 
-All new components will be deployed under the kubevirt namespace:
+All new components will be deployed under the kubevirt namespace `kubectl get pods -n kubevirt`:
 
 ```Bash
-kubectl get pods -n kubevirt
+NAMESPACE     NAME                                               READY   STATUS      RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
+kubevirt      virt-api-59d8cb4bbb-d5qr8                          1/1     Running     0          8m16s   10.40.0.6       node86   <none>           <none>
+kubevirt      virt-api-59d8cb4bbb-x5r8w                          1/1     Running     0          8m16s   10.36.0.9       node88   <none>           <none>
+kubevirt      virt-controller-6fff8874b6-j88wc                   1/1     Running     0          7m40s   10.40.0.9       node86   <none>           <none>
+kubevirt      virt-controller-6fff8874b6-z9dd2                   1/1     Running     0          7m40s   10.36.0.10      node88   <none>           <none>
+kubevirt      virt-handler-ghd4q                                 1/1     Running     0          7m40s   10.40.0.10      node86   <none>           <none>
+kubevirt      virt-handler-p555f                                 1/1     Running     0          7m40s   10.36.0.11      node88   <none>           <none>
+kubevirt      virt-handler-w44cp                                 1/1     Running     0          7m40s   10.32.0.7       node85   <none>           <none>
+kubevirt      virt-operator-67c4d5db65-5fbzw                     1/1     Running     0          9m1s    10.36.0.6       node88   <none>           <none>
+kubevirt      virt-operator-67c4d5db65-d7t6t                     1/1     Running     0          9m1s    10.40.0.5       node86   <none>           <none>
 ```
-
-<img width="486" alt="Screenshot 2023-01-19 at 11 21 52 AM" src="https://user-images.githubusercontent.com/20737479/213340429-e8b458ca-599e-47ae-b296-0f27f30e1e5f.png">
 
 ## 2. [Install Containerized Data Importer (CDI)](https://kubevirt.io/user-guide/operations/containerized_data_importer/)
 
