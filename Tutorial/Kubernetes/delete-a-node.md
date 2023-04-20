@@ -7,7 +7,7 @@
 
 - Ubuntu 22.04.2 LTS
   - Kubernetes 1.24.10
-  - CRIO 1.24.4
+  - cri-o 1.24.4
 
 ## Date
 
