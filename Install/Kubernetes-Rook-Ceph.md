@@ -87,20 +87,6 @@ It takes some time to become 'Running' status.
 
 ```Bash
 NAMESPACE     NAME                                               READY   STATUS      RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
-kube-system   coredns-57575c5f89-fcvpg                           1/1     Running     0          23m     10.46.0.1       node87   <none>           <none>
-kube-system   coredns-57575c5f89-lntc2                           1/1     Running     0          23m     10.46.0.0       node87   <none>           <none>
-kube-system   etcd-node87                                        1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
-kube-system   kube-apiserver-node87                              1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
-kube-system   kube-controller-manager-node87                     1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
-kube-system   kube-proxy-4k5c4                                   1/1     Running     0          20m     192.168.10.86   node86   <none>           <none>
-kube-system   kube-proxy-jt2sz                                   1/1     Running     0          20m     192.168.10.85   node85   <none>           <none>
-kube-system   kube-proxy-l84dn                                   1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
-kube-system   kube-proxy-pnwj2                                   1/1     Running     0          20m     192.168.10.88   node88   <none>           <none>
-kube-system   kube-scheduler-node87                              1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
-kube-system   weave-net-858x7                                    2/2     Running     0          19m     192.168.10.87   node87   <none>           <none>
-kube-system   weave-net-pvtfc                                    2/2     Running     0          19m     192.168.10.85   node85   <none>           <none>
-kube-system   weave-net-qcgjf                                    2/2     Running     0          19m     192.168.10.88   node88   <none>           <none>
-kube-system   weave-net-zmqx6                                    2/2     Running     0          19m     192.168.10.86   node86   <none>           <none>
 rook-ceph     csi-cephfsplugin-6nmwr                             3/3     Running     0          6m41s   192.168.10.88   node88   <none>           <none>
 rook-ceph     csi-cephfsplugin-8lw8f                             3/3     Running     0          6m41s   192.168.10.85   node85   <none>           <none>
 rook-ceph     csi-cephfsplugin-99sd8                             3/3     Running     0          6m41s   192.168.10.86   node86   <none>           <none>
