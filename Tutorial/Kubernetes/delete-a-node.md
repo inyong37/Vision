@@ -2,23 +2,42 @@
 
 ## Environment
 
-Ubuntu 20.04.5 LTS
+- Ubuntu 20.04.5 LTS
+  - Kubernetes 1.26.1
 
-Kubernetes 1.26.1
+- Ubuntu 22.04.2 LTS
+  - Kubernetes 1.24.10
+  - cri-o://1.24.4
 
 ## Date
 
 2023-02-02-Thursday.
 
+2023-04-20-Thursday.
+
 ## Delete a Node
 
-### 1. Drain a node
+### :bulb: TLDR
 
 ```Bash
-kubectl drain {node_name} # --ignore-daemonsets --delete-local-data
+kubectl cordon {node_name}
+kubectl drain {node_name} --ignore-daemonsets --delete-local-data
+kubectl delete node {node_name}
 ```
 
-### Finally, Delete the Node
+### 1. Mark a Node as Unschedulable 
+
+```Bash
+kubectl cordon {node_name}
+```
+
+### 2. Drain a Node in Preparation for Maintenance
+
+```Bash
+kubectl drain {node_name} --ignore-daemonsets --delete-local-data
+```
+
+### 3. Delete the Node
 
 ```Bash
 kubectl delete node {node_name}
