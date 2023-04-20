@@ -81,6 +81,57 @@ kubectl apply -f rook/deploy/examples/csi/cephfs/storageclass.yaml
 
 ---
 
+:tada: Verify
+
+It takes some time to become 'Running' status.
+
+```Bash
+NAMESPACE     NAME                                               READY   STATUS      RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-57575c5f89-fcvpg                           1/1     Running     0          23m     10.46.0.1       node87   <none>           <none>
+kube-system   coredns-57575c5f89-lntc2                           1/1     Running     0          23m     10.46.0.0       node87   <none>           <none>
+kube-system   etcd-node87                                        1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
+kube-system   kube-apiserver-node87                              1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
+kube-system   kube-controller-manager-node87                     1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
+kube-system   kube-proxy-4k5c4                                   1/1     Running     0          20m     192.168.10.86   node86   <none>           <none>
+kube-system   kube-proxy-jt2sz                                   1/1     Running     0          20m     192.168.10.85   node85   <none>           <none>
+kube-system   kube-proxy-l84dn                                   1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
+kube-system   kube-proxy-pnwj2                                   1/1     Running     0          20m     192.168.10.88   node88   <none>           <none>
+kube-system   kube-scheduler-node87                              1/1     Running     0          23m     192.168.10.87   node87   <none>           <none>
+kube-system   weave-net-858x7                                    2/2     Running     0          19m     192.168.10.87   node87   <none>           <none>
+kube-system   weave-net-pvtfc                                    2/2     Running     0          19m     192.168.10.85   node85   <none>           <none>
+kube-system   weave-net-qcgjf                                    2/2     Running     0          19m     192.168.10.88   node88   <none>           <none>
+kube-system   weave-net-zmqx6                                    2/2     Running     0          19m     192.168.10.86   node86   <none>           <none>
+rook-ceph     csi-cephfsplugin-6nmwr                             3/3     Running     0          6m41s   192.168.10.88   node88   <none>           <none>
+rook-ceph     csi-cephfsplugin-8lw8f                             3/3     Running     0          6m41s   192.168.10.85   node85   <none>           <none>
+rook-ceph     csi-cephfsplugin-99sd8                             3/3     Running     0          6m41s   192.168.10.86   node86   <none>           <none>
+rook-ceph     csi-cephfsplugin-provisioner-5c6c4c7785-j4jvr      6/6     Running     0          6m41s   10.40.0.1       node86   <none>           <none>
+rook-ceph     csi-cephfsplugin-provisioner-5c6c4c7785-wlhhr      6/6     Running     0          6m40s   10.36.0.3       node88   <none>           <none>
+rook-ceph     csi-rbdplugin-8wfwv                                3/3     Running     0          6m41s   192.168.10.85   node85   <none>           <none>
+rook-ceph     csi-rbdplugin-bh56h                                3/3     Running     0          6m41s   192.168.10.86   node86   <none>           <none>
+rook-ceph     csi-rbdplugin-pnjt5                                3/3     Running     0          6m41s   192.168.10.88   node88   <none>           <none>
+rook-ceph     csi-rbdplugin-provisioner-7c756d9bd7-57fbd         6/6     Running     0          6m41s   10.36.0.2       node88   <none>           <none>
+rook-ceph     csi-rbdplugin-provisioner-7c756d9bd7-9rp9k         6/6     Running     0          6m41s   10.40.0.3       node86   <none>           <none>
+rook-ceph     rook-ceph-crashcollector-node85-7b64ff5b96-94tcs   1/1     Running     0          28s     10.32.0.5       node85   <none>           <none>
+rook-ceph     rook-ceph-crashcollector-node86-6f69c98877-vh9fb   1/1     Running     0          43s     10.40.0.8       node86   <none>           <none>
+rook-ceph     rook-ceph-crashcollector-node88-68957884d9-xnsgt   1/1     Running     0          27s     10.36.0.8       node88   <none>           <none>
+rook-ceph     rook-ceph-mds-k8sfs-a-6b469c4c48-86wcl             1/1     Running     0          29s     10.32.0.4       node85   <none>           <none>
+rook-ceph     rook-ceph-mds-k8sfs-b-67b8dbfdc6-s2x7j             1/1     Running     0          28s     10.36.0.5       node88   <none>           <none>
+rook-ceph     rook-ceph-mgr-a-56fcf86d-h5h2q                     2/2     Running     0          77s     10.32.0.3       node85   <none>           <none>
+rook-ceph     rook-ceph-mgr-b-8cc56bd7b-g52vr                    2/2     Running     0          76s     10.40.0.4       node86   <none>           <none>
+rook-ceph     rook-ceph-mon-a-775fb5d7d7-t9cgv                   1/1     Running     0          8m10s   10.40.0.2       node86   <none>           <none>
+rook-ceph     rook-ceph-mon-b-85c94c6595-xqt4p                   1/1     Running     0          4m22s   10.36.0.4       node88   <none>           <none>
+rook-ceph     rook-ceph-mon-c-76b8868d66-m7hvk                   1/1     Running     0          4m3s    10.32.0.2       node85   <none>           <none>
+rook-ceph     rook-ceph-operator-8485948986-5q48b                1/1     Running     0          10m     10.36.0.1       node88   <none>           <none>
+rook-ceph     rook-ceph-osd-0-65745bf55d-8s249                   1/1     Running     0          45s     10.32.0.6       node85   <none>           <none>
+rook-ceph     rook-ceph-osd-1-66b58b844-lhvkl                    1/1     Running     0          43s     10.40.0.7       node86   <none>           <none>
+rook-ceph     rook-ceph-osd-2-cdd648d67-rk26w                    1/1     Running     0          43s     10.36.0.7       node88   <none>           <none>
+rook-ceph     rook-ceph-osd-prepare-node85-8g5xr                 0/1     Completed   0          18s     10.32.0.7       node85   <none>           <none>
+rook-ceph     rook-ceph-osd-prepare-node86-xmnkj                 0/1     Completed   0          15s     10.40.0.5       node86   <none>           <none>
+rook-ceph     rook-ceph-osd-prepare-node88-wlm4v                 0/1     Completed   0          12s     10.36.0.6       node88   <none>           <none>
+```
+
+---
+
 ### [Issue](https://github.com/helm/helm/issues/11287)
 
 > <img width="1168" alt="Screenshot 2023-01-30 at 2 16 07 PM" src="https://user-images.githubusercontent.com/20737479/215393142-f37257ee-b10f-4266-88e3-bd145155dcd6.png">
