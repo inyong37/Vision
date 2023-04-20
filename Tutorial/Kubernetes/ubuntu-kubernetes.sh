@@ -10,7 +10,7 @@ echo "========== SETTING KUBERNETES ON UBUNTU 22.04 LTS =========="
 # SET SWAP OFF
 echo "========== SWAP OFF =========="
 swapoff -a
-sed -i '/ swap / s/^/#/' /etc/fstab
+sed -i '/swap/s/^/#/' /etc/fstab
 
 # DISABLE FIREWALL
 systemctl stop firewalld
