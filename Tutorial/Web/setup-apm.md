@@ -125,7 +125,7 @@ cd /var/www/html/
 B. Make new php file
 
 ```Bash
-echo "Hello World! by Inyong" > /var/www/html/webtest.php
+echo "Hello World! by Inyong" > /var/www/html/index.php
 ```
 
 ### 9. Restart Apache
@@ -134,7 +134,12 @@ echo "Hello World! by Inyong" > /var/www/html/webtest.php
 systemctl restart httpd
 ```
 
-### 10. Check the Web Page `http://{server_name}/webtest.php
+### 10. Check the Web Page `http://{server_name}/index.php
+
+```Bash
+curl http://{server_name}/index.php
+# Hello World! by Inyong
+```
 
 ---
 
