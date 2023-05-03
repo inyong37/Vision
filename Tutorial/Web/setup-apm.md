@@ -138,7 +138,12 @@ systemctl restart httpd
 
 ```Bash
 curl http://{server_name}/index.php
-# Hello World! by Inyong
+```
+
+Output:
+
+```Bash
+Hello World! by Inyong
 ```
 
 ---
