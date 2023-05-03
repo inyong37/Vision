@@ -134,7 +134,7 @@ echo "Hello World! by Inyong" > /var/www/html/index.php
 systemctl restart httpd
 ```
 
-### :tada: Verify `http://{server_name}/index.php
+### :tada: Verify `http://{server_name}/index.php`
 
 ```Bash
 curl http://{server_name}/index.php
