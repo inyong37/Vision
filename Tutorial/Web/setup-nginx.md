@@ -90,9 +90,9 @@ After:
 ```conf
 ...
     server {
-        listen       {port_number};
-        listen       [::]:{port_number};
-        server_name  {server_name};
+        listen       {port_number}; # 12345
+        listen       [::]:{port_number}; # 12345
+        server_name  {server_name}; # localhost
 ...
 ```
 
@@ -110,7 +110,7 @@ netstat -tlpn | grep nginx
 
 Output:
 
-```
+```Bash
 tcp        0      0 0.0.0.0:12345           0.0.0.0:*               LISTEN      137648/nginx: maste
 tcp6       0      0 :::12345                :::*                    LISTEN      137648/nginx: maste
 ```
@@ -121,7 +121,7 @@ ss -tlpn | grep nginx
 
 Output:
 
-```
+```Bash
 LISTEN 0      511          0.0.0.0:12345      0.0.0.0:*    users:(("nginx",pid=137660,fd=8),("nginx",pid=137659,fd=8),("nginx",pid=137658,fd=8),("nginx",pid=137657,fd=8),("nginx",pid=137656,fd=8),("nginx",pid=137655,fd=8),("nginx",pid=137654,fd=8),("nginx",pid=137653,fd=8),("nginx",pid=137652,fd=8),("nginx",pid=137651,fd=8),("nginx",pid=137650,fd=8),("nginx",pid=137649,fd=8),("nginx",pid=137648,fd=8))                     
 LISTEN 0      511             [::]:12345         [::]:*    users:(("nginx",pid=137660,fd=9),("nginx",pid=137659,fd=9),("nginx",pid=137658,fd=9),("nginx",pid=137657,fd=9),("nginx",pid=137656,fd=9),("nginx",pid=137655,fd=9),("nginx",pid=137654,fd=9),("nginx",pid=137653,fd=9),("nginx",pid=137652,fd=9),("nginx",pid=137651,fd=9),("nginx",pid=137650,fd=9),("nginx",pid=137649,fd=9),("nginx",pid=137648,fd=9))
 ```
