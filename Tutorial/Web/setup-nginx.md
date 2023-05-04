@@ -1,4 +1,4 @@
-# Setup Nginx on Bare Metal Machine
+# Setup Nginx
 
 ## Date
 
@@ -6,7 +6,7 @@
 
 ## Environment
 
-Fedora 37
+Fedora 37 (Bare Metal Machine)
 
 ## Setup Nginx
 
