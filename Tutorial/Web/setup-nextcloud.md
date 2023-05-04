@@ -13,7 +13,7 @@ Ubuntu 22.04.1 LTS (Bare Metal Machine)
 ### 0. Install a Package
 
 ```Bash
-apt-get install -y  unzip
+apt-get install -y unzip
 ```
 
 ### 1. Install Nginx
@@ -57,9 +57,9 @@ systemctl restart nginx
 
 ```Bash
 cd /var/www
-wget https://download.nextcloud.com/server/releases/nextcloud-12.0.3.zip
-unzip nextcloud-12.0.3.zip
-rm -rf nextcloud-12.0.3.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-25.0.5.zip # nextcloud-12.0.3.zip
+unzip nextcloud-25.0.5.zip # nextcloud-12.0.3.zip
+rm -rf nextcloud-25.0.5.zip # nextcloud-12.0.3.zip
 ```
 
 Set `nextcloud` user:
@@ -367,7 +367,13 @@ Reload Nginx:
 systemctl reload nginx.service
 ```
 
-### Verify
+### :tada: Verify
+
+Try #2
+
+<img width="436" alt="Screenshot 2023-05-04 at 3 02 58 PM" src="https://user-images.githubusercontent.com/20737479/236123508-5c760abc-960c-40fd-aaea-fb2b0828a031.png">
+
+Try #1
 
 <img width="695" alt="Screenshot 2023-05-04 at 2 21 56 PM" src="https://user-images.githubusercontent.com/20737479/236118300-9dbaf662-70b9-4164-8438-dd06a626b208.png">
 
@@ -385,3 +391,4 @@ apt remove nginx*
 - Install Nextcloud Ubuntu Blog KR, https://velog.io/@windsekirun/%EC%A0%9C%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-NextCloud-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-on-VPS, 2023-05-04-Thu.
 - Install Certbot, https://eff-certbot.readthedocs.io/en/stable/install.html, 2023-05-04-Thu.
 - Let's Encrypt Blog KR, https://velog.io/@chldppwls12/Lets-Encrypt-SSL-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B0%9C%EA%B8%89-%EB%B0%8F-%EA%B0%B1%EC%8B%A0, 2023-05-04-Thu.
+- Nextcloud Release, https://download.nextcloud.com/server/releases/, 2023-05-04-Thu.
