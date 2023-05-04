@@ -1,4 +1,4 @@
-# Setup Nextcloud on Bare Metal Machine
+# Setup Nextcloud
 
 ## Date
 
@@ -6,7 +6,7 @@
 
 ## Environment
 
-Ubuntu 22.04.1 LTS
+Ubuntu 22.04.1 LTS (Bare Metal Machine)
 
 ## Setup Nextcloud
 
