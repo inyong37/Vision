@@ -180,7 +180,7 @@ server {
 
     listen 80;
     listen [::]:80;
-    server_name [cloud.uzuki.live];
+    server_name {server_name};
 
     root /var/www/nextcloud/;
 
@@ -276,12 +276,100 @@ server {
         access_log off;
     }
 }
+```
 
-sudo ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/nextcloud
+Verify:
+
+```Bash
+ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/nextcloud
 nginx -t
+```
+
+Output:
+
+```Bash
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+Restart services:
+
+```Bash
+systemctl restart nginx
+systemctl restart php8.1-fpm
+```
+
+### 9. Certificate Let's Encrypt
+
+```Bash
+apt-get install -y certbot
+certbot certonly --webroot -w /var/www/nextcloud --agree-tos --email {email} -d {domain} --rsa-key-size 4096
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096
+chmod 600 /etc/ssl/certs/dhparam.pem
+```
+
+### 10. Configure SSL
+
+Edit `/etc/nginx/sites-available/nextcloud`:
+
+Make new server for 443 port.
+
+After:
+
+```conf
+...
+server {
+
+    listen 80;
+    listen [::]:80;
+    server_name {server_name};
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name {server_name};
+    root /var/www/nextcloud;
+    
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/{server_name}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/{server_name}/privkey.pem;
+    ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout 1440m;
+    ssl_buffer_size 8k;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+    ssl_ciphers 'kEECDH+ECDSA+AES128 kEECDH+ECDSA+AES256 kEECDH+AES128 kEECDH+AES256 kEDH+AES128 kEDH+AES256 DES-CBC3-SHA +SHA !aNULL !eNULL !LOW !kECDH !DSS !MD5 !EXP !PSK !SRP !CAMELLIA !SEED';
+    ssl_prefer_server_ciphers on;
+
+    ssl_trusted_certificate /etc/letsencrypt/live/{server_name}/chain.pem;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Robots-Tag none;
+    add_header X-Download-Options noopen;
+    add_header X-Permitted-Cross-Domain-Policies none;
+    add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains;';
+    
+    location = /robots.txt {
+...
+```
+
+Reload Nginx:
+
+```Bash
+systemctl reload nginx.service
 ```
 
 ---
 
 ### Reference
 - Install Nextcloud Ubuntu Blog KR, https://velog.io/@windsekirun/%EC%A0%9C%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-NextCloud-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-on-VPS, 2023-05-04-Thu.
+- Install Certbot, https://eff-certbot.readthedocs.io/en/stable/install.html, 2023-05-04-Thu.
+- Let's Encrypt Blog KR, https://velog.io/@chldppwls12/Lets-Encrypt-SSL-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EB%B0%9C%EA%B8%89-%EB%B0%8F-%EA%B0%B1%EC%8B%A0, 2023-05-04-Thu.
