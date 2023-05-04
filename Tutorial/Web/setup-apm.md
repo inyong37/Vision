@@ -1,4 +1,4 @@
-# Setup APM (Apache PHP MariaDB) on Bare Metal Machine
+# Setup APM (Apache PHP MariaDB)
 
 ## Date
 
@@ -6,7 +6,7 @@
 
 ## Environment
 
-Fedora 37
+Fedora 37 (Bare Metal Machine)
 
 ## Setup APM
 
