@@ -1,4 +1,4 @@
-# Setup Nginx
+# Setup Nginx on Bare Metal Machine
 
 ## Date
 
