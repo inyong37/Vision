@@ -1,4 +1,4 @@
-# Setup Nextcloud
+# Setup Nextcloud on Bare Metal Machine
 
 ## Date
 
