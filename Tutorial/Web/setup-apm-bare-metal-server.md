@@ -1,4 +1,4 @@
-# Setup APM (Apache PHP MariaDB)
+# Setup APM (Apache PHP MariaDB) on Bare Metal Machine
 
 ## Date
 
