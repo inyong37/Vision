@@ -299,7 +299,7 @@ systemctl restart nginx
 systemctl restart php8.1-fpm
 ```
 
-### 9. Certificate Let's Encrypt
+### 9. ~~Certificate Let's Encrypt~~
 
 ```Bash
 apt-get install -y certbot
@@ -308,7 +308,7 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096
 chmod 600 /etc/ssl/certs/dhparam.pem
 ```
 
-### 10. Configure SSL
+### 10. ~~Configure SSL~~
 
 Edit `/etc/nginx/sites-available/nextcloud`:
 
@@ -366,6 +366,10 @@ Reload Nginx:
 ```Bash
 systemctl reload nginx.service
 ```
+
+### Verify
+
+<img width="695" alt="Screenshot 2023-05-04 at 2 21 56 PM" src="https://user-images.githubusercontent.com/20737479/236118300-9dbaf662-70b9-4164-8438-dd06a626b208.png">
 
 ---
 
