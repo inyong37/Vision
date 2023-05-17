@@ -1,0 +1,122 @@
+# Setup NPM Registry with verdaccio and Docker
+
+## Date
+
+2023-05-15-Monday.
+
+## Environment
+
+- Ubuntu 22.04.2 LTS
+  - Docker 23.0.3
+- Ubuntu 20.04.4 LTS
+  - Docker 23.0.6
+
+## Setup NPM Package Registry "Verdaccio" with Docker
+
+### Deploy Docker Image Container
+
+```Bash
+docker pull verdaccio/verdaccio
+docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+```
+
+### Setup
+
+```Bash
+npm adduser --registry http://0.0.0.0:4873/ # ID, PASSWORD
+```
+
+### Make `workspace/index.js`
+
+```js
+console.log("Hello World!");
+```
+
+### Make `workspace/package.json`
+
+```json
+{
+  "name": "@inyong/test",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [],
+  "author": "In Yong Hwang",
+  "license": "MIT",
+  "description": ""
+}
+```
+
+### Publish
+
+```Bash
+cd ~/workspace
+npm publish --registry http://0.0.0.0:4873/
+```
+
+### :tada: Logs
+
+```Bash
+npm notice
+npm notice 📦  @inyong/test@0.0.1
+npm notice === Tarball Contents ===
+npm notice 29B  index.js
+npm notice 208B package.json
+npm notice === Tarball Details ===
+npm notice name:          @inyong/test
+npm notice version:       0.0.1
+npm notice filename:      @inyong/test-0.0.1.tgz
+npm notice package size:  285 B
+npm notice unpacked size: 237 B
+npm notice shasum:        2cbb502d1f74a47fe8e8c9548b7f43b3a660646e
+npm notice integrity:     sha512-moj7Y0gPYIPwb[...]01bTXnMw8HPLg==
+npm notice total files:   2
+npm notice
+npm notice Publishing to http://0.0.0.0:4873/
++ @inyong/test@0.0.1
+```
+
+### :tada: `http://{ip_address}:4873/`
+
+![Screenshot 2023-05-17 at 10.10.17 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cfa95695-2996-435f-9de1-6832c7422481/Screenshot_2023-05-17_at_10.10.17_AM.png)
+
+---
+
+## Errors
+
+### Error 1: publishing without `index.js` and `package.json`; `no such file or directory package.json`
+
+### Error 2: publishing in home directory; `cannot create a string longer than 0x1fffffe8 characters`
+
+```Bash
+npm notice === Tarball Details ===
+npm notice name:          @inyong/module1
+npm notice version:       0.0.1
+npm notice filename:      @inyong/module1-0.0.1.tgz
+npm notice package size:  1.8 GB
+npm notice unpacked size: 4.2 GB
+npm notice shasum:        54e820f12992c814ef4f7fba3d91b2727fc03837
+npm notice integrity:     sha512-IR7HRTrGdCQtx[...]9NLURcFaCtWQA==
+npm notice total files:   149844
+npm notice
+npm notice Publishing to http://0.0.0.0:4873/
+npm ERR! code ERR_STRING_TOO_LONG
+npm ERR! Cannot create a string longer than 0x1fffffe8 characters
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2023-05-16T06_38_33_573Z-debug-0.log
+```
+
+---
+
+### Reference
+- Install Verdaccio Docker, https://verdaccio.org/docs/docker/, 2023-05-15-Mon.
+- Install Verdaccio with Heroku GitHub, https://github.com/juanpicado/verdaccio-heroku-example, 2023-05-15-Mon.
+- NPM, https://docs.npmjs.com/cli/v8/using-npm/registry, 2023-05-16-Tue.
+- NPM Registry, https://docs.npmjs.com/cli/v8/using-npm/registry, 2023-05-16-Tue.
+- Install Verdaccio with Docker, https://verdaccio.org/docs/docker/, 2023-05-15-Mon.
+- NPM Registry with verdaccio Blog KR, https://mygumi.tistory.com/371, 2023-05-16-Tue.
+- Verdaccio GitHub, https://github.com/verdaccio/verdaccio, 2023-05-16-Tue.
+- Verdaccio Docker Examples GitHub, https://github.com/verdaccio/verdaccio/tree/master/docker-examples, 2023-05-16-Tue.
+- no such file or directory package.json Blog KR, https://xenostudy.tistory.com/520, 2023-05-16-Tue.
