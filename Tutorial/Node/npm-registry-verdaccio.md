@@ -79,7 +79,7 @@ npm notice Publishing to http://0.0.0.0:4873/
 
 ### :tada: `http://{ip_address}:4873/`
 
-![Screenshot 2023-05-17 at 10.10.17 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cfa95695-2996-435f-9de1-6832c7422481/Screenshot_2023-05-17_at_10.10.17_AM.png)
+<img width="1200" alt="Screenshot 2023-05-17 at 10 21 21 AM" src="https://github.com/inyong37/Vision/assets/20737479/6ae61cc7-4d32-4560-ab63-b755dcf50bfc">
 
 ---
 
