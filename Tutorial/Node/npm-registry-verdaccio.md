@@ -110,6 +110,41 @@ npm ERR!     /root/.npm/_logs/2023-05-16T06_38_33_573Z-debug-0.log
 
 ---
 
+## Edit `config.yaml`
+
+일반적인 접속으로는 `config.yaml` 파일을 수정할 수 없어서 처음부터 root로 접속한다(sudo, su가 안되므로 root 접속 방법이 수월함).
+
+```bash
+docker exec -it --user root {container_name} /bin/sh
+```
+
+```bash
+vi /verdaccio/conf/config.yaml
+```
+
+수정하고는 localhost는 docker restart하면 적용이 되지만, 외부 접속은 바로 적용이 되지 않음.
+
+publish를 하면 됨. publish할 때마다 version을 올려야하는 단점이 있음.
+
+---
+
+## Usage
+
+npm 명령어 뒤에 `--registry [http://192.168.10.80:4873/](http://192.168.10.80:4873/)` 을 붙여야함.
+
+```bash
+npm set registry http://192.168.10.80:4873/
+npm adduser --registry http://192.168.10.80:4873/
+npm login --registry http://192.168.10.80:4873/
+npm whoami --registry http://192.168.10.80:4873/
+npm publish --registry http://192.168.10.80:4873/
+npm unpublish --registry http://192.168.10.80:4873/
+```
+
+adduser 시 ID, Password, Email을 넣어야함.
+
+---
+
 ### Reference
 - Install Verdaccio Docker, https://verdaccio.org/docs/docker/, 2023-05-15-Mon.
 - Install Verdaccio with Heroku GitHub, https://github.com/juanpicado/verdaccio-heroku-example, 2023-05-15-Mon.
@@ -120,3 +155,6 @@ npm ERR!     /root/.npm/_logs/2023-05-16T06_38_33_573Z-debug-0.log
 - Verdaccio GitHub, https://github.com/verdaccio/verdaccio, 2023-05-16-Tue.
 - Verdaccio Docker Examples GitHub, https://github.com/verdaccio/verdaccio/tree/master/docker-examples, 2023-05-16-Tue.
 - no such file or directory package.json Blog KR, https://xenostudy.tistory.com/520, 2023-05-16-Tue.
+- - How to run bash as user root on alpine images with docker? Stackoverflow, https://stackoverflow.com/questions/61683448/how-to-run-bash-as-user-root-on-alpine-images-with-docker-su-must-be-suid-to-w, 2023-05-18-Thu.
+- WebUI Verdaccio, https://verdaccio.org/docs/webui/, 2023-05-18-Thu.
+- Verdaccio Blog KR, https://velog.io/@army262/verdaccio-private-npm, 2023-05-18-Thu.
