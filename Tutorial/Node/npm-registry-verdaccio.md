@@ -155,6 +155,6 @@ adduser 시 ID, Password, Email을 넣어야함.
 - Verdaccio GitHub, https://github.com/verdaccio/verdaccio, 2023-05-16-Tue.
 - Verdaccio Docker Examples GitHub, https://github.com/verdaccio/verdaccio/tree/master/docker-examples, 2023-05-16-Tue.
 - no such file or directory package.json Blog KR, https://xenostudy.tistory.com/520, 2023-05-16-Tue.
-- - How to run bash as user root on alpine images with docker? Stackoverflow, https://stackoverflow.com/questions/61683448/how-to-run-bash-as-user-root-on-alpine-images-with-docker-su-must-be-suid-to-w, 2023-05-18-Thu.
+- How to run bash as user root on alpine images with docker? Stackoverflow, https://stackoverflow.com/questions/61683448/how-to-run-bash-as-user-root-on-alpine-images-with-docker-su-must-be-suid-to-w, 2023-05-18-Thu.
 - WebUI Verdaccio, https://verdaccio.org/docs/webui/, 2023-05-18-Thu.
 - Verdaccio Blog KR, https://velog.io/@army262/verdaccio-private-npm, 2023-05-18-Thu.
