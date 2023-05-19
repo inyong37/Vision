@@ -145,6 +145,19 @@ adduser 시 ID, Password, Email을 넣어야함.
 
 ---
 
+## Authority in `config.yaml`
+
+```yaml
+packages:
+  '@auth/*':
+    access: $all
+    publish: 'publish-user'
+    unpublish: 'admin'
+    proxy: npmjs
+```
+
+---
+
 ### Reference
 - Install Verdaccio Docker, https://verdaccio.org/docs/docker/, 2023-05-15-Mon.
 - Install Verdaccio with Heroku GitHub, https://github.com/juanpicado/verdaccio-heroku-example, 2023-05-15-Mon.
