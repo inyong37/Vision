@@ -60,3 +60,4 @@ Velero is installed! ⛵ Use 'kubectl logs deployment/velero -n velero' to view 
 - MinIO WebUI Blog KR, https://www.bearpooh.com/130, 2023-05-24-Wed.
 - Kubernetes Velero Install IBM KR, https://www.ibm.com/docs/ko/spp/10.1.12?topic=resources-kubernetes-installing-configuring-velero, 2023-05-24-Wed.
 - MinIO Access and Secret Key Stackoverflow, https://stackoverflow.com/questions/67285745/how-can-i-get-minio-access-and-secret-key, 2023-05-24-Wed.
+- MinIO Client Blog KR, https://www.lesstif.com/system-admin/minio-client-76709916.html, 2023-05-24-Wed.
