@@ -1,0 +1,24 @@
+# Date: 2023-05-25-Thursday.
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+# Command: kubectl apply -f test-pv-pod.yaml
+# Check: kubectl get pod test-pv-pod
+# Get in: kubectl exec -it task-pv-pod -- /bin/bash
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: task-pv-pod
+spec:
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim
+  containers:
+    - name: task-pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: task-pv-storage
