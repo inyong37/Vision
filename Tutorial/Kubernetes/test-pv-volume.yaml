@@ -2,6 +2,7 @@
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 # Command: kubectl apply -f test-pv-volume.yaml
 # Check: kubectl get pv task-pv-volume
+# Delete 3rd pod-pvc-pv: kubectl delete pv task-pv-volume
 
 apiVersion: 1
 kind: PersistentVolume
