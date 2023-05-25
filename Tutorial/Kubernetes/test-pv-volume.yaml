@@ -1,0 +1,19 @@
+# Date: 2023-05-25-Thursday.
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+# Command: kubectl apply -f test-pv-volume.yaml
+# Check: kubectl get pv task-pv-volume
+
+apiVersion: 1
+kind: PersistentVolume
+metadata:
+  name: task-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
