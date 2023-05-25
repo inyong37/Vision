@@ -3,6 +3,7 @@
 # Command: kubectl apply -f test-pv-pod.yaml
 # Check: kubectl get pod test-pv-pod
 # Get in: kubectl exec -it task-pv-pod -- /bin/bash
+# Delete 1st pod-pvc-pv: kubectl delete pod task-pv-pod
 
 apiVersion: v1
 kind: Pod
