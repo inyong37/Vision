@@ -2,6 +2,7 @@
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 # Command: kubectl apply -f test-pv-claim.yaml
 # Check: kubectl get pvc task-pv-claim
+# Delete: kubectl delete pvc task-pv-claim
 
 apiVersion: v1
 kind: PersistentVolumeClaim
