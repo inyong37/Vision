@@ -141,6 +141,13 @@ velero backup create nginx-backup --selector app=nginx
 # velero schedule create nginx-daily --schedule="@daily" --selector app=nginx
 ```
 
+```Bash
+velero backup get
+---
+NAME           STATUS      ERRORS   WARNINGS   CREATED                         EXPIRES   STORAGE LOCATION   SELECTOR
+nginx-backup   Completed   0        0          2023-05-26 05:32:29 +0000 UTC   29d       default            app=nginx
+```
+
 ### Simulate a Disaster
 
 ```Bash
@@ -168,6 +175,9 @@ Run `velero restore describe nginx-backup-20230526050649` or `velero restore log
 
 ```Bash
 velero restore get
+---
+NAME                          BACKUP         STATUS      STARTED                         COMPLETED                       ERRORS   WARNINGS   CREATED                         SELECTOR
+nginx-backup-20230526053306   nginx-backup   Completed   2023-05-26 05:33:06 +0000 UTC   2023-05-26 05:33:07 +0000 UTC   0        0          2023-05-26 05:33:06 +0000 UTC   <none>
 ```
 
 ### Clean up
