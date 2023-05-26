@@ -215,3 +215,4 @@ Velero uninstalled ⛵
 - MinIO Access and Secret Key Stackoverflow, https://stackoverflow.com/questions/67285745/how-can-i-get-minio-access-and-secret-key, 2023-05-24-Wed.
 - MinIO Client Blog KR, https://www.lesstif.com/system-admin/minio-client-76709916.html, 2023-05-24-Wed.
 - Quick Start Evaluation Install with MinIO, https://velero.io/docs/v1.11/contributions/minio/, 2023-05-26-Fri.
+- cron, https://pkg.go.dev/github.com/robfig/cron, 2023-05-26-Fri.
