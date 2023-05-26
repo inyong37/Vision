@@ -1,4 +1,6 @@
-# Setup MinIO
+# [MinIO](https://min.io/)
+
+MinIO is high-performance Kubernetes-native object storage that is compatible with the S3 API. 
 
 ## Date
 
@@ -107,7 +109,26 @@ Use the same type of drive (NVMe, SSD, or HDD) with the same capacity across all
 
 ---
 
+MinIO for
+- [Kubernetes](https://min.io/product/kubernetes)
+- [Amazon Elastic Kubernetes Service](https://min.io/product/multicloud-elastic-kubernetes-service)
+- [Microsoft Azure Kubernetes Service](https://min.io/product/multicloud-azure-kubernetes-service)
+- [Google Kubernetes Engine](https://min.io/product/multicloud-google-kubernetes-service)
+- [VMware Tanzur](https://min.io/product/private-cloud-vmware-tanzu)
+- [Red Hat OpenShift Container Platform](https://min.io/product/private-cloud-red-hat-openshift)
+- [SUSE Rancher](https://min.io/product/multicloud-suse-rancher)
+
+---
+
 ### Reference
+- MinIO, https://min.io/, 2023-05-26-Fri.
+- MinIO Kubernetes, https://min.io/product/kubernetes, 2023-05-26-Fri.
+- MinIO for Amazon Elastic Kubernetes Service, https://min.io/product/multicloud-elastic-kubernetes-service, 2023-05-26-Fri.
+- MinIO for Microsoft Azure Kubernetes Service, https://min.io/product/multicloud-azure-kubernetes-service, 2023-05-26-Fri.
+- MinIO for Google Kubernetes Engine, https://min.io/product/multicloud-google-kubernetes-service, 2023-05-26-Fri.
+- MinIO for VMware Tanzu, https://min.io/product/private-cloud-vmware-tanzu, 2023-05-26-Fri.
+- MinIO for Red Hat OpenShift Container Platform, https://min.io/product/private-cloud-red-hat-openshift, 2023-05-26-Fri.
+- MinIO for SUSE Rancher, https://min.io/product/multicloud-suse-rancher, 2023-05-26-Fri.
 - MinIO, https://min.io/docs/minio/linux/index.html, 2023-05-08-Mon.
 - MinIO Install and Deploy, https://min.io/docs/minio/linux/operations/installation.html, 2023-05-23-Tue.
 - MinIO Deploy SNSD, https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html, 2023-05-23-Tue.
