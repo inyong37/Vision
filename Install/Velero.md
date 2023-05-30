@@ -23,6 +23,16 @@ curl -fsSL -o velero-v1.9.0-linux-amd64.tar.gz https://github.com/vmware-tanzu/v
 tar -xvf velero-v1.9.0-linux-amd64.tar.gz
 ```
 
+```Bash
+mv velero-v1.9.0-linux-amd64/velero /bin/
+```
+
+Check:
+
+```Bash
+velero
+```
+
 ### Configure Access Key
 
 ```Bash
@@ -40,11 +50,11 @@ EOF
 ### Install
 
 ```Bash
-./velero install \
+velero install \
 --provider aws \
---plugins velero/velero-plugin-for-aws:v1.0.0. \
---bucket backup-testing-environment \
---secret-file ./credentials-velero \
+--plugins velero/velero-plugin-for-aws:v1.2.1 \
+--bucket {bucket_name} \
+--secret-file {access_key_file} \
 --use-volume-snapshots=false \
 --backup-location-config region=minio,s3ForcePathStyle="true",s3Url=http://{ip_address}:9000
 ```
