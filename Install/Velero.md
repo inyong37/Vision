@@ -10,6 +10,8 @@ Velero is an open source tool to safely backup and restore, perform disaster rec
 
 - Ubuntu 22.04.2 LTS
   - Kubernetes 1.24.10
+- Ubuntu 20.04.1 LTS
+  - Kubernetes 1.23.3 
 
 ## Install Velero on Kubernets
 
