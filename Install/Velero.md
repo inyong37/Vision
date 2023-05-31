@@ -245,6 +245,12 @@ If you need a volume snapshot plugin for your storage platform, or if you're usi
 
 Restic is not tied to a specific storage platform, which means that this integration also paves the way for future work to enable cross-volume-type data migrations. :key: hostPath volumes are not supported, but the local volume type is supported.
 
+### Install
+
+```Bash
+velero install --use-restic
+```
+
 ###  To back up
 
 Velero supports two approaches of discovering pod volumes that need to be backed  up using Restic:
