@@ -219,6 +219,22 @@ Velero uninstalled ⛵
 
 ---
 
+## [Autocompletion](https://velero.io/docs/main/customize-installation/#enabling-shell-autocompletion)
+
+```Bash
+echo 'source <(velero completion bash)' >>~/.bashrc
+velero completion bash >/etc/bash_completion.d/velero
+```
+
+### Alias
+
+```Bash
+echo 'alias v=velero' >>~/.bashrc
+echo 'complete -F __start_velero v' >>~/.bashrc
+```
+
+---
+
 ### Reference
 - Velero, https://velero.io/, 2023-05-26-Fri.
 - Kubernetes Backup Velero Blog KR, https://teamsmiley.github.io/2020/10/10/kubernetes-backup-velero/, 2023-05-24-Wed.
@@ -228,3 +244,4 @@ Velero uninstalled ⛵
 - MinIO Client Blog KR, https://www.lesstif.com/system-admin/minio-client-76709916.html, 2023-05-24-Wed.
 - Quick Start Evaluation Install with MinIO, https://velero.io/docs/v1.11/contributions/minio/, 2023-05-26-Fri.
 - cron, https://pkg.go.dev/github.com/robfig/cron, 2023-05-26-Fri.
+- Autocompletion, https://velero.io/docs/main/customize-installation/#enabling-shell-autocompletion, 2023-05-31-Wed.
