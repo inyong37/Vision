@@ -235,6 +235,75 @@ echo 'complete -F __start_velero v' >>~/.bashrc
 
 ---
 
+## [Restic](https://github.com/restic/restic) | [Restic Integration](https://velero.io/docs/v1.9/restic/)
+
+Restic is a backup program. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).
+
+Velero has support for backing up and restoring Kubernetes volumes using a free open-source backup tool called restic. This support is considered beta quality. Velero has always allowed you to take snapshots of persistent volumes as part of your backups if you're using one of the supported cloud providers' block storage offerings (Amazon EBS Volumes, Azure Managed Disks, Google Persistent Disks). It also provides a plugin model that enables anyone to implement additional object and block storage backends, outside the main Velero repository.
+
+If you need a volume snapshot plugin for your storage platform, or if you're using EFS, AzureFile, NFS, emptyDir, local, or any other volume type that doesn't have a native snapshot concept, Restic might be for you.
+
+Restic is not tied to a specific storage platform, which means that this integration also paves the way for future work to enable cross-volume-type data migrations. :key: hostPath volumes are not supported, but the local volume type is supported.
+
+###  To back up
+
+Velero supports two approaches of discovering pod volumes that need to be backed  up using Restic:
+
+- Opt-in approach: Where every pod containing a volume to be backed up using Restic must be annotated with the volume's name.
+- Opt-out approach: Where all pod volumes are backed up using Restic, with the ability to opt-out any volumes that should not be backed up.
+
+### Using the opt-out approach
+
+Velero will back up all pod volumes using Restic with the exception of:
+
+- Volumes mouting the default service account token, Kubernetes secrets, and config maps
+- Hostpath volumes
+
+Exclude:
+
+```Bash
+kubectl -n {namespace} annotate pod/{pod_name} backup.velero.io/backup-volumes-excludes={YOUR_VOLUME_NAME_1},{YOUR_VOLUME_NAME_2},{...}
+```
+
+Backup:
+
+```Bash
+velero backup create {backup_name} --default-volumes-to-restic {other_options}
+```
+
+### Using opt-in pod volume backup
+
+Every pod containing a volume to be backed up using Restic must be annotated with the volume's name using the annotation.
+
+Contain:
+
+```Bash
+kubectl -n {namespace} annotate pod/{pod_name} backup.velero.io/backup-volumes={YOUR_VOLUME_NAME_1},{YOUR_VOLUME_NAME_2},{...}
+```
+
+Backup:
+
+```Bash
+velero backup create {backup_name} {OPTIONS...}
+```
+
+### Restore
+
+```Bash
+velero restore create --from-backup {BACKUP_NAME} {OPTIONS...}
+```
+
+### Limitations
+
+- hostPath volumes are not supported. Local persistent volumes are supported.
+- Those of you familiar with restic may know that it encrypts all of its data. Velero uses a static, common encryption key for all Restic repositories it creates. This means that anyone who has access to your bucket can decrypt your Restic backup data. Make sure that you limit access to the Restic bucket appropriately.
+- An incremental backup chain will be maintained across pod reschedules for PVCs. However, for pod volumes that are not PVCs, such as emptyDir volumes, when a pod is deleted/recreated (for example, by a ReplicaSet/Deployment), the next backup of those volumes will be full rather than incremental, because the pod volume’s lifecycle is assumed to be defined by its pod.
+- Restic scans each file in a single thread. This means that large files (such as ones storing a database) will take a long time to scan for data deduplication, even if the actual difference is small.
+- If you plan to use Velero’s Restic integration to backup 100GB of data or more, you may need to customize the resource limits to make sure backups complete successfully.
+- Velero’s Restic integration backs up data from volumes by accessing the node’s filesystem, on which the pod is running. For this reason, Velero’s Restic integration can only backup volumes that are mounted by a pod and not directly from the PVC. For orphan PVC/PV pairs (without running pods), some Velero users overcame this limitation running a staging pod (i.e. a busybox or alpine container with an infinite sleep) to mount these PVC/PV pairs prior taking a Velero backup.
+
+---
+
 ### Reference
 - Velero, https://velero.io/, 2023-05-26-Fri.
 - Kubernetes Backup Velero Blog KR, https://teamsmiley.github.io/2020/10/10/kubernetes-backup-velero/, 2023-05-24-Wed.
@@ -245,3 +314,5 @@ echo 'complete -F __start_velero v' >>~/.bashrc
 - Quick Start Evaluation Install with MinIO, https://velero.io/docs/v1.11/contributions/minio/, 2023-05-26-Fri.
 - cron, https://pkg.go.dev/github.com/robfig/cron, 2023-05-26-Fri.
 - Autocompletion, https://velero.io/docs/main/customize-installation/#enabling-shell-autocompletion, 2023-05-31-Wed.
+- restic, https://github.com/restic/restic, 2023-05-31-Wed.
+- Restic Integration, https://velero.io/docs/v1.9/restic/, 2023-05-31-Wed.
