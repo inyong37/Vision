@@ -11,9 +11,9 @@
 - Debian GNU/Linux 11 (bullseye)
 - Ubuntu 20.04.4 LTS
 
-## Contents
+## tar
 
-### A. Unzip `tar.bz2`
+### Unzip `tar.bz2`
 
 Current directory:
 
