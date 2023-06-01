@@ -235,7 +235,7 @@ echo 'complete -F __start_velero v' >>~/.bashrc
 
 ---
 
-## [Restic](https://github.com/restic/restic) | [Restic Integration](https://velero.io/docs/v1.9/restic/)
+## [Restic](https://github.com/restic/restic) | [Restic Integration](https://velero.io/docs/v1.9/restic/) | Velero >= 1.5.0
 
 Restic is a backup program. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).
 
@@ -320,5 +320,7 @@ velero restore create --from-backup {BACKUP_NAME} {OPTIONS...}
 - Quick Start Evaluation Install with MinIO, https://velero.io/docs/v1.11/contributions/minio/, 2023-05-26-Fri.
 - cron, https://pkg.go.dev/github.com/robfig/cron, 2023-05-26-Fri.
 - Autocompletion, https://velero.io/docs/main/customize-installation/#enabling-shell-autocompletion, 2023-05-31-Wed.
-- restic, https://github.com/restic/restic, 2023-05-31-Wed.
+- Restic, https://github.com/restic/restic, 2023-05-31-Wed.
 - Restic Integration, https://velero.io/docs/v1.9/restic/, 2023-05-31-Wed.
+- Velero Restic Blog KR, https://1week.tistory.com/110, 2023-06-01-Thu.
+- Velero Resource, https://velero.io/docs/main/customize-installation/#customize-resource-requests-and-limits, 2023-06-01-Thu.
