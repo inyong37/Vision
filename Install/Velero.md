@@ -55,6 +55,8 @@ EOF
 velero install \
 --provider aws \
 --plugins velero/velero-plugin-for-aws:v1.2.1 \
+--use-restic \
+--default-volumes-to-restic \
 --bucket {bucket_name} \
 --secret-file {access_key_file} \
 --use-volume-snapshots=false \
