@@ -49,7 +49,7 @@ aws_secret_access_key={password_from_minio}
 EOF
 ```
 
-### Install
+### Install Velero with Restic opt-out
 
 ```Bash
 velero install \
