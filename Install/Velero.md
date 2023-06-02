@@ -312,6 +312,28 @@ velero restore create --from-backup {BACKUP_NAME} {OPTIONS...}
 
 ---
 
+## Object Retention Modes
+
+MinIO implements the following S3 Object Locking Modes:
+
+### GOVERNANCE Mode
+
+Prevents any operation that would mutate or modify the object or its locking settings by non-privileged users.
+
+Users with the `s3:BypassGovernanceRetention` permission on the bucket or object can modify the object or its locking settings.
+
+MinIO lifts the lock automatically after the configured retention rule duration has passed.
+
+### COMPLIANCE Mode
+
+Prevents any operation that would mutate or modify the object or its locking settings.
+
+No MinIO user can modify the object or its settings, including the MinIO root user.
+
+MinIO lifts the lock automatically after the configured retention rule duration has passed.
+
+---
+
 ## Cheat Sheet
 
 ```Bash
@@ -341,3 +363,4 @@ velero schedule delete {schedule_name}
 - Restic Integration, https://velero.io/docs/v1.9/restic/, 2023-05-31-Wed.
 - Velero Restic Blog KR, https://1week.tistory.com/110, 2023-06-01-Thu.
 - Velero Resource, https://velero.io/docs/main/customize-installation/#customize-resource-requests-and-limits, 2023-06-01-Thu.
+- Velero Object Retention, https://min.io/docs/minio/linux/administration/object-management/object-retention.html, 2023-06-02-Fri.
