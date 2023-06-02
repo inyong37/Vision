@@ -312,6 +312,21 @@ velero restore create --from-backup {BACKUP_NAME} {OPTIONS...}
 
 ---
 
+## Cheat Sheet
+
+```Bash
+velero backup create {backup_name}
+velero backup get
+velero backup delete {backup_name} {backupe_name_2} {...}
+velero backup describe {backup_name}
+velero backup logs {backup_name}
+velero schedule create {schedule_name}
+velero schedule get
+velero schedule delete {schedule_name}
+```
+
+---
+
 ### Reference
 - Velero, https://velero.io/, 2023-05-26-Fri.
 - Kubernetes Backup Velero Blog KR, https://teamsmiley.github.io/2020/10/10/kubernetes-backup-velero/, 2023-05-24-Wed.
