@@ -11,7 +11,7 @@ Application definitions, configurations, and environments should be declarative 
 ## Environment
 
 * Ubuntu 22.04.1 LTS
-  * Kubernetes 1.14.10
+  * Kubernetes 1.24.13
 
 ## Quick Start
 
