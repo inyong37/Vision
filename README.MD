@@ -149,10 +149,7 @@ Korean Scene Text Recognition by Character-level
 ### ix.   [Python Virtual Environment with Conda](Install/Virtual-Environment-conda.md)
 ### x.    [Setup Ubuntu](Install/Ubuntu.md)
 ### xi.   [Setup CentOS](Install/CentOS.md)
-### xii.  [Install Vagrant](Install/Vagrant.md)
-### xiii. [Install Kubernetes](Install/Kubernetes.md)
-### xiv.  [Install KubeVirt](Install/Kubernetes-KubeVirt.md)
-### xv.   [Install Rook Ceph](Install/Kubernetes-Rook-Ceph.md)
+
 ----------
 - Image Processing vs. Computer Vision [Reference](https://iskim3068.tistory.com/1)
 - Dehazing - Image Processing/Object Recognition - Computer Vision
