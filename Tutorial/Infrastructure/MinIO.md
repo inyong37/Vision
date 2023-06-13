@@ -49,6 +49,26 @@ mc admin info local
 
 ---
 
+## Setting Expiration
+
+### Prerequisite
+
+Alias:
+
+```Bash
+mc alias set {alias_name} http://{ip_address}:9000 {id} {password}
+# mc alias set myminio http://192.168.0.2:9000 minioadmin minioadmin
+```
+
+### Set a Rule
+
+```Bash
+mc ilm rule add --expire-days {days} {alias_name}/{bucket_name}
+# mc ilm rule add --expire-days 10 myminio/test-bucket
+```
+
+---
+
 ## Topologies
 
 ### Single-Node Single-Drive (SNSD or "Standalone")
@@ -135,3 +155,7 @@ MinIO for
 - MinIO Deploy SNMD, https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-multi-drive.html, 2023-05-23-Tue.
 - MinIO Deploy MNMD, https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html, 2023-05-23-Tue.
 - MinIO Hardware Checklist, https://min.io/docs/minio/linux/operations/checklists/hardware.html#minio-hardware-checklisthttps://min.io/docs/minio/linux/operations/checklists/hardware.html, 2023-05-23-Tue.
+- MinIO automatic delete Stackoverflow, https://stackoverflow.com/questions/69031738/minio-is-it-possible-to-set-automatic-deletion-from-bucket-of-the-object-after-t, 2023-06-13-Tue.
+- MinIO alias set, https://min.io/docs/minio/linux/reference/minio-mc/mc-alias-set.html, 2023-06-13-Tue.
+- MinIO ilm rule add, https://min.io/docs/minio/linux/reference/deprecated/mc-ilm-add.html#command-mc.ilm.add, 2023-06-13-Tue.
+- MinIO Object Management, https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html, 2023-06-13-Tue.
