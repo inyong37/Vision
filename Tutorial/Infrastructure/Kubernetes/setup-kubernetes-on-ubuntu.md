@@ -6,6 +6,8 @@
 
 2023-02-03-Friday.
 
+2023-06-15-Thursday.
+
 ## Environment
 
 Ubuntu 22.04.1 LTS
