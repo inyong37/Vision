@@ -162,6 +162,19 @@ crictl info
 apt update && apt install -y apt-transport-https ca-certificates curl
 ```
 
+Download the Google Cloud public signing key:
+
+```Bash
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
+```
+
+Add the Kubernetes apt repository:
+
+```Bash
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+```
+
+<!--
 ```Bash
 curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
@@ -169,6 +182,7 @@ curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cl
 ```Bash
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
 ```
+-->
 
 :key: FYI: Check available versions:
 
@@ -256,3 +270,4 @@ kube-system   weave-net-ttfp4                    2/2     Running   0          42
 - How to Install Kubernetes on Ubuntu 22.04 / Ubuntu 20.04, https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-kubernetes-on-ubuntu-22-04.html, 2023-02-09-Thu.
 - kubeadm init shows kubelet isn't running or healthy, https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy, 2023-02-03-Fri.
 - Integrating Kubernetes via the Addon, https://www.weave.works/docs/net/latest/kubernetes/kube-addon/, 2023-02-09-Thu.
+- Install and Set Up kubectl on Linux, https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management, 2023-06-15-Thu.
