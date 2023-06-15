@@ -27,6 +27,12 @@ root@node237:~# kubeadm reset --cri-socket=/var/run/crio/crio.sock
 
 ## Join to the new Kubernetes Cluster
 
+### Get Join Command in Master Node
+
+```Bash
+kubeadm token create --print-join-command
+```
+
 ### 1. Join
 
 ```
@@ -62,3 +68,4 @@ node88    Ready    <none>          9d      v1.24.10   192.168.10.88   <none>    
 
 ### Reference
 - Join Node Blog KR, https://sinsomi.tistory.com/entry/k8s-node-%EC%B6%94%EA%B0%80-master-node-worker-node-join, 2023-03-15-Wed.
+- Join Command Kubernetes, https://stackoverflow.com/questions/51126164/how-do-i-find-the-join-command-for-kubeadm-on-the-master, 2023-06-15-Thu.
