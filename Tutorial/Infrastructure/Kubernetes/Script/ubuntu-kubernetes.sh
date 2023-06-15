@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Author: In Yong Hwang (inyong1020@gmail.com)
-# Date: 2023-04-20-Thursday.
+# Date: 2023-06-15-Thursday.
 # Description: This shell script is to set Kubernetes on Ubuntu Machine.
 # Command: "sh ubuntu-kubernetes.sh" with root authority.
 
