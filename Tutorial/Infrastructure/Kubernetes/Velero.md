@@ -361,6 +361,21 @@ Velero Node Agent is a Kubernetes daemonset that hosts FSB modules, i.e., restic
 
 When using FSB on a storage that doesn't have Velero support for snapshots, the `--use-volume-snapshots=false` flag prevents an unused `VolumeSnapshotLocation` from being created on installation.
 
+Update Node Agent Resources
+
+```Bash
+kubectl patch daemonset restic -n velero --patch '{"spec":{"template":{"spec":{"containers":[{"name": "restic", "resources": {"limits":{"cpu": "1", "memory": "4Gi"}, "requests": {"cpu": "500m", "memory": "1Gi"}}}]}}}}'
+```
+
+```Bash
+Limits:
+      cpu:     1
+      memory:  4Gi
+    Requests:
+      cpu:     500m
+      memory:  1Gi
+```
+
 ---
 
 ### Reference
@@ -378,5 +393,7 @@ When using FSB on a storage that doesn't have Velero support for snapshots, the 
 - Velero Restic Blog KR, https://1week.tistory.com/110, 2023-06-01-Thu.
 - Velero Resource, https://velero.io/docs/main/customize-installation/#customize-resource-requests-and-limits, 2023-06-01-Thu.
 - Velero Object Retention, https://min.io/docs/minio/linux/administration/object-management/object-retention.html, 2023-06-02-Fri.
-- File System Backup Velero, https://velero.io/docs/main/file-system-backup/, 2023-06-19-Mon.
+- Velero File System Backup, https://velero.io/docs/main/file-system-backup/, 2023-06-19-Mon.
 - Kopia GitHub, https://github.com/kopia/kopia, 2023-06-19-Mon.
+- Velero Performance Guidance, https://velero.io/docs/main/performance-guidance/, 2023-06-19-Mon.
+- Velero Customize Installation, https://velero.io/docs/main/customize-installation/, 2023-06-19-Mon.
