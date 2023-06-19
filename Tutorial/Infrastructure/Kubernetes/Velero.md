@@ -312,28 +312,6 @@ velero restore create --from-backup {BACKUP_NAME} {OPTIONS...}
 
 ---
 
-## Object Retention Modes
-
-MinIO implements the following S3 Object Locking Modes:
-
-### GOVERNANCE Mode
-
-Prevents any operation that would mutate or modify the object or its locking settings by non-privileged users.
-
-Users with the `s3:BypassGovernanceRetention` permission on the bucket or object can modify the object or its locking settings.
-
-MinIO lifts the lock automatically after the configured retention rule duration has passed.
-
-### COMPLIANCE Mode
-
-Prevents any operation that would mutate or modify the object or its locking settings.
-
-No MinIO user can modify the object or its settings, including the MinIO root user.
-
-MinIO lifts the lock automatically after the configured retention rule duration has passed.
-
----
-
 ## Cheat Sheet
 
 ```Bash
@@ -346,6 +324,42 @@ velero schedule create {schedule_name}
 velero schedule get
 velero schedule delete {schedule_name}
 ```
+
+---
+
+## File System Backup
+
+Velero supports backing up and restoring Kubernetes volumes attached to pods from the file system of the volumes, called File System Backup (FSB shortly) or Pod Volume Backup. The data movement is fulfilled by using modules from free open-source backup tools restic and kopia. This support is considered beta quality. 
+
+Velero allows you to take snapshots of persistent volumes as part of your backups if you're using one of the supported cloud providers' block storage offerings (Amazon EBS Volumes, Azure Managed Disks, Google Persistent Disks). It also provides a plugin model that enables anyone to implement additional object and block stoarge backends, outside the main Velero repository.
+
+Velero's File System Backup is an addition to the aforementioned snapshot approaches. It pros and oncs are listed below:
+
+Pros:
+
+* It is capable of backing up and restoring almost any type of Kubernetes volume. Therefore, if you need a volume snapshot plugin for your storage platform, or if you're using EFS, AzureFile, NFS, emptyDir, local, or any ohter volume type that doesn't have a native snapshot concept, FSB might be for you.
+* It is not tied to a specific storage platform, so you could save the backup data to a different storage platform from the one backing Kubernetes volumes, for example, a durable storage.
+
+Cons:
+
+* It backs up data from the live file system, so the backup data is less consistent than the snapshot approaches.
+* It access the file system from the mounted hostpath directory, so the pods need to run as root user and even under privileged mode in some environments.
+
+hostPath volumes are not supported, but the local volume type is supported.
+
+### Setup File System Backup
+
+Prerequisites
+
+* Understand how Velero performs file system backup
+* Download the latest Velero release
+* Kubernetes v1.16.0 or later are required. Velero's File System Backup requires the Kubernetes MountPropagation feature.
+
+### Install Velero Node Agent
+
+Velero Node Agent is a Kubernetes daemonset that hosts FSB modules, i.e., restic, kopia uploader & repository. To install Node Agent, use the `--use-node-agent` flag in the `velero install` command.
+
+When using FSB on a storage that doesn't have Velero support for snapshots, the `--use-volume-snapshots=false` flag prevents an unused `VolumeSnapshotLocation` from being created on installation.
 
 ---
 
@@ -364,3 +378,5 @@ velero schedule delete {schedule_name}
 - Velero Restic Blog KR, https://1week.tistory.com/110, 2023-06-01-Thu.
 - Velero Resource, https://velero.io/docs/main/customize-installation/#customize-resource-requests-and-limits, 2023-06-01-Thu.
 - Velero Object Retention, https://min.io/docs/minio/linux/administration/object-management/object-retention.html, 2023-06-02-Fri.
+- File System Backup Velero, https://velero.io/docs/main/file-system-backup/, 2023-06-19-Mon.
+- Kopia GitHub, https://github.com/kopia/kopia, 2023-06-19-Mon.
