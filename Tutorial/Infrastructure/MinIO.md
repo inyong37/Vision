@@ -95,6 +95,28 @@ Scalable for Petabyte+ workloads - both storage capacity and performance
 
 ---
 
+## Object Retention Modes
+
+MinIO implements the following S3 Object Locking Modes:
+
+### GOVERNANCE Mode
+
+Prevents any operation that would mutate or modify the object or its locking settings by non-privileged users.
+
+Users with the `s3:BypassGovernanceRetention` permission on the bucket or object can modify the object or its locking settings.
+
+MinIO lifts the lock automatically after the configured retention rule duration has passed.
+
+### COMPLIANCE Mode
+
+Prevents any operation that would mutate or modify the object or its locking settings.
+
+No MinIO user can modify the object or its settings, including the MinIO root user.
+
+MinIO lifts the lock automatically after the configured retention rule duration has passed.
+
+---
+
 ## Hardware Checklist
 
 ### CPU
