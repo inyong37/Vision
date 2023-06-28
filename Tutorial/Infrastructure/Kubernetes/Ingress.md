@@ -53,9 +53,26 @@ Unlike other types of controllers which run as part of the `kube-controller-mana
 * Voyager is an ingress controller for HAProxy.
 * Wallarm Ingress Controller is an Ingress Controller that provides WAAP (WAF) and API Security capabilities.
 
+### Expose Application using NodePort
+
+```yaml
+...
+kind: Service
+...
+spec:
+  ...
+  ports:
+  - name: http
+    port: 80 # default application port
+    targetPort: 80 # default application port
+    nodePort: 30000 # The range of valid ports is 30000-32767
+  type: NodePort
+...
+```
 
 ---
 
 ### Reference
 - Ingress Kubernetes, https://kubernetes.io/docs/concepts/services-networking/ingress/, 2023-05-25-Thu.
 - Ingress Controllers Kubernetes, https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/, 2023-06-28-Wed.
+- Expose Application Blog KR, https://velog.io/@chan9708/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EB%85%B8%EC%B6%9C%EB%B2%95, 2023-06-28-Wed.
