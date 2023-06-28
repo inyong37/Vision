@@ -1,23 +1,28 @@
-# Change Timezone
+# Change Time Zone
 
 ## Date
 
 2023-02-23-Thursday.
 
+2023-06-28-Wednesday.
+
 ## Environment
 
-Ubuntu 22.04.1 LTS
+* Ubuntu 22.04.1 LTS
 
-## [Change Timezone](https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/)
+* Ubuntu 22.04.2 LTS
+
+## Change Time Zone
 
 ```Bash
-root@node85:~# timedatectl set-timezone Asia/Seoul # timedatectl set-timezone {continent_name/city_name}
+timedatectl set-timezone {continent_name/city_name}
+# timedatectl set-timezone Asia/Seoul
 ```
 
-### Verify
+### Verify it using `timedatectl`:
 
 ```Bash
-root@node85:~# timedatectl
+
                Local time: Thu 2023-02-23 11:37:01 KST
            Universal time: Thu 2023-02-23 02:37:01 UTC
                  RTC time: Thu 2023-02-23 02:37:01
