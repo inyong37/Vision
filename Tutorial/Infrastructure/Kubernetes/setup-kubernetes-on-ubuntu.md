@@ -10,13 +10,10 @@
 
 ## Environment
 
-Ubuntu 22.04.1 LTS
-
-Kubernetes 1.24.10
-
-CRI-O 1.24
-
-WeaveNet 2.8.1
+* Ubuntu 22.04 LTS/22.04.1 LTS/22.04.2 LTS
+  * Kubernetes 1.24.10
+  * CRI-O 1.24
+  * WeaveNet 2.8.1
 
 ## Content
 
