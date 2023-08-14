@@ -28,7 +28,7 @@ It is also possible that a host key has just been changed.
 ### #1
 
 ```Bash
-ssh-keygen -R {server_ip_address}
+ssh-keygen -R {ip_address}
 ```
 
 ### #2
