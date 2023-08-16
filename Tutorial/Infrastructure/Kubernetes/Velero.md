@@ -321,6 +321,7 @@ velero backup delete {backup_name} {backupe_name_2} {...}
 velero backup describe {backup_name}
 velero backup logs {backup_name}
 velero schedule create {schedule_name}
+# velero schedule create {schedule_name} --schedule="0 4 * * *" --selector namespace={namespace_name} --ttl {hours}
 velero schedule get
 velero schedule delete {schedule_name}
 ```
