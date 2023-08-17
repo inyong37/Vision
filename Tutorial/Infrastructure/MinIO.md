@@ -14,7 +14,7 @@ Ubuntu 22.04.1 LTS
 
 ## Setup MinIO
 
-### 1. Install MinIO
+### 1. [Install MinIO Server](https://dl.min.io/server/minio/release/)
 
 ```Bash
 wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230816201730.0.0_amd64.deb -O minio.deb
@@ -22,30 +22,43 @@ wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_2023081620
 sudo dpkg -i minio.deb
 ```
 
-Or
-
-A. Download MinIO Client for Linux AMD64
-
-```Bash
-wget https://dl.min.io/client/mc/release/linux-amd64/mc
-chmod +x mc
-```
-
-B. Download MinIO Server for Linux AMD64
+Alternative:
 
 ```Bash
 wget https://dl.min.io/server/minio/release/linux-amd64/minio
 chmod +x minio
 ```
 
-### 2. Configure User and Password
+### 2. [Install the MinIO Client](https://dl.min.io/client/mc/release/)
+
+```Bash
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+sudo mv mc /usr/local/bin/mc
+```
+
+### 3. Alias
+
+```Bash
+mc alias set {alias_name} http://{ip_address}:9000 {id} {password}
+# mc alias set myminio http://192.168.0.2:9000 minioadmin minioadmin
+```
+
+Option for local alias:
+
+```
+mc alias set {local_minio} http://127.0.0.1:9000 {user} {password}
+mc admin info {local_minio}
+```
+
+### 4. Configure User and Password
 
 ```Bash
 export MINIO_ROOT_USER={user}
 export MINIO_ROOT_PASSWORD={password}
 ```
 
-### 3. Launch the MinIO Server
+### 5. Launch the MinIO Server
 
 Make a Directory for MinIO
 
@@ -61,28 +74,11 @@ minio server ~/{minio_workspace} --console-address :9090
 
 `http://127.0.0.1:9090` or `{ip_address}:9090`
 
-### (Optional) Install the MinIO Client
-
-```Bash
-wget https://dl.min.io/client/mc/release/linux-amd64/mc
-chmod +x mc
-sudo mv mc /usr/local/bin/mc
-mc alias set local http://127.0.0.1:9000 {user} {password}
-mc admin info local
-```
-
 ---
 
 ## Setting Expiration
 
-### Prerequisite
-
-Alias:
-
-```Bash
-mc alias set {alias_name} http://{ip_address}:9000 {id} {password}
-# mc alias set myminio http://192.168.0.2:9000 minioadmin minioadmin
-```
+Prerequisite: Alias
 
 ### Set a Rule
 
@@ -205,3 +201,5 @@ MinIO for
 - MinIO alias set, https://min.io/docs/minio/linux/reference/minio-mc/mc-alias-set.html, 2023-06-13-Tue.
 - MinIO ilm rule add, https://min.io/docs/minio/linux/reference/deprecated/mc-ilm-add.html#command-mc.ilm.add, 2023-06-13-Tue.
 - MinIO Object Management, https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html, 2023-06-13-Tue.
+- MinIO Client Release, https://dl.min.io/client/mc/release/, 2023-08-17-Thu.
+- MinIO Server Release, https://dl.min.io/server/minio/release/, 2023-08-17-Thu.
