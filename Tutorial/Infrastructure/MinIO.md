@@ -17,7 +17,8 @@ Ubuntu 22.04.1 LTS
 ### 1. Install MinIO
 
 ```Bash
-wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230504214430.0.0_amd64.deb -O minio.deb
+wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230816201730.0.0_amd64.deb -O minio.deb
+# wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230504214430.0.0_amd64.deb -O minio.deb
 sudo dpkg -i minio.deb
 ```
 
