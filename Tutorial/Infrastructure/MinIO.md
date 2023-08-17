@@ -6,6 +6,8 @@ MinIO is high-performance Kubernetes-native object storage that is compatible wi
 
 2023-05-08-Monday.
 
+2023-08-17-Thursday.
+
 ## Environment
 
 Ubuntu 22.04.1 LTS
@@ -19,6 +21,22 @@ wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_2023050421
 sudo dpkg -i minio.deb
 ```
 
+Or
+
+A. Download MinIO Client for Linux AMD64
+
+```Bash
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+```
+
+B. Download MinIO Server for Linux AMD64
+
+```Bash
+wget https://dl.min.io/server/minio/release/linux-amd64/minio
+chmod +x minio
+```
+
 ### 2. Configure User and Password
 
 ```Bash
@@ -28,9 +46,14 @@ export MINIO_ROOT_PASSWORD={password}
 
 ### 3. Launch the MinIO Server
 
+Make a Directory for MinIO
+
 ```Bash
-mkdir ~/minio
-minio server ~/minio --console-address :9090
+mkdir ~/{minio_workspace}
+```
+
+```Bash
+minio server ~/{minio_workspace} --console-address :9090
 ```
 
 ### :tada: Connect to the MinIO Server via a Browser
