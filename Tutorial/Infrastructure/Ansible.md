@@ -1,10 +1,10 @@
 # Ansible | Red Hat Ansible Automation Platform
 
-Red Hat® Ansible® Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
+Red Hat® Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
 
 Available on Microsoft Azure, AWS, Google Cloud
 
-Ansible® is an open source, command-line IT automation software application written in Python. It can configure systems, deploy software, and orchestrate advanced workflows to support application deployment, system updates, and more.
+Ansible is an open source, command-line IT automation software application written in Python. It can configure systems, deploy software, and orchestrate advanced workflows to support application deployment, system updates, and more.
 
 Ansible’s main strengths are simplicity and ease of use. It also has a strong focus on security and reliability, featuring minimal moving parts. It uses OpenSSH for transport (with other transports and pull modes as alternatives), and uses a human-readable language that is designed for getting started quickly without a lot of training.
 
@@ -14,7 +14,7 @@ Ansible’s main strengths are simplicity and ease of use. It also has a strong 
 
 ### Community Ansible
 
-The community distribution of Ansible contains a suite of powerful command line tools supported on most operating systems with Python installed. This includes Red Hat® Enterprise Linux®, Debian, Ubuntu, MacOS, FreeBSD, Microsoft Windows, and more. For more information on installing Ansible refer to the installation documentation.
+The community distribution of Ansible contains a suite of powerful command line tools supported on most operating systems with Python installed. This includes Red Hat Enterprise Linux, Debian, Ubuntu, MacOS, FreeBSD, Microsoft Windows, and more. For more information on installing Ansible refer to the installation documentation.
 
 ### Red hat ansible automation platform
 
