@@ -76,6 +76,8 @@ minio server ~/{minio_workspace} --console-address :9090
 
 ---
 
+[List Alias](https://min.io/docs/minio/linux/reference/minio-mc/mc-alias-list.html): `mc alias list`
+
 ## Setting Expiration
 
 Prerequisite: Alias
@@ -265,3 +267,4 @@ MinIO for
 - MinIO Client Release, https://dl.min.io/client/mc/release/, 2023-08-17-Thu.
 - MinIO Server Release, https://dl.min.io/server/minio/release/, 2023-08-17-Thu.
 - Upgrade, https://min.io/docs/minio/linux/operations/install-deploy-manage/upgrade-minio-deployment.html, 2023-08-18-Fri.
+- List aliases, https://min.io/docs/minio/linux/reference/minio-mc/mc-alias-list.html, 2023-08-18-Fri.
