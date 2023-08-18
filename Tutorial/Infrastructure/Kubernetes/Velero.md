@@ -390,8 +390,10 @@ From Velero v1.10, except for using restic to do file-system level backup and re
 1. [Install the Velero CLI](https://velero.io/docs/v1.11/basic-install/):
 
 ```Bash
-wget https://github.com/vmware-tanzu/velero/releases/download/v1.11.1/velero-v1.11.1-linux-amd64.tar.gz -O velero
-chmod +x velero
+wget https://github.com/vmware-tanzu/velero/releases/download/v1.11.1/velero-v1.11.1-linux-amd64.tar.gz
+tar -xvf velero-v1.11.1-linux-amd64.tar.gz
+rm /bin/velero
+mv velero-v1.11.1-linux-amd64/velero /bin/
 ```
 
 2. Update the Velero custom resource definitions (CRDs) to include schema change across all CRDs that are at the core of the new features in this release:
