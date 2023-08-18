@@ -89,6 +89,67 @@ mc ilm rule add --expire-days {days} {alias_name}/{bucket_name}
 
 ---
 
+## [Upgrade a MinIO Deployment](https://min.io/docs/minio/linux/operations/install-deploy-manage/upgrade-minio-deployment.html)
+
+MinIO uses an update-then-restart methodology for upgrading a deployment to a newer release:
+
+1. Update the MinIO binary on all hosts with the newer release
+2. Restart the deployment using `mc admin service restart`
+
+This procedure does not require taking downtime and is non-disruptive to ongoing operations.
+
+MinIO's upgrade-then-restart procedure does not require taking downtime or scheduling a maintenance period. MinIO restarts are fast, such that restarting all server processes in parallel typically completes in a few seconds. MinIO operations are atomic and strictly consistent, such that applications using MinIO or S3 SDKs can rely on the built-in transparent retry without further client-side logic. This ensures upgrades are non-disruptive to ongoing operations.
+
+"Rolling" or serial "one-at-a-time" upgrade methods do not provide any advantage over the recommended "parallel" procedure, and can introduce unnecessary complexity to the upgrade procedure. For virtualized environments which require rolling updates, you should amend the recommend procedure as follows:
+
+1. Update the MinIO Binary in the virtual machine or container one at a time.
+2. Restart the MinIO deployment using `mc admin service restart`.
+3. Update the virtual machine/container configuration to use the matching newer MinIO image.
+4. Perform the rolling restart of each machine/container with the updated image.
+
+### A. Update `systemctl`-Managed MinIO Deployments
+
+1. Update the MinIO Binary on Each Node - DEB (Debian/Ubuntu):
+
+```Bash
+wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230816201730.0.0_amd64.deb -O minio.deb
+sudo dpkg -i minio.deb
+```
+
+2. Restart the Deployment:
+
+```Bash
+mc admin service restart {alias}
+```
+
+3. Validate the Update:
+
+```Bash
+mc admin info {alias}
+```
+
+4. Update MinIO Client
+
+```Bash
+mc update
+```
+
+### B. Update Non-System Managed MinIO Deployments
+
+The following command updates a MinIO deployment with the specified alias to the latest stable release:
+
+```Bash
+mc admin update {alias}
+```
+
+You should upgrade your `mc` binary to match or closely follow the MinIO server release. You can use the `mc update` command to update the binary to the latest stable release:
+
+```Bash
+mc update
+```
+
+---
+
 ## Topologies
 
 ### Single-Node Single-Drive (SNSD or "Standalone")
@@ -203,3 +264,4 @@ MinIO for
 - MinIO Object Management, https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html, 2023-06-13-Tue.
 - MinIO Client Release, https://dl.min.io/client/mc/release/, 2023-08-17-Thu.
 - MinIO Server Release, https://dl.min.io/server/minio/release/, 2023-08-17-Thu.
+- Upgrade, https://min.io/docs/minio/linux/operations/install-deploy-manage/upgrade-minio-deployment.html, 2023-08-18-Fri.
