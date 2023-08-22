@@ -6,9 +6,8 @@
 
 ## Environment
 
-Ubuntu 20.04.4 LTS
-
-Docker 23.0.6
+* Ubuntu 20.04.4 LTS
+  * Docker 23.0.6
 
 ## Problem
 
@@ -17,7 +16,9 @@ Docker 23.0.6
 OCI runtime exec failed: exec failed: unable to start container process: exec: "/bin/bash": stat /bin/bash: no such file or directory: unknown
 ```
 
-## Solution
+## Solution - Use `sh`
+
+There is no bash binary. You can use sh instead of it.
 
 ```Bash
 (base) root@desktop:~/workspace# docker exec -it 2fa0d13a792c /bin/sh
