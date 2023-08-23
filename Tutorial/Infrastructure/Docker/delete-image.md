@@ -6,9 +6,10 @@
 
 ## Environment
 
-Ubuntu 20.04.4 LTS
-
-Docker 23.0.3
+* Ubuntu 20.04.4 LTS
+  * Docker 23.0.3
+* Ubuntu 22.04.3 LTS
+  * Docker 24.0.5
 
 ## Delete an Image
 
