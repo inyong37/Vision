@@ -20,12 +20,10 @@ Before deleting an image, make sure that related containers are removed.
 
 ---
 
-### Step-by-Step
-
-Check images:
+1. List images: `docker images`
 
 ```Bash
-(base) inyong@desktop:~$ sudo docker images
+(base) inyong@desktop:~$ docker images
 REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
 <none>                        <none>    8715103a39da   25 seconds ago   5.95GB
 flat-manager                  0.1       a9ff3b483c58   25 hours ago     329MB
@@ -39,7 +37,7 @@ hello-world                   latest    feb5d9fea6a5   18 months ago    13.3kB
 progrium/stress               latest    db646a8f4087   8 years ago      282MB
 ```
 
-Remove an image:
+2. Remove an image: `docker image rm {image_id}
 
 ```Bash
 (base) inyong@desktop:~$ sudo docker image rm 8715103a39da
@@ -50,7 +48,7 @@ Deleted: sha256:7363a407772c4fe3db90068f8eb9ed9a42474ebec2adc7a136b97a364d38ec8b
 :tada: Verify:
 
 ```Bash
-(base) inyong@desktop:~$ sudo docker images
+(base) inyong@desktop:~$ docker images
 REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
 flat-manager                  0.1       a9ff3b483c58   25 hours ago     329MB
 ubuntu                        22.04     08d22c0ceb15   5 weeks ago      77.8MB
