@@ -26,7 +26,7 @@ Location: `/etc/docker/daemon.json`
 
 ```json
 {
-  "log-driver": "json-file"
+  "log-driver": "json-file",
   "log-opts": {
     "max-size": "10m",
     "max-file": 10
