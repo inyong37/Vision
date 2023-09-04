@@ -42,6 +42,43 @@ velero backup get
 velero restore create {[restore_arguments]}
 ```
 
+### :tada: Check It on Target Kubernetes Cluster
+
+```Bash
+velero restore {get | describe | logs} {restore_name}
+```
+
+### Restore Commands
+
+```Bash
+create
+delete
+describe
+get
+logs
+```
+
+### Workflow
+
+* Velero Client -> Kubernetes API Server; create a `Restore` object
+* RestoreController
+  * notices the new `Restore` object and validates
+  * fetches basic information, tarball
+  * extracts the tarball and performs preprocesses
+  * restores resources
+    * The RestoreController makes sure the target namespace exists. If the target namespace does not exist, then the RestoreController will create a new one on the cluster.
+    * If the resource is a Persistent Volume (PV), the RestoreController will rename the PV and remap its namespace.
+    * If the resource is a Persistent Volume Claim (PVC), the RestoreController will modify the PVC metadata.
+    * Execute the resource’s RestoreItemAction custom plugins, if you have configured one.
+    * Update the resource object’s namespace if you’ve configured namespace remapping.
+    * The RestoreController adds a velero.io/backup-name label with the backup name and a velero.io/restore-name with the restore name to the resource. This can help you easily identify restored resources and which backup they were restored from.
+  * creates the resource object on the target cluster
+* additional steps by Velero
+  * If the resource is a Pod, the RestoreController will execute any Restore Hooks and wait for the hook to finish.
+  * If the resource is a PV restored by File System Backup, the RestoreController waits for File System Backup’s restore to complete. The RestoreController sets a timeout for any resources restored with File System Backup during a restore. The default timeout is 4 hours, but you can configure this be setting using --fs-backup-timeout restore option.
+  * If the resource is a Custom Resource Definition, the RestoreController waits for its availability in the cluster. The timeout is 1 minute.
+* If any failures happen finishing these steps, the RestoreController will log an error in the restore result and will continue restoring.
+
 ---
 
 ### Reference
