@@ -29,5 +29,5 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ---
 
 ### Reference
-- ArgoCD, https://argoproj.github.io/cd/, 2023-09-08-Fri.
+- Argo CD, https://argoproj.github.io/cd/, 2023-09-08-Fri.
 - Argo CD, https://argo-cd.readthedocs.io/en/stable/, 2023-06-05-Mon.
