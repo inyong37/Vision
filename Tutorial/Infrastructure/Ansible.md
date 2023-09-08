@@ -1,6 +1,6 @@
-# Ansible | Red Hat Ansible Automation Platform
+# [Ansible] | Red Hat Ansible Automation Platform
 
-Red Hat® Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
+Red Hat Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
 
 Available on Microsoft Azure, AWS, Google Cloud
 
@@ -16,10 +16,9 @@ Ansible’s main strengths are simplicity and ease of use. It also has a strong 
 
 The community distribution of Ansible contains a suite of powerful command line tools supported on most operating systems with Python installed. This includes Red Hat Enterprise Linux, Debian, Ubuntu, MacOS, FreeBSD, Microsoft Windows, and more. For more information on installing Ansible refer to the installation documentation.
 
-### Red hat ansible automation platform
+### Red Hat Ansible Automation Platform
 
 Red Hat Ansible Automation Platform is a subscription product built on the foundations of Ansible with numerous enterprise features. It combines more than a dozen upstream projects into an integrated, streamlined product. Each product component also has a specific purpose with a well-defined scope. For example, the automation controller is the WebUI and API for Ansible automation, which is based on the upstream project AWX. This component is bundled into the platform to manage automation. Ansible Automation Platform is available to be run on-premise and charged by node (rather than by user), or you can use the managed service offering on Microsoft Azure.
-
 
 ---
 
