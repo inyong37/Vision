@@ -1,5 +1,7 @@
 # I. Ubuntu 18.04.2 LTS (Bionic Beaver)
 
+FYI: Network > Subnet: `192.168.10.0/24`
+
 ## i. Install NVIDIA drivers.
 [Reference](https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/)
 ### A. Remove nvidia drivers.
