@@ -22,8 +22,96 @@ Red Hat Ansible Automation Platform is a subscription product built on the found
 
 ---
 
+## Date
+
+2023-09-18-Monday.
+
+## Environment
+
+* Server: Ubuntu 20.04.4 LTS
+
+## Setup
+
+### Install
+
+```Bash
+sudo add-apt-repository ppa:ansible/ansible
+sudo apt install ansible -y
+```
+
+Verify: `ansible --version`
+
+```Bash
+(base) inyong@desktop:~$ ansible --version
+ansible [core 2.12.10]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/inyong/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/inyong/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, May 26 2023, 14:05:08) [GCC 9.4.0]
+  jinja version = 2.10.1
+  libyaml = True
+```
+
+```Bash
+sudo apt install python3-argcomplete -y
+sudo activate-global-python-argcomplete3
+```
+
+### Inventory
+
+Edit: `sudo vim /etc/ansible/hosts`
+
+```
+...
+[servers]
+{server_name_01} ansible_host={ip_address} # 192.168.0.10
+{server_name_01} ansible_host={ip_address} # 192.168.0.11
+{server_name_01} ansible_host={ip_address} # 192.168.0.12
+{server_name_01} ansible_host={ip_address} # 192.168.0.13
+...
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+```
+
+### SSH
+
+```Bash
+ssh-keygen -t rsa -b 4096 -C "AnsibleKey"
+ssh-copy-id -i {user_name}@{ip_address} # root@192.168.0.10
+```
+
+Verify: `ansible all -m ping -u root`
+
+```Bash
+{server_name_01} | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+### Command
+
+```Bash
+ansible all -a "{command}" -u root
+```
+
+Verify: `ansible all -a "ls" -u root`
+
+```Bash
+{server_name_01} | CHANGED | rc=0 >>
+snap
+```
+
+### Playbook
+
+---
+
 ### Reference
 - Ansible, https://www.ansible.com/, 2023-06-08-Thu.
 - How Ansible Works, https://www.ansible.com/overview/how-ansible-works, 2023-06-08-Thu.
 - Ansible in 100 Seconds, https://youtu.be/xRMPKQweySE, 2023-06-08-Thu.
 - Ansible Docs, https://docs.ansible.com/, 2023-06-08-Thu.
+- Ansible Tutorial Blog KR, https://ko.linux-console.net/?p=3487#gsc.tab=0, 2023-09-18-Mon.
+- Ansible Tutorial Blog KR, https://kibbomi.tistory.com/258, 2023-09-18-Mon.
