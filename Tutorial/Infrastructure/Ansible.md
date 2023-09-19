@@ -132,3 +132,5 @@ Execute: `ansible-playbook {playbook}.yaml`
 - Ansible Playbook Blog KR, http://www.linuxdata.org/bbs/board.php?bo_table=Ansible&wr_id=3, 2023-09-19-Tue.
 - Ansible Ping, https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html, 2023-09-19-Tue.
 - Ansible YAML, https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html, 2023-09-19-Tue.
+- container runtime is not running Blog KR, https://velog.io/@makengi/K8s-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1%EC%A4%91-%EC%97%90%EB%9F%AC, 2023-09-19-Tue.
+- Ansible File, https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html, 2023-09-19-Tue.
