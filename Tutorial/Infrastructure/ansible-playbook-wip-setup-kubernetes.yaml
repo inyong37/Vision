@@ -1,0 +1,101 @@
+# playbook for setup kubernetes
+# server types: all, masters, workers
+# tasks: swap off, set network, install container runtime interface, install kubernetes
+
+- name: setup kubernetes
+  hosts: all
+  become: true
+  tasks:
+    - name: stop and disable firewalld
+      service:
+        name: firewalld
+        state: stopped
+        enabled: False
+
+      
+
+    - name: disable SELinux
+      command: setenforce 0
+
+    - name: disable SELinux on reboot
+      selinux:
+        state: disabled
+
+    - name: remove swapfile
+      mount:
+        name: swap
+        fstype: swap
+        state: absent
+
+    - name: disable swap
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
+
+    - name: set net.bridge.bridge-nf-call-iptable 1
+      sysctl:
+        name: net.bridge.bridge-nf-call-iptables
+        value: 1
+        state: present
+
+    - name: set net.bridge.bridge-nf-call-ip6table 1
+      sysctl:
+        name: net.bridge.bridge-nf-call-ip6tables
+        value: 1
+        state: present
+
+    - name: set net.ipv4.ip_forward
+      sysctl:
+        name: net.ipv4.up_forward
+        value: 1
+        state: present
+
+    - name: install packages
+      ansible.builtin.apt:
+        update_cache: true
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg
+
+    - name: gpg key
+      ansible.builtin.apt_key:
+        url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        keyring: /etc/apt/keyrings/kubernetes-archive-keyring.gpg
+
+    - name: apt repo
+      ansible.builtin.apt_repository:
+        filename: /etc/apt/sources.list.d/kubernetes
+        repo: "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main"
+
+    - name: install kubeadm, kubectl, kubelet
+      ansible_builtin.apt:
+        update_cache: true
+        name:
+          - kubeadm
+          - kubectl
+          - kubelet
+
+    - name: set kubeadm version
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
+
+    - name: set kubectl version
+      ansible.builtin.dpkg_selections:
+        name: kubectl
+        selection: hold
+
+    - name: set kubelet version
+      ansible.builtin.dpkg_selections:
+        name: kubelet
+        selection: hold
+
+    - name: set auto complete
+      ansible.builtin.apt:
+        update_cache: true
+        name: bash-completion
+
+    - name: activate auto complete
+      ansible.builtin.command:
+          bash -c 'source /usr/share/bash-completion/bash_completion'
