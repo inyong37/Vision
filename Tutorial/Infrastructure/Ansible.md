@@ -115,6 +115,8 @@ snap
 ...
 ```
 
+Execute: `ansible-playbook {playbook}.yaml
+
 ---
 
 ### Reference
