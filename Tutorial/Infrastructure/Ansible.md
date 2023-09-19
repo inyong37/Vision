@@ -129,3 +129,4 @@ Execute: `ansible-playbook {playbook}.yaml`
 - Ansible Playbook, https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html, 2023-09-19-Tue.
 - Ansible Playbook Blog KR, https://mcpaint.tistory.com/278, 2023-09-19-Tue.
 - Ansible Playbook Blog KR, https://chanchan-father.tistory.com/517, 2023-09-19-Tue.
+- Ansible Playbook Blog KR, http://www.linuxdata.org/bbs/board.php?bo_table=Ansible&wr_id=3, 2023-09-19-Tue.
