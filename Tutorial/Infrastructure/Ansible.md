@@ -82,7 +82,7 @@ ssh-keygen -t rsa -b 4096 -C "AnsibleKey"
 ssh-copy-id -i {user_name}@{ip_address} # root@192.168.0.10
 ```
 
-Verify: `ansible all -m ping -u root`
+Verify: `ansible all -m ping -u root` = `ansible all -m ansible.builtin.ping -u root`
 
 ```Bash
 {server_name_01} | SUCCESS => {
@@ -94,10 +94,10 @@ Verify: `ansible all -m ping -u root`
 ### Command
 
 ```Bash
-ansible all -a "{command}" -u root
+ansible {agents} -a "{command}" -u root
 ```
 
-Verify: `ansible all -a "ls" -u root`
+Example: `ansible all -a "ls" -u root`
 
 ```Bash
 {server_name_01} | CHANGED | rc=0 >>
@@ -115,7 +115,7 @@ snap
 ...
 ```
 
-Execute: `ansible-playbook {playbook}.yaml
+Execute: `ansible-playbook {playbook}.yaml`
 
 ---
 
