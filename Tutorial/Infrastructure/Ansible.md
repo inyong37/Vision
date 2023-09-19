@@ -131,3 +131,4 @@ Execute: `ansible-playbook {playbook}.yaml`
 - Ansible Playbook Blog KR, https://chanchan-father.tistory.com/517, 2023-09-19-Tue.
 - Ansible Playbook Blog KR, http://www.linuxdata.org/bbs/board.php?bo_table=Ansible&wr_id=3, 2023-09-19-Tue.
 - Ansible Ping, https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html, 2023-09-19-Tue.
+- Ansible YAML, https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html, 2023-09-19-Tue.
