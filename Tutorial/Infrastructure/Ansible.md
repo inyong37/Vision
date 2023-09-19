@@ -125,3 +125,5 @@ snap
 - Ansible Tutorial Blog KR, https://ko.linux-console.net/?p=3487#gsc.tab=0, 2023-09-18-Mon.
 - Ansible Tutorial Blog KR, https://kibbomi.tistory.com/258, 2023-09-18-Mon.
 - Ansible Playbook, https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html, 2023-09-19-Tue.
+- Ansible Playbook Blog KR, https://mcpaint.tistory.com/278, 2023-09-19-Tue.
+- Ansible Playbook Blog KR, https://chanchan-father.tistory.com/517, 2023-09-19-Tue.
