@@ -1,4 +1,4 @@
-# [Ansible]() | Red Hat Ansible Automation Platform
+# [Ansible](https://www.ansible.com/) | Red Hat Ansible Automation Platform
 
 Red Hat Ansible Automation Platform is an end-to-end automation platform to configure systems, deploy software, and orchestrate advanced workflows. It includes resources to create, manage, and scale across the entire enterprise.
 
@@ -28,7 +28,7 @@ Red Hat Ansible Automation Platform is a subscription product built on the found
 
 ## Environment
 
-* Server: Ubuntu 20.04.4 LTS
+* Ansible Server: Ubuntu 20.04.4 LTS
 
 ## Setup
 
@@ -104,7 +104,16 @@ Verify: `ansible all -a "ls" -u root`
 snap
 ```
 
-### Playbook
+### [Playbook](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html)
+
+```Bash
+- name: name
+  hosts: all
+  become: true
+  tasks:
+    - name: task1
+...
+```
 
 ---
 
@@ -115,3 +124,4 @@ snap
 - Ansible Docs, https://docs.ansible.com/, 2023-06-08-Thu.
 - Ansible Tutorial Blog KR, https://ko.linux-console.net/?p=3487#gsc.tab=0, 2023-09-18-Mon.
 - Ansible Tutorial Blog KR, https://kibbomi.tistory.com/258, 2023-09-18-Mon.
+- Ansible Playbook, https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html, 2023-09-19-Tue.
