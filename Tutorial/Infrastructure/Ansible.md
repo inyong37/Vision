@@ -64,13 +64,12 @@ sudo activate-global-python-argcomplete3
 Edit: `sudo vim /etc/ansible/hosts`
 
 ```
-...
-[servers]
-{server_name_01} ansible_host={ip_address} # 192.168.0.10
+[server]
 {server_name_01} ansible_host={ip_address} # 192.168.0.11
-{server_name_01} ansible_host={ip_address} # 192.168.0.12
-{server_name_01} ansible_host={ip_address} # 192.168.0.13
-...
+{server_name_02} ansible_host={ip_address} # 192.168.0.12
+{server_name_03} ansible_host={ip_address} # 192.168.0.13
+{server_name_04} ansible_host={ip_address} # 192.168.0.14
+
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ```
@@ -79,7 +78,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 ```Bash
 ssh-keygen -t rsa -b 4096 -C "AnsibleKey"
-ssh-copy-id -i {user_name}@{ip_address} # root@192.168.0.10
+ssh-copy-id -i {user_name}@{ip_address} # root@192.168.0.11
 ```
 
 Verify: `ansible all -m ping -u root` = `ansible all -m ansible.builtin.ping -u root`
@@ -107,11 +106,11 @@ snap
 ### [Playbook](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html)
 
 ```Bash
-- name: name
+- name: Play Name
   hosts: all
   become: true
   tasks:
-    - name: task1
+    - name: task name
 ...
 ```
 
