@@ -57,6 +57,12 @@ The library uses the Kubernetes client library to communicate with Kubernetes. C
 
 Configuration files are, when possible, written in YAML.
 
+### Usage
+
+`helm install {}`
+
+`helm uninstall {}`
+
 ---
 
 ### Reference
