@@ -6,6 +6,9 @@
 
 ## Environment
 
+* Ubuntu 20.04.4 LTS
+  * virt-manager 2.2.1
+
 ## Problem
 
 QEMU/KVM - Not Connected
