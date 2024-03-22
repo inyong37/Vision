@@ -82,3 +82,20 @@ conda list
 ```
 > conda info --env
 ```
+
+---
+
+# [Anaconda](https://www.anaconda.com/)
+
+## Conda
+
+A package and environment manager program that is packaged with Anaconda Distribution and run in a CLI. Using conda, you can install and update conda packages and their dependencies, and switch between conda environments on your local computer. Contrast with Anaconda Navigator.
+
+[Conda Documentation](https://docs.conda.io/en/latest/)
+
+---
+
+### Reference
+- Anaconda, https://anaconda.org/, 2024-03-22-Fri.
+- Anaconda, https://www.anaconda.com/, 2024-03-22-Fri.
+- Conda Documentation, https://docs.conda.io/en/latest/, 2024-03-22-Fri.
