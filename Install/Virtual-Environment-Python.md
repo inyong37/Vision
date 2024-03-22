@@ -1,9 +1,21 @@
-# Create Virtual Environment with Python
+# Virtual Environment with Python
 
-Unix: Linux and macOS
+Environment: Unix (Linux and macOS)
+
+## Create
 
 ```Bash
 cd $PROJECT
 python3 -m venv .venv
+```
+##  Activate
+
+```Bash
 source .venv/bin/activate
+```
+
+## Deactivate
+
+```Bash
+source deactivate
 ```
