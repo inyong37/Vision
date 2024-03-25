@@ -6,12 +6,12 @@ Environment: Unix (Linux and macOS)
 
 ```Bash
 cd $PROJECT
-python3 -m venv .venv
+python3 -m venv .{environment_name}
 ```
 ##  Activate
 
 ```Bash
-source .venv/bin/activate
+source $PROJECT/.{environment_name}/bin/activate
 ```
 
 ## Deactivate
